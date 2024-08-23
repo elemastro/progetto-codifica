@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document contains data on Codifica di Testi.
+Filename: Lucia.xml
+Author: Eleonora Mastroianni -->
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+
+<TEI xml:lang="it" xmlns="http://www.tei-c.org/ns/1.0"><!--è il namespace per la tei (tutti gli elementi utilizzati in questo documento fanno parte del vocabolario TEI)-->
+    <teiHeader>
+        <fileDesc><!--figlio obbligatorio di teiheader. Descrizione bibliografica completa del file digitale, non del testo originale-->
+            <titleStmt><!--obbligatorio-->
+                <title type="full" level="j">
+                    <title type="main">Alcune sezioni della Rassegna Settimanale</title>
+                    <title type="sub">versione elettronica</title>
+                </title>
+                <respStmt>
+                    <resp>codificata con lo standard TEI P5 da:</resp>
+                    <persName>Eleonora Mastroianni</persName>
+                    <persName>Denise Peselli</persName>
+                </respStmt>
+                <sponsor>Centro Nazionale di Ricerca</sponsor>
+            </titleStmt>
+            <editionStmt><!--opzionale-->
+                <edition n="E1">Prima edizione studentesca in un'applicazione web</edition>
+                <respStmt>
+                    <resp>progettata e sviluppata da</resp>
+                    <persName>Eleonora Mastroianni</persName>
+                    <persName>Denise Peseli</persName>
+                </respStmt>
+            </editionStmt>
+            <!--qui si può aggiungere <extent> che serve per dichiarare la grandezza approssimativa in bytes del lavoro-->
+            <publicationStmt><!--obbligatorio-->
+                <publisher>Università di Pisa</publisher>
+                <address>
+                    <street>Piazza Evangelista Torricelli 2</street>
+                    <postCode>56126</postCode>
+                    <settlement>Pisa</settlement>
+                    <country>Italia</country>
+                </address>
+                <availability status="free">
+                    <p>L'edizione digitale è di dominio pubblico e si può trovare sul</p>
+                    <p><ref target="https://github.com/elemastro/progetto-codifica">sito di Github</ref></p>
+                </availability>
+                <date>settembre 2024</date>
+                <idno type="filename">progetto_peselli_mastroianni.xml</idno>
+            </publicationStmt>
+            <!--qui si può aggiungere <serieStmt> che serve se l'edizione digitale fa parte di una serie-->
+            <notesStmt>
+                <note>Si sono occupati di una prima digitalizzazione dell'intera Rassegna Settimanale il <orgName ref="https://biblioteche.cultura.gov.it/it/comitati-nazionali/visualizza-i-comitati-nazionali/comitato/Comitato-Nazionale-per-le-celebrazioni-del-centenario-della-morte-di-Leopoldo-Franchetti/">Comitato per il Centenario della morte di Leopoldo Franchetti</orgName>, l'<orgName ref="https://www.animi.it/index.html">Associazione nazionale per gli interessi del Mezzogiorno d'Italia</orgName> e l'<orgName ref="https://www.unisob.na.it/">Università degli Studi Suor Orsola Benincasa</orgName></note>
+                <note>Questo lavoro si trova sul sito <ref target="https://rassegnasettimanale.animi.it/#">La Rassegna Settimanale</ref></note>
+            </notesStmt>
+            <sourceDesc><!--obbligatorio-->
+                <listBibl>
+                    <head>Sezioni scelte</head>
+                    <biblStruct>
+                        <analytic xml:id="art1">
+                            <title level="a">Marchesa Colombi: In risaia - Racconto di Natale</title>
+                            <textLang>Italiano</textLang>
+                        </analytic>
+
+                        <analytic xml:id="art2">
+                            <author>
+                                <persName>
+                                    <forename>Renato</forename>
+                                    <surname>Fucini</surname>
+                                </persName>
+                            </author>
+                            <title level="a">Lucia</title>
+                            <textLang>Italiano</textLang>
+                        </analytic>
+
+                        <analytic xml:id="art3">
+                            <author>
+                                <persName>
+                                    <forename>Olindo</forename>
+                                    <surname>Guerrini</surname>
+                                </persName>
+                            </author>
+                            <title level="a">Achillini e Manzoni</title>
+                            <textLang>Italiano</textLang>
+                        </analytic>
+
+                        <analytic xml:id="bibl1">
+                            <title>
+                                <title level="a" type="main">Bibliografia</title>
+                                <title level="a" type="sub">Storia</title>
+                            </title>
+                            <textLang>Italiano</textLang>
+                        </analytic>
+
+                        <analytic xml:id="bibl2">
+                            <title>
+                                <title level="a" type="main">Bibliografia</title>
+                                <title level="a" type="sub">Scienze Filosofiche</title>
+                                <title level="a" type="sub">Scienze Naturali</title>
+                            </title>
+                            <textLang>Italiano</textLang>
+                        </analytic>
+
+                        <analytic xml:id="notizie">
+                            <title level="a" type="main">Notizie(1,2,3)</title>
+                            <textLang>Italiano</textLang>
+                        </analytic>
+
+                        <monogr>
+                            <respStmt>
+                                <resp>fondata da</resp>
+                                <persName>
+                                    <forename>Leopoldo</forename>
+                                    <surname>Franchetti</surname>
+                                </persName>
+                                <persName>
+                                    <forename>Sidney</forename>
+                                    <surname>Sonnino</surname>
+                                </persName>
+                            </respStmt>
+                            <title level="j">
+                                <title type="main">La Rassegna Settimanale</title>
+                                <title type="sub">di politica, scienze, lettere ed arti</title>
+                            </title>
+                            <textLang>Italiano</textLang>
+                            <availability status="free">
+                                <p>Consultazione libera su <ref target="https://rassegnasettimanale.animi.it/"></ref></p>
+                            </availability>
+                            
+                            <!--dubbi se sia giusta la divisione in volumi e fascicoli dentro imprint (tag che serve per le informazioni di pubblicazione e diffusione)-->
+                            <imprint>
+                                <biblScope unit="volume">1</biblScope>
+                                <biblScope unit="issue">5</biblScope>
+                                <biblScope unit="page">75-76-77-81-82-84</biblScope>
+                                <!--<distributor>     non so se è giusto mischiare così edizione originaria e edizione digitale
+                                    <orgName>Comitato per il Centenario della morte di Leopoldo Franchetti</orgName>
+                                    <orgName>Associazione nazionale per gli interessi del Mezzogiorno d’Italia</orgName>
+                                    <orgName>Università degli Studi Suor Orsola Benincasa</orgName>
+                                </distributor>-->
+                                <pubPlace>Firenze</pubPlace>
+                                <publisher>Casa Editrice Barbèra</publisher>
+                                <date when="1878-02-03">3 febbraio 1878</date>
+                            </imprint>
+                            
+                            <imprint>
+                                <biblScope unit="volume">1</biblScope>
+                                <biblScope unit="issue">23</biblScope>
+                                <biblScope unit="page">434-435</biblScope>
+                                <pubPlace>Firenze</pubPlace>
+                                <publisher>Casa Editrice Barbèra</publisher>
+                                <date when="1878-06-09">9 giugno 1878</date>
+                            </imprint>
+                            
+                            <imprint>
+                                <biblScope unit="volume">3</biblScope>
+                                <biblScope unit="issue">59</biblScope>
+                                <biblScope unit="page">130-131-138-139</biblScope>
+                                <pubPlace>Firenze</pubPlace>
+                                <publisher>Casa Editrice Barbèra</publisher>
+                                <date when="1879-02-16">16 febbraio 1879</date>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc><!--secondo figlio di teiheader, informazioni sulla codifica fatta e le scelte fatte-->
+            <appInfo><!--strumenti usati per la realizzazione-->
+                <application version="1.92.2" ident="vscode">
+                    <label>Visual Studio Code</label>
+                    <p>Editor di testo utilizzato per la stesura e la modifica del documento</p>
+                </application>
+                <application version="17.0.12" ident="java">
+                    <label>Java Runtime Environment</label>
+                    <p>Utilizzato per eseguire la validazione XML con xerces</p>
+                </application>
+                <application version="2.12.2" ident="xerces">
+                    <label>Xerces-J</label>
+                    <p>Utilizzato per eseguire la validazione XML con xerces</p>
+                </application>
+            </appInfo>
+            <editorialDecl>
+                <correction status="medium" method="markup">
+                    <p>Tutte le forme ritenute errate sono state riportate dentro il tag <gi>choise</gi> con la stesura originale dentro il tag <gi>sic</gi> e la forma ritenuta corretta dal codificatore nel tag <gi>corr</gi></p>
+                </correction>
+                <hyphenation eol="all">
+                    <p>L'unione o la divisione tramite trattino è stata mantenuta come nella fonte originale</p>
+                </hyphenation>
+                <normalization method="markup">
+                    <p>La normalizzazione delle forme arcaiche o dialettali è stata gestita con il tag <gi>choise</gi> con dentro il tag <gi>orig</gi> per designare il termine ritenuto non standard e <gi>reg</gi>per la forma normalizzata</p>
+                </normalization>
+                <punctuation marks="all" placement="internal">
+                    <p>La punteggiatura è stata resa come nel testo originale</p>
+                </punctuation>
+                <quotation>
+                    <!--commento per deni: mi sembra che l'unica citazione sia quella nel tuo articolo su Manzoni quindi vedi te cosa mettere qua-->
+                </quotation>
+            </editorialDecl>
+            <projectDesc><!--finalità del progetto-->
+                <p>Progetto realizzato per il corso di Codifica di Testi della facoltà di Informatica Umanistica</p>
+            </projectDesc>
+            <samplingDecl><!--descrizione delle motivazioni e metodi per la selezione dei testi-->
+                <p>Sono stati scelti dalla Rassegna Settimanale un articolo, un'entrata bibliografica e due notizie dal volume 1 fascicolo 5, un articolo dal volume 1 fascicolo 23 e un articolo e un'entrata bibliografica dal volume 3 fascicolo 59</p>
+            </samplingDecl>
+            <!--ci sono altri elementi che si possono inserire da prendere in considerazione tipo costruire una tassonomia con classDecl, schemaSpec-->
+        </encodingDesc>
+    </teiHeader>
+
+    <facsimile>
+        <!--articolo 1-->
+        <surface xml:id="pg75" n="1" start="#pb75">
+            <graphic url="Vol1-1878-1-S1-F5-75.png"/>
+        </surface>
+        <surface xml:id="pg76" n="2" start="#pb76">
+            <graphic url="Vol1-1878-1-S1-F5-76.png"/>
+        </surface>
+        <surface xml:id="pg77" n="3" start="#pb77">
+            <graphic url="Vol1-1878-1-S1-F5-77.png"/>
+        </surface>
+
+        <!--articolo 2-->
+        <surface xml:id="pg434" n="4" start="#pb434">
+            <graphic url="Vol1-1878-1-S1-F23-434.png"/>
+        </surface>
+        <surface xml:id="pg435" n="5" start="#pb435">
+            <graphic url="Vol1-1878-1-S1-F23-435.png"/>
+        </surface>
+
+        <!--articolo 3-->
+        <surface xml:id="pg130" n="6" start="#pb130">
+            <graphic url="Vol3-1879-1-S1-F59-130.png"/>
+        </surface>
+        <surface xml:id="pg131" n="7" start="#pb131">
+            <graphic url="Vol3-1879-1-S1-F59-131.png"/>
+        </surface>
+        
+        <!--bibliografia 1: Storia-->
+        <surface xml:id="pg138" n="7" start="#pb138">
+            <graphic url="Vol3-1879-1-S1-F59-138.png"/>
+        </surface>
+        <surface xml:id="pg139" n="8" start="#pb139">
+            <graphic url="Vol3-1879-1-S1-F59-139.png"/>
+        </surface>
+
+        <!--bibliografia 1: Scienze filosofiche e Scienze naturali-->
+        <surface xml:id="pg81" n="9" start="#pb81">
+            <graphic url="Vol1-1878-1-S1-F5-81.png"/>
+        </surface>
+        <surface xml:id="pg82" n="10" start="#pb82">
+            <graphic url="Vol1-1878-1-S1-F5-82.png"/>
+        </surface>
+
+        <!--notizie-->
+        <surface xml:id="pg84" n="11" start="#pb84">
+            <graphic url="Vol1-1878-1-S1-F5-84.png"/>
+        </surface>
+
+    </facsimile>
+    <text>
+        <body>
+            <div type="journal" org="composite">
+                <!--articolo 2-->
+                <div type="article" n="2" xml:lang="it" source="art2">
+                    <pb n="2_1" facs="#pg434" xml:id="pb434"/><!--n="2_1" vuol dire che è la pagina 1 dell'articolo 2, il valore di facs è la pagina sul giornale e l'id è il pb per questa pagina-->
+                    <cb n="2_1_2" xml:id="pg434_c2" corresp="#pb434"/>
+                    <head xml:id="art2_titolo_434" corresp="pg434_c2" facs="titolo_434" rend="align(center) case(allcaps)">
+                        <lb/><persName><surname xml:id="L">Lucia</surname></persName>
+                    </head>
+                    <p xml:id="p_434_1" n="1">
+                        <lb />Con la <rs>sua</rs> voce d’argento chiamò :« <name xml:id="ncap" type="animal">Bianchina</name>, Bian-
+                        <lb />china mia » e rimase attenta ad ascoltare.... Un merlo spau-
+                        <lb />rito, fuggì chioccolando da un cespuglio prossimo alla rupe
+                        <lb />in vetta alla quale stava Lucia chiamando la sua capretta,
+                        <lb />ma la capretta non rispose. «O Dio! chi mi rende la mia
+                        <lb />Bianchina? chi mi rende la Bianchina mia? » e ponendosi
+                    </p>
+
+                    <pb n="2_2" facs="#pg435" xml:id="pb435"/>
+                    <cb n="2_2_1" xml:id="pg435_c1" corresp="#pb435"/>
+                    <p xml:id="p_435">
+                        <lb />afflitta a sedere, con la fronte appoggiata ad una mano,
+                        <lb />tende l’occhio addolorato alle pendici del colle e trista-
+                        <lb />mente s’abbandona ai suoi pensieri.
+                        <lb />Il sole bacia le sue spalle nude e la brezza della sera la
+                        <lb />investe fasciandole i panni alla persona elegante e le as-
+                        <lb />salta briosa la chioma come se volesse rubarle quel fiore
+                        <lb />dei campi che agitato rosseggia fra le sue lucide trecce.
+                        <lb />Come sei bella in mezzo alla primavera, o fresca Lucia!
+                        <lb />e sei sola su la terra, povera Lucia!
+                        <lb />Il padre suo morì di febbre in Maremma; la madre è
+                        <lb />lontana, ha la sua casetta su quelle montagne azzurre
+                        <lb />laggiù in fondo in fondo, ed è vecchia ed inferma.... se a
+                        <lb />quest’ora non è già a riposarsi nel cimitero di fianco alla
+                        <lb />chiesa. E il fratello? Chi sa? Andò soldato; lo mandarono
+                        <lb />di là dal mare; non ha scritto più nulla da due anni.... dove
+                        <lb />sarà?
+                        <lb />Cacciata dal bisogno, dopo aver abbracciato i suoi cari,
+                        <lb />scese dalle montagne natie ed ora, garzona d’un contadino
+                        <lb />delle valli, fila, guarda quei monti lontani e guida le capre
+                        <lb />alla pastura.
+                        <lb />La madre ed il fratello erano così da lei chiamati, ma
+                        <lb />non erano tali. L’avevano allevata e tenuta cara finché
+                        <lb />l’ Ospizio dei Trovatelli passò loro quindici lire al mese;
+                        <lb />dopo, con un tozzo di pane ed un paro di scarpe nuove,
+                        <lb />le insegnarono la strada e serrandole dietro la porta: «Dio
+                        <lb />t’accompagni, bambina mia!» e Lucia scese al piano ed
+                        <lb />ora fila, guida le capre alla pastura e guarda quei monti
+                        <lb />lontani.
+                        <lb />«Se ritorni senza la capra, pover’ a te !» le ha detto
+                        <lb />dianzi Rosalba cacciandola a spintoni fuori della stalla. E
+                        <lb />Lucia lo sa che cosa l’aspetta se la capretta fosse smar-
+                        <lb />rita per sempre; lo sa, e con la fronte appoggiata sopra
+                        <lb />una mano, tende l’ occhio addolorato alle pendici del colle
+                        <lb />e pensa e singhiozza.
+                        <lb />«Se non ritrovo la mia capretta, stasera non mi da-
+                        <lb />ranno da cena e Rosalba mi picchierà come l’altra volta....
+                        <lb />mi fece tanto male al petto! O Dio, Dio!»
+                        <lb />Un ramarro, verde come le foglie del fico salvatico sul
+                        <lb />quale si era arrampicato per cercare gli ultimi raggi del
+                        <lb />sole cadente, vibrando la lingua veloce, la fissava, non vi-
+                        <lb />sto, coi suoi occhi d’ebano, e Lucia singhiozzando pensava:
+                        <lb />«Mi manderanno via.... domani! forse stasera! e non ci
+                        <lb />ho colpa. Le ho munte stamani alle sei, le ho contate e
+                        <lb />c’erano tutte.... Dodici lire! e dove le trovo per dire a Ro-
+                        <lb />salba:— tenete ; la capra è smarrita e queste sono le do-
+                        <lb />dici lire che costava? — Ma non le ho ! Non mi daranno
+                        <lb />da cena; Rosalba mi picchierà e mi chiameranno.... O
+                        <lb />Dio, Dio ! »
+                        <lb />Una folata di vento più forte le portò via il fiore dai
+                        <lb />capelli; si alzò lesta per riprenderlo e il core le fece un
+                        <lb />balzo d’allegrezza al rapido fruscio che sentì tra le foglie
+                        <lb />a pochi passi da lei e credè ritrovata la sua capretta. Il
+                        <lb />ramarro spaventato dal movimento di Lucia, s’era lasciato
+                        <lb />cadere dal ramo del fico salvatico e strisciando come una
+                        <lb />saetta, era corso a refugiarsi nel cavo d’una ceppa di ca-
+                        <lb />stagno.
+                        <lb />Raccolse il fiore e se lo accomodò più forte tra i ca-
+                        <lb />pelli. A Lucia era caro quel fiore come tutti gli altri che
+                        <lb />ogni mattina coglieva per adornarsene il capo e per offrirli
+                        <lb />la sera alla Madonna che pendeva a capo del suo lettic-
+                        <lb />ciuolo. Anche quella sera non sarebbe mancato alla Ver-
+                        <lb />gine l’omaggio di quel povero fiore.
+                        <lb />Lucia guardò il sole, e vedendo il suo disco mezzo tuf-
+                        <lb />fato sotto l’orizzonte lontano, sentì il suo sgomento farsi
+                        <lb />maggiore e disperata chiamò per l’ultima volta: «Bian-
+                        <lb />china, Bianchina mia, teeeh!»
+                        <lb />Un leggiero belato si udì ad un trar di mano da lei;
+                    </p>
+                    <cb n="2_2_2" xml:id="pg435_c2" corresp="#pb435"/>
+                    <p xml:id="p_435_c2">
+                        <lb />un lampo di gioia le balenò nei limpidi occhi celesti e, tra
+                        <lb />le spine, tra i sassi, attraverso ai rovi, ferendosi i piedi
+                        <lb />scalzi e gridando allegramente: «Bianchina, Bianchina
+                        <lb />bella, Bianchina mia» corse, corse affannata verso il ce-
+                        <lb />spuglio dal quale era partito il belato e ficcandosi sma-
+                        <lb />niosa tra i suoi rami fronzuti, sparì fra quelli tutta lieta e
+                        <lb />sorridente.
+                        <lb />Lucia dall’alto della sua rupe, non aveva scorto due
+                        <lb />occhi umani che da un’ora lacrimavano di stanchezza, av-
+                        <lb />ventando faville assetate agli occhi suoi, alle sue spalle, al
+                        <lb />suo colmo seno, e credè messo dalla sua capretta il belato
+                        <lb />che il ruvido Togno scaltramente aveva imitato, ed era
+                        <lb />corsa.... ed era corsa, povera Lucia, lieta e sicura come
+                        <lb />l’usignolo innocente corre gorgheggiando nella bocca del
+                        <lb />rospo che digiuno lo guarda.
+                        <lb />Il vento è cessato; di quel ciuffo di frassini nessuna fo-
+                        <lb />glia si muove e il sole già tramontato, si tira dietro gli
+                        <lb />ultimi lembi del suo manto di luce.
+                        <lb />Appena scesa la notte, la capra tornò belando alla casa
+                        <lb />in cerca delle sue compagne. Tutti le mossero lieti incontro;
+                        <lb />Lucia sola non si mosse nè si rallegrò. Aveva il viso ac-
+                        <lb />ceso, un livido in una gota e i capelli e le vesti in disor-
+                        <lb />dine.... «Se ti senti male, va’ a letto » le disse Rosalba fat-
+                        <lb />tasi cortese dopo il ritorno della capra. E Lucia s’avviò
+                        <lb />stanca alla sua cameretta.... Cercò il fiore per offrirlo alla
+                        <lb />Regina degli Angioli, ma l’aveva perduto! Sentì una stretta
+                        <lb />al core, dette in uno scoppio di pianto e cadde sul suo let-
+                        <lb />ticciuolo dove aspettò il giorno spasimando.
+                        <lb />Togno quella sera non aveva sonno. Aguzzò tutti i pali
+                        <lb />per gli olivi della chiudenda; rifece la traversa all’erpice
+                        <lb />vecchio e fino al tocco dopo la mezzanotte rimase a fre-
+                        <lb />scheggiare su l’aia, cantando a gola spiegata.
+                        <lb />Era uno stellato di paradiso.
+                        <lb />Renato Fucini
+                    </p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div>
+                <listPerson>
+                    <head>Lista persone nel testo:</head>
+                    <person xml:id="pf_L" sex="F">
+                    </person>
+                </listPerson>
+            </div>
+        </back>
+    </text>
+</TEI>
