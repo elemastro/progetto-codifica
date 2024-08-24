@@ -23,8 +23,8 @@ Author: Eleonora Mastroianni -->
                 <edition n="E1">Prima edizione studentesca in un'applicazione web</edition>
                 <respStmt>
                     <resp>progettata e sviluppata da</resp>
-                    <persName>Eleonora Mastroianni</persName>
-                    <persName>Denise Peseli</persName>
+                    <persName xml:id="em">Eleonora Mastroianni</persName>
+                    <persName xml:id="dp">Denise Peseli</persName>
                 </respStmt>
             </editionStmt>
             <!--qui si può aggiungere <extent> che serve per dichiarare la grandezza approssimativa in bytes del lavoro-->
@@ -124,9 +124,6 @@ Author: Eleonora Mastroianni -->
                             
                             <!--dubbi se sia giusta la divisione in volumi e fascicoli dentro imprint (tag che serve per le informazioni di pubblicazione e diffusione)-->
                             <imprint>
-                                <biblScope unit="volume">1</biblScope>
-                                <biblScope unit="issue">5</biblScope>
-                                <biblScope unit="page">75-76-77-81-82-84</biblScope>
                                 <!--<distributor>     non so se è giusto mischiare così edizione originaria e edizione digitale
                                     <orgName>Comitato per il Centenario della morte di Leopoldo Franchetti</orgName>
                                     <orgName>Associazione nazionale per gli interessi del Mezzogiorno d’Italia</orgName>
@@ -135,25 +132,18 @@ Author: Eleonora Mastroianni -->
                                 <pubPlace>Firenze</pubPlace>
                                 <publisher>Casa Editrice Barbèra</publisher>
                                 <date when="1878-02-03">3 febbraio 1878</date>
-                            </imprint>
-                            
-                            <imprint>
-                                <biblScope unit="volume">1</biblScope>
-                                <biblScope unit="issue">23</biblScope>
-                                <biblScope unit="page">434-435</biblScope>
-                                <pubPlace>Firenze</pubPlace>
-                                <publisher>Casa Editrice Barbèra</publisher>
                                 <date when="1878-06-09">9 giugno 1878</date>
-                            </imprint>
-                            
-                            <imprint>
-                                <biblScope unit="volume">3</biblScope>
-                                <biblScope unit="issue">59</biblScope>
-                                <biblScope unit="page">130-131-138-139</biblScope>
-                                <pubPlace>Firenze</pubPlace>
-                                <publisher>Casa Editrice Barbèra</publisher>
                                 <date when="1879-02-16">16 febbraio 1879</date>
                             </imprint>
+                            <biblScope unit="volume" xml:id="vol1f5">1</biblScope>
+                            <biblScope unit="issue" corresp="#vol1f5">5</biblScope>
+                            <biblScope unit="page" corresp="#vol1f5">75-76-77-81-82-84</biblScope>
+                            <biblScope unit="volume" xml:id="vol1f23">1</biblScope>
+                            <biblScope unit="issue" corresp="#vol1f23">23</biblScope>
+                            <biblScope unit="page" corresp="#vol1f23">434-435</biblScope>
+                            <biblScope unit="volume" xml:id="vol3f59">3</biblScope>
+                            <biblScope unit="issue" corresp="#vol3f59">59</biblScope>
+                            <biblScope unit="page" corresp="#vol3f59">130-131-138-139</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -183,7 +173,7 @@ Author: Eleonora Mastroianni -->
                     <p>L'unione o la divisione tramite trattino è stata mantenuta come nella fonte originale</p>
                 </hyphenation>
                 <normalization method="markup">
-                    <p>La normalizzazione delle forme arcaiche o dialettali è stata gestita con il tag <gi>choise</gi> con dentro il tag <gi>orig</gi> per designare il termine ritenuto non standard e <gi>reg</gi>per la forma normalizzata</p>
+                    <p>La normalizzazione delle forme arcaiche o dialettali è stata gestita con il tag <gi>choice</gi> con dentro il tag <gi>orig</gi> per designare il termine ritenuto non standard e <gi>reg</gi>per la forma normalizzata</p>
                 </normalization>
                 <punctuation marks="all" placement="internal">
                     <p>La punteggiatura è stata resa come nel testo originale</p>
@@ -260,15 +250,15 @@ Author: Eleonora Mastroianni -->
                     <pb n="2_1" facs="#pg434" xml:id="pb434"/><!--n="2_1" vuol dire che è la pagina 1 dell'articolo 2, il valore di facs è la pagina sul giornale e l'id è il pb per questa pagina-->
                     <cb n="2_1_2" xml:id="pg434_c2" corresp="#pb434"/>
                     <head xml:id="art2_titolo_434" corresp="pg434_c2" facs="titolo_434" rend="align(center) case(allcaps)">
-                        <lb/><persName><surname xml:id="L">Lucia</surname></persName>
+                        <lb/><persName><forename corresp="#pf_lucia">Lucia</forename></persName>
                     </head>
                     <p xml:id="p_434_1" n="1">
-                        <lb />Con la <rs>sua</rs> voce d’argento chiamò :« <name xml:id="ncap" type="animal">Bianchina</name>, Bian-
-                        <lb />china mia » e rimase attenta ad ascoltare.... Un merlo spau-
+                        <lb />Con la sua voce d’argento chiamò:<said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia"><name xml:id="ncap" type="animal" subtype="capra" ref="https://it.wikipedia.org/wiki/Capra_hircus">Bianchina</name>, <name corresp="#ncap">Bian-
+                        <lb />china</name> mia</said> e rimase attenta ad ascoltare<pc force="inter">....</pc>Un merlo spau-<!--force="inter" vuol dire che il segno di punteggiatura può essere o no un separatore di parole-->
                         <lb />rito, fuggì chioccolando da un cespuglio prossimo alla rupe
-                        <lb />in vetta alla quale stava Lucia chiamando la sua capretta,
-                        <lb />ma la capretta non rispose. «O Dio! chi mi rende la mia
-                        <lb />Bianchina? chi mi rende la Bianchina mia? » e ponendosi
+                        <lb />in vetta alla quale stava <forename>Lucia</forename> chiamando la sua <rs corresp="#ncap">capretta</rs>,
+                        <lb />ma la <rs corresp="#ncap">capretta</rs> non rispose.<said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia">O <forename corresp="#Dio">Dio</forename>! chi mi rende la mia
+                        <lb /><name corresp="#ncap">Bianchina</name>? chi mi rende la <name corresp="#ncap">Bianchina</name> mia?</said> e ponendosi
                     </p>
 
                     <pb n="2_2" facs="#pg435" xml:id="pb435"/>
@@ -277,119 +267,213 @@ Author: Eleonora Mastroianni -->
                         <lb />afflitta a sedere, con la fronte appoggiata ad una mano,
                         <lb />tende l’occhio addolorato alle pendici del colle e trista-
                         <lb />mente s’abbandona ai suoi pensieri.
-                        <lb />Il sole bacia le sue spalle nude e la brezza della sera la
-                        <lb />investe fasciandole i panni alla persona elegante e le as-
+                        <lb />Il sole bacia le sue spalle nude e la brezza della sera <rs corresp="#pf_lucia">la</rs>
+                        <lb />investe fasciandole i panni alla persona elegante e <rs corresp="#pf_lucia">le</rs> as-
                         <lb />salta briosa la chioma come se volesse rubarle quel fiore
                         <lb />dei campi che agitato rosseggia fra le sue lucide trecce.
-                        <lb />Come sei bella in mezzo alla primavera, o fresca Lucia!
-                        <lb />e sei sola su la terra, povera Lucia!
-                        <lb />Il padre suo morì di febbre in Maremma; la madre è
+                        <lb /><q ana="#apostrofe" who="#au_renfuc" toWhom="#pf_lucia">Come sei bella in mezzo alla primavera, o fresca <forename corresp="#pf_lucia">Lucia</forename>!
+                        <lb />e sei sola su la terra, povera <forename corresp="#pf_lucia">Lucia</forename>!</q>
+                    </p>
+                    <p xml:id="p_435_1">
+                        <lb />Il padre suo morì di febbre in <geogName>Maremma</geogName>; la madre è
                         <lb />lontana, ha la sua casetta su quelle montagne azzurre
-                        <lb />laggiù in fondo in fondo, ed è vecchia ed inferma.... se a
+                        <lb />laggiù in fondo in fondo, ed è vecchia ed inferma<pc force="inter">....</pc> se a
                         <lb />quest’ora non è già a riposarsi nel cimitero di fianco alla
-                        <lb />chiesa. E il fratello? Chi sa? Andò soldato; lo mandarono
-                        <lb />di là dal mare; non ha scritto più nulla da due anni.... dove
-                        <lb />sarà?
-                        <lb />Cacciata dal bisogno, dopo aver abbracciato i suoi cari,
-                        <lb />scese dalle montagne natie ed ora, garzona d’un contadino
+                        <lb />chiesa. <q ana="#apostrofe" who="#au_renfuc">E il fratello? Chi sa?<!--<choice resp="#em"><orig>Andò</orig><reg>Partì per fare il</reg></choice>-->soldato; lo mandarono
+                        <lb /><choice resp="#em"><orig>di là dal</orig><reg>oltre</reg></choice> mare; non <!--<choice><orig>ha scritto</orig><reg>scrive</reg></choice>--> più nulla da due anni<pc force="inter">....</pc> dove
+                        <lb />sarà?</q>
+                        <lb />Cacciata dal bisogno, dopo aver abbracciato i <rs corresp="#pf_lucia">suoi</rs> cari,
+                        <lb />scese dalle montagne natie ed ora, <rs corresp="#pf_lucia">garzona</rs> d’un contadino
                         <lb />delle valli, fila, guarda quei monti lontani e guida le capre
                         <lb />alla pastura.
-                        <lb />La madre ed il fratello erano così da lei chiamati, ma
-                        <lb />non erano tali. L’avevano allevata e tenuta cara finché
-                        <lb />l’ Ospizio dei Trovatelli passò loro quindici lire al mese;
-                        <lb />dopo, con un tozzo di pane ed un paro di scarpe nuove,
-                        <lb />le insegnarono la strada e serrandole dietro la porta: «Dio
-                        <lb />t’accompagni, bambina mia!» e Lucia scese al piano ed
+                        <lb />La madre ed il fratello erano così da <rs corresp="#pf_lucia">lei</rs> chiamati, ma
+                        <lb />non erano tali. <rs corresp="#pf_lucia">L</rs>’avevano allevata e tenuta cara finché
+                        <lb />l’<orgName corresp="#osdtr">Ospizio dei Trovatelli</orgName> passò loro <num type="cardinal" value="15">quindici</num> lire al mese;
+                        <lb />dopo, con un tozzo di pane ed un <!--<choice resp="#em"><orig>paro</orig><reg>paio</reg></choice>--> di scarpe nuove,
+                        <lb /><rs corresp="#pf_lucia">le</rs> insegnarono la strada e serrandole dietro la porta: <said aloud="true" direct="true" rend="pre(«) post(»)" toWhom="#pf_lucia"><forename corresp="#Dio">Dio</forename>
+                        <lb /><rs corresp="#pf_lucia">t’</rs>accompagni, bambina mia!</said> e <forename corresp="#pf_lucia">Lucia</forename> scese <!--<choice resp="#em"><orig>al piano</orig><reg>in pianura</reg></choice>--> ed
                         <lb />ora fila, guida le capre alla pastura e guarda quei monti
                         <lb />lontani.
-                        <lb />«Se ritorni senza la capra, pover’ a te !» le ha detto
-                        <lb />dianzi Rosalba cacciandola a spintoni fuori della stalla. E
-                        <lb />Lucia lo sa che cosa l’aspetta se la capretta fosse smar-
+                    </p>
+                    <p xml:id="p_435_2">
+                        <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_rosalba">Se ritorni senza la <rs corresp="#ncap">capra</rs>, <!--<choice><orig>pover’ a</orig><reg>povera</reg></choice>--> <rs corresp="#pf_lucia">te</rs>!</said> le ha detto
+                        <lb /><!--<choice resp="#em"><orig>dianzi</orig><reg>poco prima</reg></choice>--> <forename corresp="#pf_rosalba">Rosalba</forename> cacciandola a spintoni fuori della stalla. E
+                        <lb /><forename corresp="#pf_lucia">Lucia</forename> lo sa che cosa l’aspetta se la <rs corresp="#ncap">capretta</rs> fosse smar-
                         <lb />rita per sempre; lo sa, e con la fronte appoggiata sopra
-                        <lb />una mano, tende l’ occhio addolorato alle pendici del colle
+                        <lb />una mano, tende l’occhio addolorato alle pendici del colle
                         <lb />e pensa e singhiozza.
-                        <lb />«Se non ritrovo la mia capretta, stasera non mi da-
-                        <lb />ranno da cena e Rosalba mi picchierà come l’altra volta....
-                        <lb />mi fece tanto male al petto! O Dio, Dio!»
+                        <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia">Se non ritrovo la mia <rs corresp="#ncap">capretta</rs>, stasera non mi da-
+                        <lb />ranno <!--<choice resp="#em"><orig>da</orig><reg>la</reg></choice>--> cena e <forename corresp="#pf_rosalba">Rosalba</forename> mi picchierà come l’altra volta<pc force="inter">....</pc>
+                        <lb />mi fece tanto male al petto! O <forename corresp="#Dio">Dio</forename>, <forename corresp="#Dio">Dio</forename>!</said>
                         <lb />Un ramarro, verde come le foglie del fico salvatico sul
                         <lb />quale si era arrampicato per cercare gli ultimi raggi del
-                        <lb />sole cadente, vibrando la lingua veloce, la fissava, non vi-
-                        <lb />sto, coi suoi occhi d’ebano, e Lucia singhiozzando pensava:
-                        <lb />«Mi manderanno via.... domani! forse stasera! e non ci
-                        <lb />ho colpa. Le ho munte stamani alle sei, le ho contate e
-                        <lb />c’erano tutte.... Dodici lire! e dove le trovo per dire a Ro-
-                        <lb />salba:— tenete ; la capra è smarrita e queste sono le do-
-                        <lb />dici lire che costava? — Ma non le ho ! Non mi daranno
-                        <lb />da cena; Rosalba mi picchierà e mi chiameranno.... O
-                        <lb />Dio, Dio ! »
-                        <lb />Una folata di vento più forte le portò via il fiore dai
-                        <lb />capelli; si alzò lesta per riprenderlo e il core le fece un
+                        <lb />sole cadente, vibrando la lingua veloce, <rs corresp="#pf_lucia">la</rs> fissava, non vi-
+                        <lb />sto, coi suoi occhi d’ebano, e <forename corresp="#pf_lucia">Lucia</forename> singhiozzando pensava:
+                        <lb /><said aloud="false" direct="true" rend="pre(«) post(»)" who="#pf_lucia">Mi manderanno via<pc force="inter">....</pc> domani! forse stasera! e <!--<choice resp="#em"><orig>non ci ho</orig><reg>non ho</reg></choice>-->
+                        <lb />colpa. Le ho munte stamani alle sei, le ho contate e
+                        <lb />c’erano tutte<pc force="inter">....</pc> <num type="cardinal" value="12">Dodici</num> lire! e dove le trovo per dire a <forename corresp="#pf_rosalba">Ro-
+                        <lb />salba</forename>:<q type="thought" who="#pf_lucia" rend="pre(-) post(-)">tenete; la <rs corresp="#ncap">capra</rs> è smarrita e queste sono le <num type="cardinal" value="12">do-
+                        <lb />dici</num> lire che costava?</q> Ma non le ho! Non mi daranno
+                        <lb /><!--<choice resp="#em"><orig>da</orig><reg>la</reg></choice>--> cena; <forename corresp="#pf_rosalba">Rosalba</forename> mi picchierà e mi chiameranno<pc force="inter">....</pc> O
+                        <lb /><forename corresp="#Dio">Dio</forename>, <forename corresp="#Dio">Dio</forename>!</said>
+                    </p>
+                    <p xml:id="p_435_3">
+                        <lb />Una folata di vento più forte <rs corresp="#pf_lucia">le</rs> portò via il fiore dai
+                        <lb />capelli; si alzò lesta per riprenderlo e il <!--<choice resp="#em"><orig>core</orig><reg>cuore</reg></choice>--> le fece un
                         <lb />balzo d’allegrezza al rapido fruscio che sentì tra le foglie
-                        <lb />a pochi passi da lei e credè ritrovata la sua capretta. Il
-                        <lb />ramarro spaventato dal movimento di Lucia, s’era lasciato
+                        <lb />a pochi passi da lei e credè ritrovata la sua <rs corresp="#ncap">capretta</rs>. Il
+                        <lb />ramarro spaventato dal movimento di <forename corresp="#pf_lucia">Lucia</forename>, s’era lasciato
                         <lb />cadere dal ramo del fico salvatico e strisciando come una
-                        <lb />saetta, era corso a refugiarsi nel cavo d’una ceppa di ca-
+                        <lb />saetta, era corso a <!--<choice resp="#em"><orig>refugiarsi</orig><reg>rifugiarsi</reg></choice>--> nel cavo <!--<choice resp="#em"><orig>d'una ceppa</orig><reg>di un ceppo</reg></choice>--> di ca-
                         <lb />stagno.
                         <lb />Raccolse il fiore e se lo accomodò più forte tra i ca-
-                        <lb />pelli. A Lucia era caro quel fiore come tutti gli altri che
+                        <lb />pelli. A <forename corresp="#pf_lucia">Lucia</forename> era caro quel fiore come tutti gli altri che
                         <lb />ogni mattina coglieva per adornarsene il capo e per offrirli
-                        <lb />la sera alla Madonna che pendeva a capo del suo lettic-
-                        <lb />ciuolo. Anche quella sera non sarebbe mancato alla Ver-
-                        <lb />gine l’omaggio di quel povero fiore.
-                        <lb />Lucia guardò il sole, e vedendo il suo disco mezzo tuf-
+                        <lb />la sera alla <addName corresp="#mad">Madonna</addName> che pendeva a capo del suo <!--<choice resp="#em"><orig>letticciuolo</orig><reg>lettino</reg></choice>-->.
+                        <lb />Anche quella sera non sarebbe mancato alla <addName corresp="#mad">Ver-
+                        <lb />gine</addName> l’omaggio di quel povero fiore.
+                        <lb /><forename corresp="#pf_lucia">Lucia</forename> guardò il sole, e vedendo il suo disco mezzo tuf-
                         <lb />fato sotto l’orizzonte lontano, sentì il suo sgomento farsi
-                        <lb />maggiore e disperata chiamò per l’ultima volta: «Bian-
-                        <lb />china, Bianchina mia, teeeh!»
-                        <lb />Un leggiero belato si udì ad un trar di mano da lei;
+                        <lb />maggiore e disperata chiamò per l’ultima volta:<said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia">Bian-
+                        <lb />china, <name corresp="#ncap">Bianchina</name> mia, teeeh!</said>
+                        <lb />Un <!--<choice resp="#em"><orig>leggiero</orig><reg>leggero</reg></choice>--> belato si udì ad un trar di mano da <rs corresp="#pf_lucia">lei</rs>;
                     </p>
                     <cb n="2_2_2" xml:id="pg435_c2" corresp="#pb435"/>
-                    <p xml:id="p_435_c2">
-                        <lb />un lampo di gioia le balenò nei limpidi occhi celesti e, tra
+                    <p xml:id="p_435_4">
+                        <lb />un lampo di gioia <rs corresp="#pf_lucia">le</rs> balenò nei limpidi occhi celesti e, tra
                         <lb />le spine, tra i sassi, attraverso ai rovi, ferendosi i piedi
-                        <lb />scalzi e gridando allegramente: «Bianchina, Bianchina
-                        <lb />bella, Bianchina mia» corse, corse affannata verso il ce-
+                        <lb />scalzi e gridando allegramente:<said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia"><name corresp="#ncap">Bianchina</name>, <name corresp="#ncap">Bianchina</name>
+                        <lb />bella, <name corresp="#ncap">Bianchina</name> mia</said> corse, corse affannata verso il ce-
                         <lb />spuglio dal quale era partito il belato e ficcandosi sma-
                         <lb />niosa tra i suoi rami fronzuti, sparì fra quelli tutta lieta e
                         <lb />sorridente.
-                        <lb />Lucia dall’alto della sua rupe, non aveva scorto due
+                        <lb /><forename corresp="#pf_lucia">Lucia</forename> dall’alto della sua rupe, non aveva scorto due
                         <lb />occhi umani che da un’ora lacrimavano di stanchezza, av-
                         <lb />ventando faville assetate agli occhi suoi, alle sue spalle, al
-                        <lb />suo colmo seno, e credè messo dalla sua capretta il belato
-                        <lb />che il ruvido Togno scaltramente aveva imitato, ed era
-                        <lb />corsa.... ed era corsa, povera Lucia, lieta e sicura come
+                        <lb />suo colmo seno, e credè messo dalla sua <rs corresp="#ncap">capretta</rs> il belato
+                        <lb />che il ruvido <forename corresp="#pf_togno">Togno</forename> scaltramente aveva imitato, ed era
+                        <lb />corsa<pc force="inter">....</pc> ed era corsa, povera <forename corresp="#pf_lucia">Lucia</forename>, lieta e sicura come
                         <lb />l’usignolo innocente corre gorgheggiando nella bocca del
                         <lb />rospo che digiuno lo guarda.
+                    </p>
+                    <p xml:id="p_435_5">
                         <lb />Il vento è cessato; di quel ciuffo di frassini nessuna fo-
                         <lb />glia si muove e il sole già tramontato, si tira dietro gli
                         <lb />ultimi lembi del suo manto di luce.
-                        <lb />Appena scesa la notte, la capra tornò belando alla casa
-                        <lb />in cerca delle sue compagne. Tutti le mossero lieti incontro;
-                        <lb />Lucia sola non si mosse nè si rallegrò. Aveva il viso ac-
+                        <lb />Appena scesa la notte, la <rs corresp="#ncap">capra</rs> tornò belando alla casa
+                        <lb />in cerca delle sue compagne. Tutti <rs corresp="#ncap">le</rs> mossero lieti incontro;
+                        <lb /><forename corresp="#pf_lucia">Lucia</forename> sola non si mosse nè si rallegrò. Aveva il viso ac-
                         <lb />ceso, un livido in una gota e i capelli e le vesti in disor-
-                        <lb />dine.... «Se ti senti male, va’ a letto » le disse Rosalba fat-
-                        <lb />tasi cortese dopo il ritorno della capra. E Lucia s’avviò
-                        <lb />stanca alla sua cameretta.... Cercò il fiore per offrirlo alla
-                        <lb />Regina degli Angioli, ma l’aveva perduto! Sentì una stretta
-                        <lb />al core, dette in uno scoppio di pianto e cadde sul suo let-
-                        <lb />ticciuolo dove aspettò il giorno spasimando.
-                        <lb />Togno quella sera non aveva sonno. Aguzzò tutti i pali
-                        <lb />per gli olivi della chiudenda; rifece la traversa all’erpice
+                        <lb />dine<pc force="inter">....</pc><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_rosalba">Se ti senti male, va’ a letto</said> le disse <forename corresp="#pf_rosalba">Rosalba</forename> fat-
+                        <lb />tasi cortese dopo il ritorno della <rs corresp="#ncap">capra</rs>. E <forename corresp="#pf_lucia">Lucia</forename> s’avviò
+                        <lb />stanca alla sua cameretta<pc force="inter">....</pc> Cercò il fiore per offrirlo alla
+                        <lb /><addName corresp="#mad">Regina degli <!--<choice resp="#em"><orig>Angioli</orig><reg>Angeli</reg></choice>--></addName>, ma l’aveva perduto! Sentì una stretta
+                        <lb />al <!--<choice resp="#em"><orig>core</orig><reg>cuore</reg></choice>-->, dette in uno scoppio di pianto e cadde sul suo
+                        <lb /><!--<choice resp="#em"><orig>letticciuolo</orig><reg>lettino</reg></choice>--> dove aspettò il giorno spasimando.
+                        <lb /><forename corresp="#pf_togno">Togno</forename> quella sera non aveva sonno. Aguzzò tutti i pali
+                        <lb />per gli olivi della <term>chiudenda</term>; rifece la <term>traversa</term> all’<term>erpice</term>
                         <lb />vecchio e fino al tocco dopo la mezzanotte rimase a fre-
                         <lb />scheggiare su l’aia, cantando a gola spiegata.
                         <lb />Era uno stellato di paradiso.
-                        <lb />Renato Fucini
                     </p>
+                    <closer>
+                        <signed corresp="au_renfuc">
+                            <forename>Renato</forename>
+                            <surname>Fucini</surname>
+                        </signed>
+                    </closer>
                 </div>
             </div>
         </body>
         <back>
             <div>
                 <listPerson>
-                    <head>Lista persone nel testo:</head>
-                    <person xml:id="pf_L" sex="F">
+                    <head>Lista persone o personaggi:</head>
+                    <person xml:id="au_renfuc" sex="M">
+                        <persName>
+                            <forename>Renato</forename>
+                            <surname>Fucini</surname>
+                            <ref target="https://it.wikipedia.org/wiki/Renato_Fucini" />
+                        </persName>
+                        <occupation>È stato un poeta, scrittore e insegnante italiano</occupation>
+                        <birth>
+                            <date when="1843-04-08">8 aprile 1843</date>
+                            <placeName>Monterotondo Marittimo</placeName>
+                            <location>
+                                <region>Toscana</region>
+                                <country>Italia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1921-02-25">25 febbraio 1921</date>
+                            <placeName>Empoli</placeName>
+                            <location>
+                                <region>Toscana</region>
+                                <country>Italia</country>
+                            </location>
+                        </death>
+                    </person>
+                    <person xml:id="pf_lucia" sex="F"><!--pf nell'id sta per personaggio di fantasia-->
+                        <persName>
+                            <forename>Lucia</forename>
+                        </persName>
+                        <note resp="#em">Protagonista dell'omonima novella</note>
+                        <faith ref="https://it.wikipedia.org/wiki/Cristianesimo">cristiana</faith>
+                        <occupation>pastorella</occupation>
+                    </person>
+                    <person xml:id="pf_rosalba" sex="F">
+                        <persName>
+                            <forename>Rosalba</forename>
+                        </persName>
+                        <note resp="#em">Contadina severa che da vitto e alloggio a Lucia in cambio del lavoro da pastorella di quest'ultima</note>
+                    </person>
+                    <person xml:id="pf_togno" sex="M">
+                        <persName>
+                            <forename>Togno</forename>
+                        </persName>
+                        <note resp="#em">Ragazzo che nuoce alla protagonista</note>
+                    </person>
+                    <person xml:id="Dio">
+                        <persName>
+                            <forename>Dio</forename>
+                            <ref target="https://it.wikipedia.org/wiki/Dio_(cristianesimo)" />
+                        </persName>
+                        <note>Divinità unica del Cristianesimo</note>
+                    </person>
+                    <person xml:id="mad">
+                        <persName>
+                            <addName>Beata Vergine</addName>
+                            <forename>Maria</forename>
+                            <ref target="https://it.wikipedia.org/wiki/Maria_(madre_di_Ges%C3%B9)"/>
+                        </persName>
+                        <note>Madre di Gesù, figlio del Dio cristiano</note>
                     </person>
                 </listPerson>
+
+                <listOrg>
+                    <head>Lista delle organizzazioni:</head>
+                    <org xml:id="osdtr">
+                        <orgName>Ospizio dei Trovatelli</orgName>
+                        <note resp="#em">Le rare informazioni geografiche non rendono possibile identificare la struttura precisa.Si ipotizza possa essere <ref target="https://www.turismo.pisa.it/cultura/dettaglio/Ospizio-dei-Trovatelli-00001">l'Ospizio dei Trovatelli di Pisa.</ref></note>
+                    </org>
+                </listOrg>
+
+                <listPlace>
+                    <head>Elenco dei luoghi:</head>
+                    <place xml:id="maremma" type="region">
+                        <geogName>Maremma</geogName>
+                        <location>
+                            <region>Toscana</region>
+                        </location>
+                        <note resp="#em"><ref target="https://it.wikipedia.org/wiki/Maremma" /></note>
+                    </place>
+                </listPlace>
             </div>
         </back>
     </text>
+    <standOff><!--luogo dove stanno le interpretazioni date a certe parti del testo e collegate alle singole interpretazioni con l'attributo @ana-->
+        <interpGrp type="rethoric_fig">
+            <interp xml:id="apostrofe">L'apostrofe è una figura retorica dove il narratore si rivolge direttamente a un personaggio, un oggetto o al lettore</interp>
+        </interpGrp>
+    </standOff>
 </TEI>
