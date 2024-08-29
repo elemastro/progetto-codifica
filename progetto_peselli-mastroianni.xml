@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?> 
 <!-- This document contains data on Codifica di Testi.
 Filename: progetto_peselli-mastroianni.xml
 Author: Eleonora Mastroianni -->
@@ -14,8 +15,8 @@ Author: Eleonora Mastroianni -->
                 </title>
                 <respStmt>
                     <resp>codificata con lo standard TEI P5 da:</resp>
-                    <persName>Eleonora Mastroianni</persName>
-                    <persName>Denise Peselli</persName>
+                    <persName xml:id="em">Eleonora Mastroianni</persName>
+                    <persName xml:id="dp">Denise Peselli</persName>
                 </respStmt>
                 <sponsor>Centro Nazionale di Ricerca</sponsor>
             </titleStmt>
@@ -23,8 +24,8 @@ Author: Eleonora Mastroianni -->
                 <edition n="E1">Prima edizione studentesca in un'applicazione web</edition>
                 <respStmt>
                     <resp>progettata e sviluppata da</resp>
-                    <persName xml:id="em">Eleonora Mastroianni</persName>
-                    <persName xml:id="dp">Denise Peselli</persName>
+                    <persName corresp="#em">Eleonora Mastroianni</persName>
+                    <persName corresp="#dp">Denise Peselli</persName>
                 </respStmt>
             </editionStmt>
             <!--qui si può aggiungere <extent> che serve per dichiarare la grandezza approssimativa in bytes del lavoro-->
@@ -192,10 +193,18 @@ Author: Eleonora Mastroianni -->
     <facsimile>
         <!--articolo 1-->
         <surface xml:id="pg75" n="1" start="#pb75">
-            <graphic url="Vol1-1878-1-S1-F5-75.png"/>
+            <graphic url="Vol1-1878-1-S1-F5-75.png" width='1527.4px' height='2230.4px' corresp="#" />
+            <zone xml:id="titolo_75" ulx="720" uly="719" lrx="1391" lry="754" corresp="#art1_titolo_75" />
+            <zone xml:id="pg_75_p1" ulx="716" uly="757" lrx="1396" lry="1070" start="#p_75_1" />
+            <zone xml:id="pg_75_p2" ulx="715" uly="1076" lrx="1391" lry="1560" start="#p_75_2" />
+            <zone xml:id="pg_75_p3" ulx="716" uly="1562" lrx="1387" lry="2023" start="#p_75_3" />
+            <zone xml:id="pg_75_nota" ulx="722" uly="2039" lrx="1378" lry="2068" corresp="#pie_nota1" />
         </surface>
         <surface xml:id="pg76" n="2" start="#pb76">
-            <graphic url="Vol1-1878-1-S1-F5-76.png"/>
+            <graphic url="Vol1-1878-1-S1-F5-76.png" width='1527.4px' height='2230.4px' />
+            <zone xml:id="pg_76_p1" ulx="138" uly="161" lrx="813" lry="759" start="#p_76_1" />
+            <zone xml:id="pg_76_p2" ulx="142" uly="764" lrx="816" lry="1218" start="#p_76_2" />
+            <zone xml:id="pg_76_p3" ulx="145" uly="1221" lrx="815" lry="1786" start="#p_76_3" />
         </surface>
         <surface xml:id="pg77" n="3" start="#pb77">
             <graphic url="Vol1-1878-1-S1-F5-77.png"/>
@@ -209,7 +218,7 @@ Author: Eleonora Mastroianni -->
         </surface>
 
         <surface xml:id="pg435" n="5" start="#pb435">
-            <graphic url="Vol1-1878-1-S1-F23-435.png"/>
+            <graphic url="Vol1-1878-1-S1-F23-435.png" width='1505.4px' height='2225.4px' />
             <zone xml:id="pg_435_p0" ulx="86" uly="139" lrx="755" lry="395" start="#p_435" />
             <zone xml:id="pg_435_p1" ulx="84" uly="401" lrx="756" lry="944" start="#p_435_1" />
             <zone xml:id="pg_435_p2" ulx="65" uly="945" lrx="755" lry="1521" start="#p_435_2" />
@@ -237,7 +246,7 @@ Author: Eleonora Mastroianni -->
 
         <!--bibliografia 2: Scienze filosofiche e "Scienze naturali"-->
         <surface xml:id="pg81" n="9" start="#pb81">
-            <graphic url="Vol1-1878-1-S1-F5-81.png"/>
+            <graphic url="Vol1-1878-1-S1-F5-81.png" width='1541.4px' height='2221.4px' />
             <zone xml:id="titolo_81" ulx="59" uly="827" lrx="715" lry="860" corresp="#bibl2_titolo_81" />
             <zone xml:id="pg_81_fonte" ulx="58" uly="862" lrx="713" lry="919" corresp="#fonte_2" />
             <zone xml:id="pg_81_p1" ulx="53" uly="922" lrx="711" lry="2064" start="#p_81_1" />
@@ -247,7 +256,7 @@ Author: Eleonora Mastroianni -->
 
         <!--notizie-->
         <surface xml:id="pg84" n="11" start="#pb84">
-            <graphic url="Vol1-1878-1-S1-F5-84.png"/>
+            <graphic url="Vol1-1878-1-S1-F5-84.png" width='1495.4px' height='2210.4px' />
             <zone xml:id="titolo_84" ulx="826" uly="347" lrx="1461" lry="388" corresp="#not_titolo_84" />
             <zone xml:id="pg_84_not1" ulx="805" uly="398" lrx="1469" lry="422" start="#not1" />
             <zone xml:id="pg_84_not2" ulx="795" uly="427" lrx="1473" lry="551" start="#not2" />
@@ -260,12 +269,12 @@ Author: Eleonora Mastroianni -->
             <div type="journal" org="composite">
                 <!--aricolo 1-->
                 <div type="article" n="1" xml:lang="it" source="art1">
-                    <pb n="1_1" facs="#pg75" xml:id="pb75"/>
-                    <cb n="1_1_2" xml:id="pg75_c2" corresp="#pb75"/>
+                    <pb n="1" facs="#pg75" xml:id="pb75"/>
+                    <cb n="2" xml:id="pg75_c2" corresp="#pb75"/>
                     <head xml:id="art1_titolo_75" corresp="pg75_c2" facs="titolo_75" rend="align(center) case(allcaps)">
                         <lb/><persName type="pseudonym"><addName>Marchesa</addName><surname>Colombi</surname></persName>. — <name type="bibl"> In Risaia</name>; Racconto di natale<ref target="#nota1" type="noteAnchor">*</ref>
                     </head>
-                    <p>
+                    <p xml:id="p_75_1" facs="#pg_75_p1">
                         <lb />Siamo in una cascina tra <placeName corresp="#novara">Novara</placeName> e <placeName corresp="#trecate">Trecate</placeName>. <num type="cardinal" value="2">Due</num> fami-
                         <lb />glie di contadini vivono in una medesima casa divisa in due
                         <lb />abitazioni. In una ci sta <persName corresp="#pf_marlov"><forename>Martino</forename> <surname>Lovatelli</surname></persName> con <forename corresp="#pf_madd">Maddalena</forename>
@@ -275,8 +284,10 @@ Author: Eleonora Mastroianni -->
                         <lb />prodigatele nell’infanzia favorirono le sue disposizioni. <said aloud="true" direct="true" rend="pre(”) post(”)" who="#pf_madd">È
                         <lb />tempo di maritarla,</said> diceva la madre, <said aloud="true" direct="true" rend="pre(”) post(”)" who="#pf_madd">ma senza l’argento
                         <lb />una ragazza non può trovar marito.</said>
-                        <lb />L’<term xml:id="arg" rend="italics">argento</term> è quella <gloss target="#arg">corona di spilloni che le contadine
-                        <lb />lombarde si mettono intorno alle <choice><orig>treccie</orig><reg resp="#em">trecce</reg></gloss>.
+                        <lb />L’<term corresp="#arsper" rend="italics">argento</term> è quella <gloss target="#arg">corona di spilloni che le contadine
+                        <lb />lombarde si mettono intorno alle <choice><orig>treccie</orig><reg resp="#em">trecce</reg></choice></gloss>.
+                    </p>
+                    <p xml:id="p_75_2" facs="#pg_75_p2">
                         <lb />In casa non c’erano che <num type="cardinal" value="30">trenta</num> lire e ce ne volevano
                         <lb /><num type="cardinal" value="30">settantadue</num>. <forename corresp="#pf_nanna">Nanna</forename> che aveva una voglia matta d’avere
                         <lb />quella benedetta <rs corresp="#arg">aureola di metallo</rs> propose di andare a
@@ -294,6 +305,8 @@ Author: Eleonora Mastroianni -->
                         <lb />in carne: una bellezza delicata come quella di <forename corresp="#pf_nanna">Nanna</forename> non
                         <lb />faceva per lui. Quella sera che si. fermò in risaia ebbe un
                         <lb />gran successo.
+                    </p>
+                    <p xml:id="p_75_3" facs="#pg_75_p3">
                         <lb />Finita la zappatura, <forename corresp="#pf_nanna">Nanna</forename> invece d’andare a casa
                         <lb />dovè andare allo <choice><orig>spedale</orig><reg resp="#em">ospedale</reg></choice> perchè aveva <choice><orig>le febbri</orig><reg resp="#em">la febbre</reg></choice>. La de-
                         <lb />scrizione di questo viaggio di ritorno è bellissima. Seduta
@@ -311,15 +324,15 @@ Author: Eleonora Mastroianni -->
                         <lb />era assai più grave, ed <rs corresp="#pf_nanna">essa</rs> non era ancora ben guarita!
                         <lb />La mattina una nebbia fitta e l’acqua fino al ginocchio; 
                     </p>
-                    <note xml:id="nota1" type="footnote" rend="pre(*)">
+                    <note xml:id="pie_nota1" type="footnote" rend="pre(*)" facs="#pg_75_nota">
                         <bibl>
                             <pubPlace corresp="#milano">Milano</pubPlace>,
                             <date when="1878">1878</date>
                         </bibl>
                     </note>
-                    <pb n="1_2" facs="#pg76" xml:id="pb76"/>
-                    <cb n="1_2_1" xml:id="pg76_c1" corresp="#pb76"/>
-                    <p>
+                    <pb n="2" facs="#pg76" xml:id="pb76"/>
+                    <cb n="1" xml:id="pg76_c1" corresp="#pb76"/>
+                    <p xml:id="p_76_1" facs="#pg_76_p1">
                         <lb />poi, sparita la nebbia, un sole così cocente che pareva bru-
                         <lb />ciasse; e, a misura che il caldo aumentava, il puzzo dell’ac-
                         <lb />qua si taceva più intollerabile.
@@ -341,6 +354,8 @@ Author: Eleonora Mastroianni -->
                         <lb />per ballar con <forename corresp="#pf_gaud">Gaudenzio</forename>, per mostrarglisi sana e vispa
                         <lb />come le altre. Poverina! a un tratto cadde e non si levò
                         <lb />più. Aveva presa una cefalite.
+                    </p>
+                    <p xml:id="p_76_2" facs="#pg_76_p2">
                         <lb />Una di quelle dottoresse sentenziò che unico rimedio era
                         <lb />la gallina nera. Una superstizione orrenda. Una gallina
                         <lb />squartata dal collo in giù fu applicata sul capo indolenzito
@@ -357,6 +372,8 @@ Author: Eleonora Mastroianni -->
                         <lb />divenne aspra: <rs corresp="#pf_nanna">le</rs> si chiuse il cuore. Odiava tutti i felici
                         <lb />per quella parte di bene che <rs corresp="#pf_nanna">le</rs> pareva a <rs corresp="#pf_nanna">lei</rs> rapito. In
                         <lb />casa ci voleva una pazienza da santi per sopportarla.
+                    </p>
+                    <p xml:id="p_76_3" facs="#pg_76_p3">
                         <lb />Sui <num type="cardinal" value="24">24</num> anni però si fece robusta, <rs corresp="#pf_nanna">le</rs> tornò la freschezza
                         <lb />giovanile, e parve meno stizzosa. I genitori dicevano che
                         <lb />s’era rassegnata; invece <rs corresp="#pf_nanna">le</rs> era tornata la speranza. Ba-
@@ -382,8 +399,8 @@ Author: Eleonora Mastroianni -->
 
                 <!--articolo 2-->
                 <div type="article" n="2" xml:lang="it" source="art2">
-                    <pb n="2_1" facs="#pg434" xml:id="pb434"/><!--n="2_1" vuol dire che è la pagina 1 dell'articolo 2, il valore di facs è la pagina sul giornale e l'id è il pb per questa pagina-->
-                    <cb n="2_1_2" xml:id="pg434_c2" corresp="#pb434"/>
+                    <pb n="1" facs="#pg434" xml:id="pb434"/><!--n="2_1" vuol dire che è la pagina 1 dell'articolo 2, il valore di facs è la pagina sul giornale e l'id è il pb per questa pagina-->
+                    <cb n="2" xml:id="pg434_c2" corresp="#pb434"/>
                     <head xml:id="art2_titolo_434" corresp="pg434_c2" facs="titolo_434" rend="align(center) case(allcaps)">
                         <lb/><persName><forename corresp="#pf_lucia">Lucia</forename></persName>
                     </head>
@@ -396,8 +413,8 @@ Author: Eleonora Mastroianni -->
                         <lb /><name corresp="#ncap">Bianchina</name>? chi mi rende la <name corresp="#ncap">Bianchina</name> mia?</said> e ponendosi
                     </p>
 
-                    <pb n="2_2" facs="#pg435" xml:id="pb435"/>
-                    <cb n="2_2_1" xml:id="pg435_c1" corresp="#pb435"/>
+                    <pb n="2" facs="#pg435" xml:id="pb435"/>
+                    <cb n="1" xml:id="pg435_c1" corresp="#pb435"/>
                     <p xml:id="p_435" facs="#pg_435_p0">
                         <lb />afflitta a sedere, con la fronte appoggiata ad una mano,
                         <lb />tende l’occhio addolorato alle pendici del colle e trista-
@@ -475,7 +492,7 @@ Author: Eleonora Mastroianni -->
                         <lb />china, <name corresp="#ncap">Bianchina</name> mia, teeeh!</said>
                         <lb />Un <choice resp="#em"><orig>leggiero</orig><reg>leggero</reg></choice> belato si udì ad un trar di mano da <rs corresp="#pf_lucia">lei</rs>;
                     </p>
-                    <cb n="2_2_2" xml:id="pg435_c2" corresp="#pb435"/>
+                    <cb n="2" xml:id="pg435_c2" corresp="#pb435"/>
                     <p xml:id="p_435_4" corresp="#pg_435_p4">
                         <lb />un lampo di gioia <rs corresp="#pf_lucia">le</rs> balenò nei limpidi occhi celesti e, tra
                         <lb />le spine, tra i sassi, attraverso ai rovi, ferendosi i piedi
@@ -508,7 +525,7 @@ Author: Eleonora Mastroianni -->
                         <lb />al <choice resp="#em"><orig>core</orig><reg>cuore</reg></choice>, dette in uno scoppio di pianto e cadde sul suo <choice resp="#em"><orig>let-
                         <lb />ticciuolo</orig><reg>lettino</reg></choice> dove aspettò il giorno spasimando.
                         <lb /><forename corresp="#pf_togno">Togno</forename> quella sera non aveva sonno. Aguzzò tutti i pali
-                        <lb />per gli olivi della <term>chiudenda</term>; rifece la <term>traversa</term> all’<term>erpice</term>
+                        <lb />per gli olivi della <term corresp="#chiud">chiudenda</term>; rifece la traversa all’<term corresp="#erp">erpice</term>
                         <lb />vecchio e fino al tocco dopo la mezzanotte rimase a fre-
                         <lb />scheggiare su l’aia, cantando a gola spiegata.
                         <lb />Era uno stellato di paradiso.
@@ -523,13 +540,13 @@ Author: Eleonora Mastroianni -->
 
                 <!--bibliografia 2 Scienze filosofiche-->
                 <div type="article" n="5" xml:lang="it" source="bibl2">
-                    <pb n="2_1" facs="#pg81" xml:id="pb81"/>
-                    <cb n="2_1_1" xml:id="pg81_c1" corresp="#pb81"/>
+                    <pb n="1" facs="#pg81" xml:id="pb81"/>
+                    <cb n="1" xml:id="pg81_c1" corresp="#pb81"/>
                     <head xml:id="bibl2_titolo_81" corresp="pg81_c1" facs="#titolo_81" rend="align(center) case(allcaps)">
                         <lb/>Scienze Filosofiche
                     </head>
                     <ab xml:id="fonte_2" facs="#pg_81_fonte">
-                        <bibl  xml:id="fonte_bibl2">
+                        <bibl xml:id="fonte_bibl2" corresp="#sosanuna">
                             <lb />
                             <author>
                                 <persName corresp="#au_paric">
@@ -550,32 +567,32 @@ Author: Eleonora Mastroianni -->
                         <lb />perchè la <num type="ordinal" value="2">seconda</num> e la <num type="ordinal" value="4">quarta</num> trattano di argomenti così
                         <lb />speciali, che il renderne conto spetta alle riviste scientifiche.
                         <lb />L’<rs corresp="#au_paric">Autore</rs> divide il processo attentivo in <num type="cardinal" value="2">due</num> grandi classi:
-                        <lb />l’<term xml:id="att_est">attenzione <hi rend="italics">esterna</hi></term> e l’<term xml:id="att_int">attenzione <hi rend="italics">interna</hi></term>; <gloss target="#att_est">la <num type="ordinal" value="1">prima</num> è pro-
+                        <lb />l’<term corresp="#attest">attenzione <hi rend="italics">esterna</hi></term> e l’<term corresp="#attint">attenzione <hi rend="italics">interna</hi></term>; <gloss target="#att_est">la <num type="ordinal" value="1">prima</num> è pro-
                         <lb />vocata dalle impressioni esterne</gloss>, <gloss target="#att_int">la <num type="ordinal" value="2">seconda</num> è ingenerata
                         <lb />da stimoli interni</gloss>. A noi pare che nulla sia mutato alla na-
                         <lb />tura del processo attentivo secondo l’origine degli stimoli
                         <lb />che lo mettono in attività, secondo cioè che questi siano
-                        <lb /><gloss target="#sdi">impressioni pervenute al sensorio per la via dei sensi</gloss>, (<term xml:id="sdi">sen-
-                        <lb />sazioni dirette</term>) oppure <gloss target="#sind">rappresentazioni destate da queste
-                        <lb />nell’interno del sensorio medesimo</gloss>, (<term xml:id="sind">sensazioni indirette</term> o
+                        <lb /><gloss target="#ssdi">impressioni pervenute al sensorio per la via dei sensi</gloss>, (<term corresp="#sdi">sen-
+                        <lb />sazioni dirette</term>) oppure <gloss target="#ssind">rappresentazioni destate da queste
+                        <lb />nell’interno del sensorio medesimo</gloss>, (<term corresp="#sind">sensazioni indirette</term> o
                         <lb /><term type="alternative" corresp="#sind">riflesse</term>). Risvegliata dalle une o dalle altre, l’attenzione è
                         <lb />sempre l’attenzione, dimodoché il dividerla in due classi
                         <lb />non sembra sufficentemente giustificato. L’<rs corresp="#au_paric">Autore</rs> distin-
-                        <lb />gue poi in ciascuna delle predette classi due forme di at-
-                        <lb />tenzione, <hi xml:id="att_fis" rend="italics">fisiologica</hi> o <hi rend="italics" corresp="#att_fis">incosciente</hi> l’ una, e <hi xml:id="att_psi" rend="italics">psichica</hi> o <hi rend="italics" corresp="#att_psi">cosciente</hi>
+                        <lb />gue poi in ciascuna delle predette classi due forme di <term corresp="#attinc">at-
+                        <lb />tenzione, <hi rend="italics">fisiologica</hi></term> o <term type="alternative" corresp="#att_inc"><hi rend="italics">incosciente</hi></term> l’ una, e <term corresp="#attpsi"><hi rend="italics">psichica</hi></term> o <term corresp="#attpsi"><hi rend="italics" corresp="#attpsi">cosciente</hi></term>
                         <lb />l’ altra. Egli si occupa specialmente di quest’ultima e non
                         <lb />spiega abbastanza ciò che intenda <choice><orig>colla</orig><reg resp="#em">con la</reg></choice> prima. Una espo-
                         <lb />sizione completa in questo riguardo sarebbe stata tanto
-                        <lb />più necessaria che la stessa espressione di <term rend="italics">attenzione inco-
+                        <lb />più necessaria che la stessa espressione di <term corresp="#attinc" rend="italics">attenzione inco-
                         <lb />sciente</term> è atta a sorprendere chiunque consideri l’attenzione
-                        <lb />come una recrudescenza di coscienza. Le innumerevoli ecci-
+                        <lb />come una recrudescenza di coscienza. <gloss target="att_inc">Le innumerevoli ecci-
                         <lb />tazioni cui è esposto il cervello, provenienti tanto dalla
                         <lb />fonte inesauribile delle impressioni esterne quanto da quella
                         <lb />egualmente inesauribile delle sensazioni interne, non sono
                         <lb />tutte percepite col medesimo grado di consapevolezza; una
                         <lb />grandissima parte di esse passa del tutto inosservata, e
                         <lb />soltanto un numero relativamente piccolo viene chiaramente
-                        <lb />avvertito. Di questo piccolo numero poi solo <hi rend="italics">alcune</hi>, de-
+                        <lb />avvertito</gloss>. Di questo piccolo numero poi solo <hi rend="italics">alcune</hi>, de-
                         <lb />stando, per contrasto o per similitudine, un alto grado di
                         <lb />consapevolezza, prendono il sopravvento sopra le altre, con-
                         <lb />centrano su di sè l’attività psichica, ne invadono prepo-
@@ -585,7 +602,7 @@ Author: Eleonora Mastroianni -->
                         <lb />impressioni destano nell’atto di imporsi alla mente; men-
                         <lb />tre non si suol chiamare attenzione lo stato di indifferenza
                     </p>
-                    <cb n="2_2_1" xml:id="pg81_c2" corresp="#pb81"/>
+                    <cb n="2" xml:id="pg81_c2" corresp="#pb81"/>
                     <p xml:id="p_81_2" facs="#pg_81_p2">
                         <lb />nel quale la grande massa di eccitazioni lasciano il cervello
                         <lb />o la mente. Uno stato <hi rend="italics">in</hi>-conscio od anche <hi rend="italics">sub</hi>-conscio è anzi
@@ -1028,8 +1045,86 @@ Author: Eleonora Mastroianni -->
                         </location>
                     </place>
                 </listPlace>
-                <!--<listBibl>
-                </listBibl>-->
+                <listBibl>
+                    <biblStruct xml:id="sosanuna">
+                        <monogr>
+                            <author>
+                                <persName corresp="#au_paric">
+                                    <roleName>Dottor</roleName>
+                                    <forename><choice><abbr>P.</abbr><expan>Paolo</expan></choice></forename>
+                                    <surname>Riccardi</surname>
+                                </persName>
+                            </author>
+                            <title level="m" rend="italics">Studi ed osservazioni sull'attenzione nell'Uomo e negli Animali</title>
+                           <imprint>
+                                <pubPlace>Modena</pubPlace>
+                                <publisher>Società Tipografica</publisher>
+                                <date when="1877">1877</date>
+                            </imprint>
+                            <biblScope unit="volume" n="1">Fisio-psicologia dell'attenzione</biblScope>
+                            <biblScope unit="volume" n="2">Attenzione negli animali e nell'uomo</biblScope>
+                            <biblScope unit="volume" n="3">Dell'attenzione in rapporto alla educazione intellettuale dell'uomo</biblScope>
+                            <biblScope unit="volume" n="4">L'attenzione negli alienati</biblScope>
+                        </monogr>
+                    </biblStruct>
+                </listBibl>
+                <list type="gloss">
+                    <head>Glossario</head>
+                    <label>
+                        <term xml:id="arsper">Argento</term>
+                    </label>
+                    <item>
+                        <gloss xml:id="arg">Il nome esatto è <term>sperada</term> ed è una corona di spilloni che le contadine lombarde si mettono intorno alle trecce per il matrimonio</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="chiud">Chiudenda</term>
+                    </label>
+                    <item>
+                        <gloss>Riparo a orti o a campi coltivati, fatto di siepi o di pruni.</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="erp">Erpice</term>
+                    </label>
+                    <item>
+                        <gloss>Macchina agricola, che può essere trainata da animali o da trattrici, impiegata dopo l’aratura per spianare e sminuzzare il terreno smosso, e inoltre per interrare semi e concimi, rompere le sottili croste superficiali del terreno, asportare residui vegetali, ecc.; è schematicamente costituita da un telaio, rigido o snodato, che reca denti rigidi o lame flessibili.</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="attest">Attenzione esterna</term>
+                    </label>
+                    <item>
+                        <gloss xml:id="att_est">Secondo gli studi di Paolo Riccardi è provocata dalle impressioni esterne, è quindi rivolta a un contenuto percettivo.</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="attintt">Attenzione interna</term>
+                    </label>
+                    <item>
+                        <gloss xml:id="att_int">Secondo gli studi di Paolo Riccardi è provocata dagli stimoli interni, è quindi rivolta a un contenuto rappresentativo.</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="sdi">Sensazioni dirette</term>
+                    </label>
+                    <item>
+                        <gloss xml:id="ssdi">Impressioni pervenute al sensorio per la via dei sensi.</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="sind">Sensazioni indirette o riflesse</term>
+                    </label>
+                    <item>
+                        <gloss xml:id="ssind">Rappresentazioni destate da sensazioni nell’interno del sensorio medesimo.</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="attinc">Attenzione fisiologica o incosciente</term>
+                    </label>
+                    <item>
+                        <gloss xml:id="att_inc">Le innumerevoli eccitazioni cui è esposto il cervello, provenienti tanto dalla fonte inesauribile delle impressioni esterne quanto da quella egualmente inesauribile delle sensazioni interne, non sono tutte percepite col medesimo grado di consapevolezza; una grandissima parte di esse passa del tutto inosservata, e soltanto un numero relativamente piccolo viene chiaramente avvertito.</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="attpsi">Attenzione psichica o cosciente</term>
+                    </label>
+                    <item>
+                        <gloss xml:id="att_psi">Eccitazioni a cui è esposto il cervello e che elabora in modo conscio.</gloss>
+                    </item>
+                </list>
             </div>
         </back>
     </text>
