@@ -21,7 +21,7 @@ Author: Eleonora Mastroianni -->
                 <sponsor>Centro Nazionale di Ricerca</sponsor>
             </titleStmt>
             <editionStmt><!--opzionale-->
-                <edition n="E1">Prima edizione studentesca in un'applicazione web</edition>
+                <edition n="E1">Prima edizione studentesca in un'applicazione web </edition>
                 <respStmt>
                     <resp>progettata e sviluppata da</resp>
                     <persName corresp="#em">Eleonora Mastroianni</persName>
@@ -42,7 +42,7 @@ Author: Eleonora Mastroianni -->
                     <p><ref target="https://github.com/elemastro/progetto-codifica">sito di Github</ref></p>
                 </availability>
                 <date>settembre 2024</date>
-                <idno type="filename">progetto_peselli_mastroianni.xml</idno>
+                <idno type="filename">progetto_peselli-mastroianni.xml</idno>
             </publicationStmt>
             <!--qui si può aggiungere <serieStmt> che serve se l'edizione digitale fa parte di una serie-->
             <notesStmt>
@@ -53,12 +53,12 @@ Author: Eleonora Mastroianni -->
                 <listBibl>
                     <head>Sezioni scelte</head>
                     <biblStruct>
-                        <analytic xml:id="art1">
+                        <analytic xml:id="art1" corresp="vol1f5">
                             <title level="a">Marchesa Colombi: In risaia - Racconto di Natale</title>
                             <textLang>Italiano</textLang>
                         </analytic>
 
-                        <analytic xml:id="art2">
+                        <analytic xml:id="art2" corresp="vol1f23">
                             <author>
                                 <persName>
                                     <forename>Renato</forename>
@@ -69,7 +69,7 @@ Author: Eleonora Mastroianni -->
                             <textLang>Italiano</textLang>
                         </analytic>
 
-                        <analytic xml:id="art3">
+                        <analytic xml:id="art3" corresp="vol3f59">
                             <author>
                                 <persName>
                                     <forename>Olindo</forename>
@@ -80,7 +80,7 @@ Author: Eleonora Mastroianni -->
                             <textLang>Italiano</textLang>
                         </analytic>
 
-                        <analytic xml:id="bibl1">
+                        <analytic xml:id="bibl1" corresp="vol3f59">
                             <title>
                                 <title level="a" type="main">Bibliografia</title>
                                 <title level="a" type="sub">Storia</title>
@@ -88,7 +88,7 @@ Author: Eleonora Mastroianni -->
                             <textLang>Italiano</textLang>
                         </analytic>
 
-                        <analytic xml:id="bibl2">
+                        <analytic xml:id="bibl2" corresp="vol1f5">
                             <title>
                                 <title level="a" type="main">Bibliografia</title>
                                 <title level="a" type="sub">Scienze Filosofiche</title>
@@ -96,7 +96,7 @@ Author: Eleonora Mastroianni -->
                             <textLang>Italiano</textLang>
                         </analytic>
 
-                        <analytic xml:id="notizie">
+                        <analytic xml:id="notizie" corresp="vol1f5">
                             <title level="a" type="main">Notizie(1,2,3,4)</title>
                             <textLang>Italiano</textLang>
                         </analytic>
@@ -126,21 +126,21 @@ Author: Eleonora Mastroianni -->
                             <imprint>
                                 <pubPlace>Firenze</pubPlace>
                                 <publisher>Casa Editrice Barbèra</publisher>
-                                <date when="1878-02-03">3 febbraio 1878</date>
-                                <date when="1878-06-09">9 giugno 1878</date>
-                                <date when="1879-02-16">16 febbraio 1879</date>
+                                <date when="1878-02-03" corresp="vol1f5">3 febbraio 1878</date>
+                                <date when="1878-06-09" corresp="vol1f23">9 giugno 1878</date>
+                                <date when="1879-02-16" corresp="vol3f59">16 febbraio 1879</date>
                             </imprint>
                             <biblScope unit="volume" xml:id="vol1f5">1</biblScope>
-                            <biblScope unit="issue" corresp="#vol1f5">5</biblScope>
-                            <biblScope unit="page" corresp="#vol1f5">75-76-77-81-82-84</biblScope>
+                            <biblScope unit="issue" corresp="vol1f5">5</biblScope>
+                            <biblScope unit="page" corresp="vol1f5">75-76-77-81-84</biblScope>
 
                             <biblScope unit="volume" xml:id="vol1f23">1</biblScope>
-                            <biblScope unit="issue" corresp="#vol1f23">23</biblScope>
-                            <biblScope unit="page" corresp="#vol1f23">434-435</biblScope>
+                            <biblScope unit="issue" corresp="vol1f23">23</biblScope>
+                            <biblScope unit="page" corresp="vol1f23">434-435</biblScope>
 
                             <biblScope unit="volume" xml:id="vol3f59">3</biblScope>
-                            <biblScope unit="issue" corresp="#vol3f59">59</biblScope>
-                            <biblScope unit="page" corresp="#vol3f59">130-131-138-139</biblScope>
+                            <biblScope unit="issue" corresp="vol3f59">59</biblScope>
+                            <biblScope unit="page" corresp="vol3f59">130-131-138-139</biblScope>
                         </monogr>
                     </biblStruct>
                 </listBibl>
@@ -159,7 +159,7 @@ Author: Eleonora Mastroianni -->
                 </application>
                 <application version="2.12.2" ident="xerces">
                     <label>Xerces-J</label>
-                    <p>Utilizzato per eseguire la validazione XML con xerces</p>
+                    <p>Utilizzato per eseguire la validazione XML</p>
                 </application>
             </appInfo>
             <editorialDecl>
@@ -170,7 +170,7 @@ Author: Eleonora Mastroianni -->
                     <p>L'unione o la divisione tramite trattino è stata mantenuta come nella fonte originale</p>
                 </hyphenation>
                 <normalization method="markup">
-                    <p>La normalizzazione delle forme arcaiche o dialettali è stata gestita con il tag <gi>choice</gi> con dentro il tag <gi>orig</gi> per designare il termine ritenuto non standard e <gi>reg</gi>per la forma normalizzata</p>
+                    <p>La normalizzazione delle forme arcaiche o dialettali è stata gestita con il tag <gi>choice</gi> con dentro il tag <gi>orig</gi> per designare il termine ritenuto non standard e <gi>reg</gi> per la forma normalizzata</p>
                 </normalization>
                 <punctuation marks="all" placement="external">
                     <p>La punteggiatura è stata resa come nel testo originale</p>
@@ -244,7 +244,7 @@ Author: Eleonora Mastroianni -->
             <graphic url="Vol3-1879-1-S1-F59-139.png"/>
         </surface>
 
-        <!--bibliografia 2: Scienze filosofiche e "Scienze naturali"-->
+        <!--bibliografia 2: Scienze filosofiche-->
         <surface xml:id="pg81" n="9" start="#pb81">
             <graphic url="Vol1-1878-1-S1-F5-81.png" width='1541.4px' height='2221.4px' />
             <zone xml:id="titolo_81" ulx="59" uly="827" lrx="715" lry="860" corresp="#bibl2_titolo_81" />
@@ -272,14 +272,14 @@ Author: Eleonora Mastroianni -->
                     <pb n="1" facs="#pg75" xml:id="pb75"/>
                     <cb n="2" xml:id="pg75_c2" corresp="#pb75"/>
                     <head xml:id="art1_titolo_75" corresp="pg75_c2" facs="titolo_75" rend="align(center) case(allcaps)">
-                        <lb/><persName type="pseudonym"><addName>Marchesa</addName><surname>Colombi</surname></persName>. — <name type="bibl"> In Risaia</name>; Racconto di natale<ref target="#nota1" type="noteAnchor">*</ref>
+                        <lb/><persName type="pseudonym" corresp="#marchesa_colombi"><addName>Marchesa</addName> <surname>Colombi</surname></persName>. — <name type="bibl"> In Risaia</name>; Racconto di natale<ref target="#nota1" type="noteAnchor">*</ref>
                     </head>
                     <p xml:id="p_75_1" facs="#pg_75_p1">
                         <lb />Siamo in una cascina tra <placeName corresp="#novara">Novara</placeName> e <placeName corresp="#trecate">Trecate</placeName>. <num type="cardinal" value="2">Due</num> fami-
                         <lb />glie di contadini vivono in una medesima casa divisa in due
-                        <lb />abitazioni. In una ci sta <persName corresp="#pf_marlov"><forename>Martino</forename> <surname>Lovatelli</surname></persName> con <forename corresp="#pf_madd">Maddalena</forename>
-                        <lb />sua moglie e <forename corresp="#pf_nanna">Nanna</forename> e <forename corresp="#pf_pietro">Pietro</forename> loro figliuoli.
-                        <lb /><forename corresp="#pf_nanna">Nanna</forename>, l’eroina del racconto, è giunta ai <num type="cardinal" value="17">diciassett</num>’anni,
+                        <lb />abitazioni. In una ci sta <persName corresp="#pf_marlov"><forename>Martino</forename> <surname>Lovatelli</surname></persName> con <persName corresp="#pf_madd"><forename>Maddalena</forename></persName>
+                        <lb />sua moglie e <persName corresp="#pf_nanna"><forename>Nanna</forename></persName> e <persName  corresp="#pf_pietro"><forename>Pietro</forename></persName> loro figliuoli.
+                        <lb /><persName corresp="#pf_nanna"><forename>Nanna</forename></persName>, l’eroina del racconto, è giunta ai <num type="cardinal" value="17">diciassett</num>’anni,
                         <lb />ed è bellina e gentile. Appassionata per natura, le carezze
                         <lb />prodigatele nell’infanzia favorirono le sue disposizioni. <said aloud="true" direct="true" rend="pre(”) post(”)" who="#pf_madd">È
                         <lb />tempo di maritarla,</said> diceva la madre, <said aloud="true" direct="true" rend="pre(”) post(”)" who="#pf_madd">ma senza l’argento
@@ -289,34 +289,34 @@ Author: Eleonora Mastroianni -->
                     </p>
                     <p xml:id="p_75_2" facs="#pg_75_p2">
                         <lb />In casa non c’erano che <num type="cardinal" value="30">trenta</num> lire e ce ne volevano
-                        <lb /><num type="cardinal" value="30">settantadue</num>. <forename corresp="#pf_nanna">Nanna</forename> che aveva una voglia matta d’avere
+                        <lb /><num type="cardinal" value="30">settantadue</num>. <persName corresp="#pf_nanna"><forename>Nanna</forename></persName> che aveva una voglia matta d’avere
                         <lb />quella benedetta <rs corresp="#arg">aureola di metallo</rs> propose di andare a
                         <lb />zappare il riso in aprile. Ci avrebbe guadagnate le sue
-                        <lb /><num type="cardinal" value="20">20</num> lire; ma poiché non bastavano ancora, <forename corresp="pf_pietro">Pietro</forename> offrì d’ac-
+                        <lb /><num type="cardinal" value="20">20</num> lire; ma poiché non bastavano ancora, <persName corresp="#pf_pietro"><forename>Pietro</forename></persName> offrì d’ac-
                         <lb />compagnarla e di lavorare per lei. Ed eccoci in risaia.
                         <lb />Zappare <num type="cardinal" value="9">nove</num> ore il giorno e mangiar minestra e pane
                         <lb />di grano turco, non è certo una bella vita; ma la sera si
-                        <lb />ballava, e poi <forename corresp="#pf_nanna">Nanna</forename> ebbe la consolazione di veder arrivare
+                        <lb />ballava, e poi <persName corresp="#pf_nanna"><forename>Nanna</forename></persName> ebbe la consolazione di veder arrivare
                         <lb />l’uomo del suo cuore, l’ideale vagheggiato in silenzio. Co-
-                        <lb />stui si chiamava <forename corresp="pf_gaud">Gaudenzio</forename> e faceva il carrettiere: era un
+                        <lb />stui si chiamava <persName corresp="pf_gaud"><forename>Gaudenzio</forename></persName> e faceva il carrettiere: era un
                         <lb /><persName corresp="#pf_dongiov"><addName>don</addName> <forename>Giovanni</forename></persName> da stalla, col cappello sull’ orecchio, il ciuffo
                         <lb />ritto, la cravatta a colori. Tutte le ragazze ne erano in-
                         <lb />namorate. Ma per piacergli bisognava che fossero bene
-                        <lb />in carne: una bellezza delicata come quella di <forename corresp="#pf_nanna">Nanna</forename> non
+                        <lb />in carne: una bellezza delicata come quella di <persName corresp="#pf_nanna"><forename>Nanna</forename></persName> non
                         <lb />faceva per lui. Quella sera che si. fermò in risaia ebbe un
                         <lb />gran successo.
                     </p>
                     <p xml:id="p_75_3" facs="#pg_75_p3">
-                        <lb />Finita la zappatura, <forename corresp="#pf_nanna">Nanna</forename> invece d’andare a casa
+                        <lb />Finita la zappatura, <persName corresp="#pf_nanna"><forename>Nanna</forename></persName> invece d’andare a casa
                         <lb />dovè andare allo <choice><orig>spedale</orig><reg resp="#em">ospedale</reg></choice> perchè aveva <choice><orig>le febbri</orig><reg resp="#em">la febbre</reg></choice>. La de-
                         <lb />scrizione di questo viaggio di ritorno è bellissima. Seduta
                         <lb />sopra un carro di ghiaia, sotto la pioggia, la <rs corresp="#pf_nanna">povera ra-
                         <lb />gazza</rs>, col vaneggiare <choice><orig>delle febbri</orig><reg resp="#em">per la febbre</reg></choice>, si figurava che fosse il
-                        <lb />carro di Gaudenzio e le pareva di stare sopra un letto
+                        <lb />carro di <persName corresp="#pf_gaud"><forename>Gaudenzio</forename></persName> e le pareva di stare sopra un letto
                         <lb />di rose.
                         <lb />Guarita <choice><orig>dalle febbri</orig><reg resp="#em">dalla febbre</reg></choice> venne a casa col suo bravo <hi rend="italics">argento</hi>,
                         <lb />felice, superba. Ma, ahimè, era diventata più magra che
-                        <lb />mai, e il bel <forename corresp="#pf_gaud">Gaudenzio</forename> non aveva che sarcasmi per <rs corresp="#pf_nanna">lei</rs>.
+                        <lb />mai, e il bel <persName corresp="#pf_gaud"><forename>Gaudenzio</forename></persName> non aveva che sarcasmi per <rs corresp="#pf_nanna">lei</rs>.
                         <lb />In certe creature, però, i disprezzi ringagliardiscono l’amore.
                         <lb />Al tempo della mondatura volle tornare in risaia, per-
                         <lb />chè sapeva che <rs corresp="#pf_gaud">lui</rs> ci avrebbe data qualche capatina, e
@@ -325,6 +325,7 @@ Author: Eleonora Mastroianni -->
                         <lb />La mattina una nebbia fitta e l’acqua fino al ginocchio; 
                     </p>
                     <note xml:id="pie_nota1" type="footnote" rend="pre(*)" facs="#pg_75_nota">
+                        <lb />
                         <bibl>
                             <pubPlace corresp="#milano">Milano</pubPlace>,
                             <date when="1878">1878</date>
@@ -344,14 +345,14 @@ Author: Eleonora Mastroianni -->
                         <lb />volle imitarle. Ma come si sentiva debole la sera dopo
                         <lb />aver perso tanto sangue e lavorato a quel modo! Il vitto
                         <lb />era cattivo e insufficente: il sensale che aveva preso l’ap-
-                        <lb />palto dei lavori lo forniva egli stesso, e <forename corresp="#Dio">Dio</forename> sa se ci spe-
+                        <lb />palto dei lavori lo forniva egli stesso, e <persName corresp="#Dio"><forename>Dio</forename></persName> sa se ci spe-
                         <lb />culava sopra!
-                        <lb />Venuta la domenica, <forename corresp="#pf_nanna">Nanna</forename> non ne poteva più; pure,
+                        <lb />Venuta la domenica, <persName corresp="#pf_nanna"><forename>Nanna</forename></persName> non ne poteva più; pure,
                         <lb />invece di riposare, andò a <placeName corresp="#novara">Novara</placeName> colle compagne a ven-
-                        <lb />dere le <choice><orig>mignatte</orig><reg resp="#em">sanguisughe</reg></choice>. Nel tornare trovò il carro di <forename corresp="#pf_gaud">Gaudenzio</forename>
+                        <lb />dere le <choice><orig>mignatte</orig><reg resp="#em">sanguisughe</reg></choice>. Nel tornare trovò il carro di <persName corresp="#pf_gaud"><forename>Gaudenzio</forename></persName>
                         <lb />sull'aia; <rs corresp="#pf_nanna">le</rs> parve di respirar meglio. Il dopo pranzo balla-
-                        <lb />rono. <forename corresp="#pf_nanna">Nanna</forename>, che non si reggeva, fece uno sforzo sovrumano
-                        <lb />per ballar con <forename corresp="#pf_gaud">Gaudenzio</forename>, per mostrarglisi sana e vispa
+                        <lb />rono. <persName corresp="#pf_nanna"><forename>Nanna</forename></persName>, che non si reggeva, fece uno sforzo sovrumano
+                        <lb />per ballar con <persName corresp="#pf_gaud"><forename>Gaudenzio</forename></persName>, per mostrarglisi sana e vispa
                         <lb />come le altre. Poverina! a un tratto cadde e non si levò
                         <lb />più. Aveva presa una cefalite.
                     </p>
@@ -365,7 +366,7 @@ Author: Eleonora Mastroianni -->
                         <lb />simo dell’ agonia.
                         <lb />Tornò allo <choice><orig>spedale</orig><reg resp="#em">ospedale</reg></choice>, e questa volta col tifo. Guarì dopo
                         <lb /><num type="cardinal" value="6">sei</num> mesi, ma rimase senza un capello in capo, vecchia e
-                        <lb />brutta, a <num type="cardinal" value="18">diciott</num>’anni, povera figliuola! E il bel <forename corresp="#pf_gaud">Gaudenzio</forename>
+                        <lb />brutta, a <num type="cardinal" value="18">diciott</num>’anni, povera figliuola! E il bel <persName corresp="#pf_gaud"><forename>Gaudenzio</forename></persName>
                         <lb />rise quando <rs corresp="#pf_nanna">la</rs> vide, e <rs corresp="#pf_nanna">le</rs> disse di piantarsi gli spilloni
                         <lb />d’argento dentro la pelle. Per <rs corresp="#pf_nanna">lei</rs> era come se glieli avesse
                         <lb />piantati in cuore. Questa disgrazia <rs corresp="#pf_nanna">le</rs> fece mutar carattere;
@@ -377,8 +378,8 @@ Author: Eleonora Mastroianni -->
                         <lb />Sui <num type="cardinal" value="24">24</num> anni però si fece robusta, <rs corresp="#pf_nanna">le</rs> tornò la freschezza
                         <lb />giovanile, e parve meno stizzosa. I genitori dicevano che
                         <lb />s’era rassegnata; invece <rs corresp="#pf_nanna">le</rs> era tornata la speranza. Ba-
-                        <lb />date che qui non si tratta d’un amore esclusivo. <forename corresp="#pf_nanna">Nanna</forename>
-                        <lb />amava <forename corresp="#pf_gaud">Gaudenzio</forename> perchè <rs corresp="#pf_nanna">le</rs> pareva il più bello fra tutti i
+                        <lb />date che qui non si tratta d’un amore esclusivo. <persName corresp="#pf_nanna"><forename>Nanna</forename></persName>
+                        <lb />amava <persName corresp="#pf_gaud"><forename>Gaudenzio</forename></persName> perchè <rs corresp="#pf_nanna">le</rs> pareva il più bello fra tutti i
                         <lb />giovani del paese; ma avrebbe amato e sposato volentieri
                         <lb />anche un altro, purché fosse stato egualmente bello e gio-
                         <lb />vane e l’avesse amata. È il bisogno di vivere della crea-
@@ -391,11 +392,122 @@ Author: Eleonora Mastroianni -->
                         <lb />l’aveva consolata un poco. Poi la sposa del suo antico pre-
                         <lb />tendente era più brutta di <rs corresp="#pf_nanna">lei</rs> — altro conforto — e, infine,
                         <lb />morì dando alla luce la prima bambina.
-                        <lb />Il vedovo pensò un’ altra volta a <forename corresp="#pf_nanna">Nanna</forename> e la chiese in
+                        <lb />Il vedovo pensò un’ altra volta a <persName corresp="#pf_nanna"><forename>Nanna</forename></persName> e la chiese in
                         <lb />moglie, ma si lasciò sfuggire che lo faceva perchè avesse
                         <lb />cura della sua figliuoletta, e perchè era <hi rend="italics">matura e punto bella</hi>.
+                        <lb />Questo guastò ogni cosa. Nonostante la sua testa pe-
+                        <lb />lata, <rs corresp="#pf_nanna">la povera ragazza</rs> sognava sempre l’amore delle gio-
+                        <lb />vani e delle belle.
+                    </p>
+                    <p xml:id="p_76_4" facs="#pg_76_p4">
+                        <lb />Intanto anche <persName corresp="#pf_pietro"><forename>Pietro</forename></persName> aveva preso moglie, e <rs corresp="#pf_rosetta">la cognatina</rs>
+                        <lb />era una bella <choice><orig>giovanetta</orig><reg resp="#dp">giovinetta</reg></choice> allegra e robusta. Qui comincia
+                        <lb />per <persName corresp="#pf_nanna"><forename>Nanna</forename></persName> una vita di gelosie e di rancori che l’<rs corresp="#marchesa_colombi">Autore</rs>
+                        <lb />dipinge perfettamente. <persName corresp="#pf_rosetta"><forename>Rosetta</forename></persName>, la sposa di Pietro, aveva
+                        <lb />condotto con sè una <rs corresp="#pf_lucia">sua sorella</rs>, fanciulletta di <num type="cardinal" value="16">16</num> anni,
+                        <lb />che appena visto il bel <persName corresp="#pf_gaud"><forename>Gaudenzio</forename></persName> se ne innamora come le
+                        <lb />altre. Ma a lui piace <persName corresp="#pf_rosetta"><forename>Rosetta</forename></persName>, la <rs corresp="#pf_rosetta">moglie di Pietro</rs>.
+                    </p>
+                    <cb n="2" xml:id="pg76_c2" corresp="#pb76"/>
+                    <p xml:id="p_76_5" facs="#pg_76_p5">
+                        <lb />I pensieri, i discorsi di queste <num type="cardinal" value="3">tre</num> donne e del <rs corresp="#pf_gaud">giova-
+                        <lb />notto</rs>, le veglie nella stalla, gli equivoci che nascono da
+                        <lb />una posizione così singolare, formano la parte meglio riu-
+                        <lb />scita del <rs corresp="#in_risaia">libro</rs>. I contadini della <persName corresp="#marchesa_colombi"><surname>Colombi</surname></persName> sono veri conta-
+                        <lb />dini, ma nello stesso tempo hanno le passioni e le debo-
+                        <lb />lezze universali.
+                        <lb />La catastrofe un po’ cercata per la ragione di quel be-
+                        <lb />nedetto Natale, ci piace meno.
+                        <lb />Un fiore di filigrana, desiderato da tutte e tre le donne,
+                        <lb />diventa l’ inevitabile <choice><orig>regalo di Ceppo</orig><reg resp="#dp">regalo di Natale</reg></choice> e la chiave dello scio-
+                        <lb />glimento. <persName corresp="#pf_pietro"><forename>Pietro</forename></persName> e <persName corresp="#pf_gaud"><forename>Gaudenzio</forename></persName> vogliono regalarlo a <persName corresp="#pf_rosetta"><forename>Rosetta</forename></persName>:
+                        <lb /><persName corresp="#pf_lucia1"><forename>Lucia</forename></persName>, la fanciulletta di <num type="cardinal" value="16">16</num> anni, crede che <persName corresp="pf_gaud"><forename>Gaudenzio</forename></persName> vo-
+                        <lb />glia donarlo a lei. <persName corresp="#pf_pietro"><forename>Pietro</forename></persName> è uomo timido, chiuso in sè, ma
+                        <lb />che ama ardentemente; e <persName corresp="#pf_nanna"><forename>Nanna</forename></persName>, per vendicarsi di <persName corresp="pf_gaud"><forename>Gau-
+                        <lb />denzio</forename></persName>, ha eccitato la sua gelosia. Vorrebbe far cacciar la
+                        <lb /><rs corresp="#pf_rosetta">cognata</rs> che la esaspera colla sua bellezza; ma alla fine si
+                        <lb />accorge che <rs corresp="#pf_pietro">il disgraziato</rs> ama troppo <rs corresp="#pf_rosetta">la moglie</rs>, e, che se
+                        <lb />si credesse tradito, non potrebbe vivere.
+                        <lb />Allora comprende tutto il male che ha fatto, è atterrita,
+                        <lb />si pente, e vuol rimediarvi. Le si affaccia alla memoria
+                        <lb />una scena di sangue di cui s’ era parlato a lungo pochi
+                        <lb />mesi prima. Un marito, geloso del proprio fratello, l’aveva
+                        <lb />ucciso, poi aveva ucciso la moglie : <persName corresp="#pf_pietro"><forename>Pietro</forename></persName> nella sua umiltà
+                        <lb />non avrebbe cercato di punir nessuno; ma si sarebbe ucciso.
+                        <lb />Per fortuna le riesce di riparare a tutto : è il Natale
+                        <lb />che vuole così.
+                        <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_nanna"> Ah grullo !</said> esclama, <said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_nanna">ci sei cascato ! Ora lo so che
+                        <lb />sei geloso ! Dammi qui il fiore che lo metta nello zoccolo
+                        <lb />della <rs corresp="#pf_rosetta">tua donna</rs>, stupido, va’ !</said> 
+                        <lb /><persName corresp="#pf_pietro"><forename>Pietro</forename></persName> porse il fiore esitando. <said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_pietro">Ma l’a ltro ?</said> chiese,
+                        <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_pietro">Hai detto che ce n’ è un altro! </said>
+                        <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_nanna">L’ altro è nello zoccolo di <persName corresp="#pf_lucia1"><forename>Lucia</forename></persName>, ce l’ ha messo <persName corresp="#pf_gaud"><forename>Gau-
+                        <lb />denzio</forename></persName> ch’ è innamorato di <rs corresp="#pf_lucia1">lei</rs> e si confida a <persName corresp="#pf_rosetta"><forename>Rosetta</forename></persName>. E
+                        <lb />anche <rs corresp="#pf_lucia1">la ragazza</rs> è cotta. E anche questo non l’hai capito?
+                        <lb />Che ci hai la <choice><orig>cateratta</orig><reg resp="#dp">cataratta</reg></choice> agli occhi? </said>
+                        <lb /><persName corresp="#pf_pietro"><forename>Pietro</forename></persName> rimane persuaso.
+                        <lb />Tutte le partite s’ accomodano così per il meglio. I due
+                        <lb />sposi s’ amano più di prima: <persName corresp="#pf_rosetta"><forename>Rosetta</forename></persName> è riconoscente alla
+                        <lb /><rs corresp="#pf_nanna">cognata</rs> d’ averla salvata; <persName corresp="#pf_lucia1"><forename>Lucia</forename></persName> sposa <rs corresp="#pf_gaud">il suo idolo</rs>, e que-
+                        <lb />sti si rassegna colla speranza che in un paio d’anni di-
+                        <lb />venga anche lei grassa e florida come <rs corresp="#pf_rosetta>">la sorella</rs>.
+                        <lb />E <persName corresp="#pf_nanna"><forename>Nanna</forename></persName>?
+                        <lb /><persName corresp="#pf_nanna"><forename>Nanna</forename></persName> si ricorda in buon punto del <rs corresp="#pf_pacifico">vedovo</rs>. Era sem-
+                        <lb />pre libero, sempre disposto a sposarla: non era un giova-
+                        <lb />notto, <rs corresp="#pf_nanna">la</rs> sposava perchè era matura e punto bella, ma,
+                        <lb />infine, <rs corresp="#pf_nanna">la</rs> sposava.
+                        <lb />Rientrando a casa quella notte il brav’uomo <rs corresp="#pf_nanna">la</rs> trovò
+                        <lb />presso la culla della bimba. <said aloud="true" direct="true" rend="pre(“) post(”)" who="#pf_nanna">Sto guardando il mio <choice><orig>regalo
+                        <lb />di Ceppo</orig><reg resp="#dp">regalo di Natale</reg></choice>,</said> disse <rs corresp="#pf_nanna">la ragazza</rs> commossa.
+                        <lb /><persName corresp="#pf_pacifico"><forename>Pacifico</forename></persName> fu al colmo della gioia : l’ aveva sempre amata
+                        <lb />malgrado la sua testa pelata: aveva sposato l’altra per
+                        <lb />mantenere una promessa fatta a suo fratello al letto di
+                        <lb />morte : la bambina alla quale aveva dato il nome, era una
+                        <lb />povera orfana.
+                        <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_nanna"> Mi amavate, e avete detto di volermi sposare perchè
+                        <lb />sono matura e punto bella!</said> disse ancora <persName corresp="#pf_nanna"><forename>Nanna</forename></persName>, che non
+                        <lb />poteva levarsi dal cuore quelle parole.
+                        <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_pacifico">È vero, </said> rispose <persName corresp="#pf_pacifico"><forename>Pacifico</forename></persName> senza scomporsi; <said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_pacifico"> ma ve
+                        <lb />ne sono tante di mature e punto belle; eppure non avrei
+                        <lb />mai sposato un’ altra. </said>
+                    </p>
+                    <p xml:id="p_76_6" facs="#pg_76_p6">
+                        <lb />Non si può negare che questo racconto sia pieno di
+                        <lb />vita, e trascini il lettore fino in fondo. È chiaro che la
+                        <lb /><persName corresp="#marchesa_colombi" type="pseudonym"><addName>Marchesa</addName> <surname>Colombi</surname></persName> s’ è ispirata un po’ alla <name  rend="italics" corresp="#nedda" type="bibl">Nedda</name> del <persName corresp="#verga">Verga</persName>;
+                        <lb />non ha però il caldo affetto che l’ <rs corresp="#verga">autore siciliano</rs> trasfonde
+                        <lb />ne’ suoi lettori: non l’indignazione che prorompe dal cuore
+                        <lb />davanti alle sofferenze di tanta povera gente. Il fare sem-
+                        <lb />pre eguale e placido della <persName corresp="#marchesa_colombi"><addName>Marchesa</addName></persName>, rivela una grande
+                    </p>
+                    <pb n="3" facs="#pg77" xml:id="pb77"/>
+                    <cb n="1" xml:id="pg77_c1" corresp="#pb77"/>
+                    <p xml:id="p_77_1" facs="#pg_77_p7">
+                        <lb />acutezza di osservazione e molt’ arte ; ma non ci si sente
+                        <lb />mai il fremito potente di chi, mettendo il dito sopra una
+                        <lb />piaga che sanguina, vorrebbe sanarla a costo della pro-
+                        <lb />pria vita.
+                        <lb />Nè valga il dire che l’ <rs corresp="#marchesa_colombi">autrice</rs> non ha voluto fare de-
+                        <lb />clamazioni ; non ce n’ era alcun bisogno: chi è commosso
+                        <lb />lascia trasparire in tutto la propria commozione, senza
+                        <lb />declamare.
+                        <lb />La preoccupazione di fare un <term rend="italics">racconto di Natale</term>, cioè a
+                        <lb />dire di dargli uno svolgimento convenzionale, le ha fatto
+                        <lb />dimenticare la parte grandiosa e tragica del suo argo-
+                        <lb />mento. A un certo punto, e assai presto, non si assiste
+                        <lb />più ai patimenti dei poveri contadini nelle risaie, ma al
+                        <lb />crepacuore di <rs corresp="#marchesa_colombi">una donna</rs> che ha perduta la sua bellezza e
+                        <lb />non ci si sa rassegnare.
+                        <lb />E un lavoro fine, studiato, e ben fatto: la vanità, le
+                        <lb />gelosie di quelle tre donne, le loro rahbiette, le smargias-
+                        <lb />sate di quel <rs corresp="#pf_gaud">rustico galante</rs>, son cose indovinate. Ma che
+                        <lb />ci ha che fare questo con gli spasimi di una gente che pa-
+                        <lb />tisce e muore in un lavoro da bestie? Che ci ha che fare
+                        <lb />con quel tumulto d’affetti e di pensieri che ci sentiamo nel-
+                        <lb />l’anima alle sole parole <pc force="weak">"</pc>In Risaia?<pc force="weak">"</pc>
                     </p>
                 </div>
+
 
                 <!--articolo 2-->
                 <div type="article" n="2" xml:lang="it" source="art2">
@@ -408,8 +520,8 @@ Author: Eleonora Mastroianni -->
                         <lb />Con la sua voce d’argento chiamò:<said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia"><name xml:id="ncap" type="animal" subtype="capra" ref="https://it.wikipedia.org/wiki/Capra_hircus">Bianchina</name>, <name corresp="#ncap">Bian-
                         <lb />china</name> mia</said> e rimase attenta ad ascoltare<pc force="inter">....</pc>Un merlo spau-<!--force="inter" vuol dire che il segno di punteggiatura può essere o no un separatore di parole-->
                         <lb />rito, fuggì chioccolando da un cespuglio prossimo alla rupe
-                        <lb />in vetta alla quale stava <forename>Lucia</forename> chiamando la sua <rs corresp="#ncap">capretta</rs>,
-                        <lb />ma la <rs corresp="#ncap">capretta</rs> non rispose.<said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia">O <forename corresp="#Dio">Dio</forename>! chi mi rende la mia
+                        <lb />in vetta alla quale stava <persName corresp="#pf_lucia"><forename>Lucia</forename></persName> chiamando la sua <rs corresp="#ncap">capretta</rs>,
+                        <lb />ma la <rs corresp="#ncap">capretta</rs> non rispose.<said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia">O <persName corresp="#Dio"><forename>Dio</forename></persName>! chi mi rende la mia
                         <lb /><name corresp="#ncap">Bianchina</name>? chi mi rende la <name corresp="#ncap">Bianchina</name> mia?</said> e ponendosi
                     </p>
 
@@ -423,11 +535,11 @@ Author: Eleonora Mastroianni -->
                         <lb />investe fasciandole i panni alla persona elegante e <rs corresp="#pf_lucia">le</rs> as-
                         <lb />salta briosa la chioma come se volesse rubarle quel fiore
                         <lb />dei campi che agitato rosseggia fra le sue lucide trecce.
-                        <lb /><q ana="#apostrofe" who="#au_renfuc" toWhom="#pf_lucia">Come sei bella in mezzo alla primavera, o fresca <forename corresp="#pf_lucia">Lucia</forename>!
-                        <lb />e sei sola su la terra, povera <forename corresp="#pf_lucia">Lucia</forename>!</q>
+                        <lb /><q ana="#apostrofe" who="#au_renfuc" toWhom="#pf_lucia">Come sei bella in mezzo alla primavera, o fresca <persName corresp="#pf_lucia"><forename>Lucia</forename></persName>!
+                        <lb />e sei sola su la terra, povera <persName corresp="#pf_lucia"><forename>Lucia</forename></persName>!</q>
                     </p>
                     <p xml:id="p_435_1" facs="#pg_435_p1">
-                        <lb />Il padre suo morì di febbre in <geogName>Maremma</geogName>; la madre è
+                        <lb />Il padre suo morì di febbre in <geogName corresp="#maremma">Maremma</geogName>; la madre è
                         <lb />lontana, ha la sua casetta su quelle montagne azzurre
                         <lb />laggiù in fondo in fondo, ed è vecchia ed inferma<pc force="inter">....</pc> se a
                         <lb />quest’ora non è già a riposarsi nel cimitero di fianco alla
@@ -442,51 +554,51 @@ Author: Eleonora Mastroianni -->
                         <lb />non erano tali. <rs corresp="#pf_lucia">L</rs>’avevano allevata e tenuta cara finché
                         <lb />l’<orgName corresp="#osdtr">Ospizio dei Trovatelli</orgName> passò loro <num type="cardinal" value="15">quindici</num> lire al mese;
                         <lb />dopo, con un tozzo di pane ed un <choice resp="#em"><orig>paro</orig><reg>paio</reg></choice> di scarpe nuove,
-                        <lb /><rs corresp="#pf_lucia">le</rs> insegnarono la strada e serrandole dietro la porta: <said aloud="true" direct="true" rend="pre(«) post(»)" toWhom="#pf_lucia"><forename corresp="#Dio">Dio</forename>
-                        <lb /><rs corresp="#pf_lucia">t’</rs>accompagni, bambina mia!</said> e <forename corresp="#pf_lucia">Lucia</forename> scese <choice resp="#em"><orig>al piano</orig><reg>in pianura</reg></choice> ed
+                        <lb /><rs corresp="#pf_lucia">le</rs> insegnarono la strada e serrandole dietro la porta: <said aloud="true" direct="true" rend="pre(«) post(»)" toWhom="#pf_lucia"><persName corresp="#Dio"><forename>Dio</forename></persName>
+                        <lb /><rs corresp="#pf_lucia">t’</rs>accompagni, bambina mia!</said> e <persName corresp="#pf_lucia"><forename>Lucia</forename></persName> scese <choice resp="#em"><orig>al piano</orig><reg>in pianura</reg></choice> ed
                         <lb />ora fila, guida le capre alla pastura e guarda quei monti
                         <lb />lontani.
                     </p>
                     <p xml:id="p_435_2" facs="#pg_435_p2">
                         <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_rosalba">Se ritorni senza la <rs corresp="#ncap">capra</rs>, <choice><orig>pover’ a</orig><reg>povera</reg></choice> <rs corresp="#pf_lucia">te</rs>!</said> le ha detto
-                        <lb /><choice resp="#em"><orig>dianzi</orig><reg>poco prima</reg></choice> <forename corresp="#pf_rosalba">Rosalba</forename> cacciandola a spintoni fuori della stalla. E
-                        <lb /><forename corresp="#pf_lucia">Lucia</forename> lo sa che cosa l’aspetta se la <rs corresp="#ncap">capretta</rs> fosse smar-
+                        <lb /><choice resp="#em"><orig>dianzi</orig><reg>poco prima</reg></choice> <persName corresp="#pf_rosalba"><forename>Rosalba</forename></persName> cacciandola a spintoni fuori della stalla. E
+                        <lb /><persName corresp="#pf_lucia"><forename>Lucia</forename></persName> lo sa che cosa l’aspetta se la <rs corresp="#ncap">capretta</rs> fosse smar-
                         <lb />rita per sempre; lo sa, e con la fronte appoggiata sopra
                         <lb />una mano, tende l’occhio addolorato alle pendici del colle
                         <lb />e pensa e singhiozza.
                         <lb /><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia">Se non ritrovo la mia <rs corresp="#ncap">capretta</rs>, stasera non mi da-
-                        <lb />ranno <choice resp="#em"><orig>da</orig><reg>la</reg></choice> cena e <forename corresp="#pf_rosalba">Rosalba</forename> mi picchierà come l’altra volta<pc force="inter">....</pc>
-                        <lb />mi fece tanto male al petto! O <forename corresp="#Dio">Dio</forename>, <forename corresp="#Dio">Dio</forename>!</said>
+                        <lb />ranno <choice resp="#em"><orig>da</orig><reg>la</reg></choice> cena e <persName corresp="#pf_rosalba"><forename>Rosalba</forename></persName> mi picchierà come l’altra volta<pc force="inter">....</pc>
+                        <lb />mi fece tanto male al petto! O <persName corresp="#Dio"><forename>Dio</forename></persName>, <persName corresp="#Dio"><forename>Dio</forename></persName>!</said>
                         <lb />Un ramarro, verde come le foglie del fico salvatico sul
                         <lb />quale si era arrampicato per cercare gli ultimi raggi del
                         <lb />sole cadente, vibrando la lingua veloce, <rs corresp="#pf_lucia">la</rs> fissava, non vi-
-                        <lb />sto, coi suoi occhi d’ebano, e <forename corresp="#pf_lucia">Lucia</forename> singhiozzando pensava:
+                        <lb />sto, coi suoi occhi d’ebano, e <persName corresp="#pf_lucia"><forename>Lucia</forename></persName> singhiozzando pensava:
                         <lb /><said aloud="false" direct="true" rend="pre(«) post(»)" who="#pf_lucia">Mi manderanno via<pc force="inter">....</pc> domani! forse stasera! e <choice resp="#em"><orig>non ci 
                         <lb />ho</orig><reg>non ho</reg></choice>
                         <lb />colpa. Le ho munte stamani alle sei, le ho contate e
-                        <lb />c’erano tutte<pc force="inter">....</pc> <num type="cardinal" value="12">Dodici</num> lire! e dove le trovo per dire a <forename corresp="#pf_rosalba">Ro-
-                        <lb />salba</forename>:<q type="thought" who="#pf_lucia" rend="pre(-) post(-)">tenete; la <rs corresp="#ncap">capra</rs> è smarrita e queste sono le <num type="cardinal" value="12">do-
+                        <lb />c’erano tutte<pc force="inter">....</pc> <num type="cardinal" value="12">Dodici</num> lire! e dove le trovo per dire a <persName corresp="#pf_rosalba"><forename>Ro-
+                        <lb />salba</forename></persName>:<q type="thought" who="#pf_lucia" rend="pre(-) post(-)">tenete; la <rs corresp="#ncap">capra</rs> è smarrita e queste sono le <num type="cardinal" value="12">do-
                         <lb />dici</num> lire che costava?</q> Ma non le ho! Non mi daranno
-                        <lb /><choice resp="#em"><orig>da</orig><reg>la</reg></choice> cena; <forename corresp="#pf_rosalba">Rosalba</forename> mi picchierà e mi chiameranno<pc force="inter">....</pc> O
-                        <lb /><forename corresp="#Dio">Dio</forename>, <forename corresp="#Dio">Dio</forename>!</said>
+                        <lb /><choice resp="#em"><orig>da</orig><reg>la</reg></choice> cena; <persName corresp="#pf_rosalba"><forename>Rosalba</forename></persName> mi picchierà e mi chiameranno<pc force="inter">....</pc> O
+                        <lb /><persName corresp="#Dio"><forename>Dio</forename></persName>, <persName corresp="#Dio"><forename>Dio</forename></persName>!</said>
                     </p>
                     <p xml:id="p_435_3" facs="#pg_435_p3">
                         <lb />Una folata di vento più forte <rs corresp="#pf_lucia">le</rs> portò via il fiore dai
                         <lb />capelli; si alzò lesta per riprenderlo e il <choice resp="#em"><orig>core</orig><reg>cuore</reg></choice> le fece un
                         <lb />balzo d’allegrezza al rapido fruscio che sentì tra le foglie
                         <lb />a pochi passi da lei e credè ritrovata la sua <rs corresp="#ncap">capretta</rs>. Il
-                        <lb />ramarro spaventato dal movimento di <forename corresp="#pf_lucia">Lucia</forename>, s’era lasciato
+                        <lb />ramarro spaventato dal movimento di <persName corresp="#pf_lucia"><forename>Lucia</forename></persName>, s’era lasciato
                         <lb />cadere dal ramo del fico salvatico e strisciando come una
                         <lb />saetta, era corso a <choice resp="#em"><orig>refugiarsi</orig><reg>rifugiarsi</reg></choice> nel cavo <choice resp="#em"><orig>d'una ceppa</orig><reg>di un ceppo</reg></choice> di ca-
                         <lb />stagno.
                         <lb />Raccolse il fiore e se lo accomodò più forte tra i ca-
-                        <lb />pelli. A <forename corresp="#pf_lucia">Lucia</forename> era caro quel fiore come tutti gli altri che
+                        <lb />pelli. A <persName corresp="#pf_lucia"><forename>Lucia</forename></persName> era caro quel fiore come tutti gli altri che
                         <lb />ogni mattina coglieva per adornarsene il capo e per offrirli
-                        <lb />la sera alla <addName corresp="#mad">Madonna</addName> che pendeva a capo del suo <choice resp="#em"><orig>lettic-
+                        <lb />la sera alla <persName corresp="#mad"><addName>Madonna</addName></persName> che pendeva a capo del suo <choice resp="#em"><orig>lettic-
                         <lb />ciuolo</orig><reg>lettino</reg></choice>.
-                        <lb />Anche quella sera non sarebbe mancato alla <addName corresp="#mad">Ver-
-                        <lb />gine</addName> l’omaggio di quel povero fiore.
-                        <lb /><forename corresp="#pf_lucia">Lucia</forename> guardò il sole, e vedendo il suo disco mezzo tuf-
+                        <lb />Anche quella sera non sarebbe mancato alla <persName corresp="#mad"><addName>Ver-
+                        <lb />gine</addName></persName> l’omaggio di quel povero fiore.
+                        <lb /><persName corresp="#pf_lucia"><forename>Lucia</forename></persName> guardò il sole, e vedendo il suo disco mezzo tuf-
                         <lb />fato sotto l’orizzonte lontano, sentì il suo sgomento farsi
                         <lb />maggiore e disperata chiamò per l’ultima volta:<said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_lucia">Bian-
                         <lb />china, <name corresp="#ncap">Bianchina</name> mia, teeeh!</said>
@@ -501,12 +613,12 @@ Author: Eleonora Mastroianni -->
                         <lb />spuglio dal quale era partito il belato e ficcandosi sma-
                         <lb />niosa tra i suoi rami fronzuti, sparì fra quelli tutta lieta e
                         <lb />sorridente.
-                        <lb /><forename corresp="#pf_lucia">Lucia</forename> dall’alto della sua rupe, non aveva scorto due
+                        <lb /><persName corresp="#pf_lucia"><forename>Lucia</forename></persName> dall’alto della sua rupe, non aveva scorto due
                         <lb />occhi umani che da un’ora lacrimavano di stanchezza, av-
                         <lb />ventando faville assetate agli occhi suoi, alle sue spalle, al
                         <lb />suo colmo seno, e credè messo dalla sua <rs corresp="#ncap">capretta</rs> il belato
-                        <lb />che il ruvido <forename corresp="#pf_togno">Togno</forename> scaltramente aveva imitato, ed era
-                        <lb />corsa<pc force="inter">....</pc> ed era corsa, povera <forename corresp="#pf_lucia">Lucia</forename>, lieta e sicura come
+                        <lb />che il ruvido <persName corresp="#pf_togno"><forename>Togno</forename></persName> scaltramente aveva imitato, ed era
+                        <lb />corsa<pc force="inter">....</pc> ed era corsa, povera <persName corresp="#pf_lucia"><forename>Lucia</forename></persName>, lieta e sicura come
                         <lb />l’usignolo innocente corre gorgheggiando nella bocca del
                         <lb />rospo che digiuno lo guarda.
                     </p>
@@ -516,27 +628,186 @@ Author: Eleonora Mastroianni -->
                         <lb />ultimi lembi del suo manto di luce.
                         <lb />Appena scesa la notte, la <rs corresp="#ncap">capra</rs> tornò belando alla casa
                         <lb />in cerca delle sue compagne. Tutti <rs corresp="#ncap">le</rs> mossero lieti incontro;
-                        <lb /><forename corresp="#pf_lucia">Lucia</forename> sola non si mosse nè si rallegrò. Aveva il viso ac-
+                        <lb /><persName corresp="#pf_lucia"><forename>Lucia</forename></persName> sola non si mosse nè si rallegrò. Aveva il viso ac-
                         <lb />ceso, un livido in una gota e i capelli e le vesti in disor-
-                        <lb />dine<pc force="inter">....</pc><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_rosalba">Se ti senti male, va’ a letto</said> le disse <forename corresp="#pf_rosalba">Rosalba</forename> fat-
-                        <lb />tasi cortese dopo il ritorno della <rs corresp="#ncap">capra</rs>. E <forename corresp="#pf_lucia">Lucia</forename> s’avviò
+                        <lb />dine<pc force="inter">....</pc><said aloud="true" direct="true" rend="pre(«) post(»)" who="#pf_rosalba">Se ti senti male, va’ a letto</said> le disse <persName corresp="#pf_rosalba"><forename>Rosalba</forename></persName> fat-
+                        <lb />tasi cortese dopo il ritorno della <rs corresp="#ncap">capra</rs>. E <persName corresp="#pf_lucia"><forename>Lucia</forename></persName> s’avviò
                         <lb />stanca alla sua cameretta<pc force="inter">....</pc> Cercò il fiore per offrirlo alla
-                        <lb /><addName corresp="#mad">Regina degli <choice resp="#em"><orig>Angioli</orig><reg>Angeli</reg></choice></addName>, ma l’aveva perduto! Sentì una stretta
+                        <lb /><persName corresp="#mad"><addName>Regina degli <choice resp="#em"><orig>Angioli</orig><reg>Angeli</reg></choice></addName></persName>, ma l’aveva perduto! Sentì una stretta
                         <lb />al <choice resp="#em"><orig>core</orig><reg>cuore</reg></choice>, dette in uno scoppio di pianto e cadde sul suo <choice resp="#em"><orig>let-
                         <lb />ticciuolo</orig><reg>lettino</reg></choice> dove aspettò il giorno spasimando.
-                        <lb /><forename corresp="#pf_togno">Togno</forename> quella sera non aveva sonno. Aguzzò tutti i pali
+                        <lb /><persName corresp="#pf_togno"><forename>Togno</forename></persName> quella sera non aveva sonno. Aguzzò tutti i pali
                         <lb />per gli olivi della <term corresp="#chiud">chiudenda</term>; rifece la traversa all’<term corresp="#erp">erpice</term>
                         <lb />vecchio e fino al tocco dopo la mezzanotte rimase a fre-
                         <lb />scheggiare su l’aia, cantando a gola spiegata.
                         <lb />Era uno stellato di paradiso.
                     </p>
                     <closer xml:id="firma_2">
-                        <signed corresp="au_renfuc">
-                            <forename>Renato</forename>
-                            <surname>Fucini</surname>
+                        <signed>
+                            <persName corresp="au_renfuc">
+                                <forename>Renato</forename>
+                                <surname>Fucini</surname>
+                            </persName>
                         </signed>
                     </closer>
                 </div>
+
+                <div type="article" n="5" xml:lang="it" source="bibl1">
+                    <pb n="1" facs="#pg138" xml:id="pb138"/>
+                    <cb n="1" xml:id="pg138_c1" corresp="#pb138"/>
+                    <head xml:id="bibl3_titolo_138" corresp="pg138_c1" facs="#titolo_138" rend="align(center) case(allcaps)">
+                        <lb/>Storia
+                    </head>
+                    <ab xml:id="fonte_3" facs="#pg_138_fonte">
+                        <bibl xml:id="fonte_bibl3" corresp="#savoia">
+                            <lb />
+                            <author>
+                                <persName corresp="#croset_mouchet">
+                                    <forename>Giuseppe</forename>
+                                    <surname type="complex">Croset<pc force="weak">-</pc>Mouchet</surname>
+                                </persName>
+                            </author>
+                            <title level="m" rend="italics">Vita dell’infanta Maria Francesca
+                             <lb />Apollonia, principessa di Savoia. </title>
+                            <pubPlace>Torino</pubPlace>
+                            <publisher>Unione tipo-
+                            <lb />grafico<pc force="weak">-</pc>editrice</publisher>
+                            <date when="1878">1878</date>
+                        </bibl>
+                    </ab>
+                    <p xml:id="p_138_1" facs="#pg_138_p1">
+                        <lb />Quest’opera postuma del <persName corresp="#croset_mouchet"><addName type="role">canonico</addName> Croset-Mouchet</persName>, che
+                        <lb />fu membro effettivo della <orgName corresp="#reg_dep">regia deputazione di storia patria
+                        <lb />torinese</orgName>, pubblicata per cura di un nipote di <rs corresp="#croset_mouchet">lui</rs>, è <rs corresp="#savoia">libro</rs> di
+                        <lb />forma e di sostanza ascetiche, ma è <choice><orig>pur anco</orig><reg resp="#dp">anche</reg></choice> libro di storia.
+                        <lb />Quindi la critica non deve lasciarlo passare senza segna-
+                        <lb />larne l’esistenza agli studiosi, poiché per la storia, la quale
+                        <lb />ha sempre <hi rend="italics">più sete di pria</hi>, tutte le fonti son buone, non
+                        <lb />escluse quelle di acqua benedetta. E la fonte cui il buon
+                        <lb />canonico attinse, è l’epistolario della principessa <hi rend="italics">gelosamente
+                        <lb />custodito itegli <orgName corresp="#archivi_torino">Archivi di Corte a <placeName corresp="#torino">Torino</placeName></orgName></hi>. In quelle lettere,
+                        <lb />l’<persName corresp="#maria_sav"><addName>infanta</addName><forename type="first">Maria</forename><pc force="weak">-</pc><forename type="second">Apollonia</forename><surname>di Savoia</surname></persName>, <hi rend="italics">morta a <placeName corresp="#roma">Roma</placeName> in odore
+                        <lb />di santità il <date when="1656-07-14">14 luglio 1656</date></hi>, si rivela davvero <hi rend="italics">specchio di
+                        <lb />virtù, e di straordinaria pietà, ma insieme carattere di tempra
+                        <lb />forte e virile non che di senno rarissimo nel maneggio degli
+                        <lb />affari di Stato</hi>.
+                        <lb />Il <persName corresp="#carutti"><surname>Carutti</surname></persName> nella sua <bibl corresp="#storia_car">Storia della diplomazia della Casa di
+                        <lb />Savoia</bibl> (vol. <num type="cardinal" value="2">2</num>, p. <num type="cardinal" value="244">244</num>) dice che nel <date when="1624">1624</date> si parlò del matri-
+                        <lb />monio di una <persName><addName type="role">principessa</addName> di Savoia</persName> col <persName><addName type="role">Re</addName> di' <placeName><country>Danimarca</country></placeName></persName>
+                        <lb />per cementare la grande confederazione contro l’<placeName><country>Austria</country></placeName>,
+                        <lb />ed aggiunge in nota: <quote rend="pre(«) post(»)" source="#storia_car"> Le <persName corresp="#maria_sav"><addName type="role">principesse</addName> <forename>Maria</forename></persName> e <persName corresp="#cat_sav"><forename>Cristina</forename></persName>
+                        <lb />(deve dir <hi rend="italics"><persName corresp="#cat_sav"><forename>Caterina</forename></persName></hi>) erano sempre nubili ; farebbe un curioso
+                        <lb />libro chi dei divisati, degli effettuati e non effettuati matri-
+                        <lb />moni delle <num type="cardinal" value="4">quattro</num> figliuole di <persName corresp="#carlo_emanuele">Carlo Emanuele <genName>I</genName></persName> scrivesse
+                    <cb n="2" xml:id="pg138_c2" corresp="#pb138"/>
+                        <lb />una narrazione aneddotica. <persName corresp="#maria_sav"><forename>Maria</forename></persName> e <persName corresp="#cat_sav"><forename>Cristina</forename></persName> (<persName corresp="#cat_sav"><forename>Caterina</forename></persName>) non
+                        <lb />andarono a marito e si monacarono.</quote>
+                    </p>
+                    <p xml:id="p_138_2" facs="#pg_138_p2">
+                        <lb />Questa narrazione matrimoniale cercherebbesi invano
+                        <lb />nel libro del canonico <persName corresp="#croset_mouchet">Croset-Mouchet</persName>, il quale, trattando del-
+                        <lb />l’<persName corresp="#maria_sav"><addName>infanta</addName> <forename>Maria</forename></persName>, parla pure della sorella <persName corresp="#cat_sav"><forename>Caterina</forename></persName> che le fu
+                        <lb />fida compagna in tutto fino a che non la colse la morte,
+                        <lb />avvenuta a <placeName corresp="#biella">Biella</placeName> nel <date when="1640-10-20">20 ottobre 1640</date> secondo il nostro
+                        <lb />autore, e nel <date when="1641-11-20">20 novembre 1641</date> secondo il <persName corresp="#cibrario">Cibrario</persName>; <ref target="#nota_cib" type="noteAnchor">*</ref> di-
+                        <lb />versità di data che non trova spiegazione alcuna nel libro
+                        <lb />del <persName corresp="#croset_mouchet">Croset-Mouchet</persName>. Ma quanto ai matrimoni progettati per
+                        <lb />le <num type="cardinal" value="2">due</num> Infante, egli va molto per le spicce fermandosi sol-
+                        <lb />tanto, e troppo a lungo, sul connubio da esse celebrato col
+                        <lb />loro <rs corresp="#Dio">sposo celeste</rs> nella <placeName>chiesa di S. Giovanni di <placeName corresp="#torino">Torino</placeName></placeName>
+                        <lb />il <date when="1629-10-04">4 ottobre 1629</date> quando fecero la professione religiosa di
+                        <lb />monache terziarie di S. Francesco.
+                        <lb />Lasciamo da parte la <persName corresp="#cat_sav"><addName>principessa</addName> <forename>Caterina</forename></persName>, figura molto
+                        <lb />sbiadita che forse fu trascinata al gran passo dall’esempio
+                        <lb />della <rs corresp="#maria_sav">sorella maggiore</rs>. Ma il fatto dell’<persName corresp="#maria_sav"><addName>infanta</addName> <forename type="first">Maria</forename> <forename type="middle">Apol-
+                        <lb />lonia</forename></persName> che a <num type="cardinal" value="35">trentacinque anni</num>, bella tuttavia di quella sua
+                        <lb />avvenenza tanto vantata dal biografo, piena di vita, di forza
+                        <lb />e di spirito, pone una barriera insuperabile fra la propria
+                        <lb />vita e quella della famiglia sovrana cui appartiene, non ci
+                        <lb />sembra Così liscio da potersi spiegare, come fa l’autore, sol-
+                        <lb />tanto con le aspirazioni mistiche dalle quali erasi lasciata
+                        <lb />prendere. Nò vediamo che il <persName corresp="#croset_mouchet"><addName type="role">canonico</addName> Croset-Mouchet</persName> sia
+                        <lb />compiutamente chiaro ed esplicito su questo punto. Di-
+                        <lb />fatti, dopo avere accompagnato l’Infanta al voto solenne,
+                        <lb />torna un passo indietro e, cominciando a raccontare fatti
+                        <lb />successi precedentemente, genera confusione; tanto più che
+                        <lb />fra quei fatti ve ne sono alcuni che forse spargono un po’
+                        <lb />di luce sulla gravissima risoluzione della <rs corresp="#maria_sav">Principessa</rs>, come,
+                        <lb />per esempio, le delicate gare d’etichetta e di altro con la
+                        <lb />cognata <persName corresp="#maria_borb"><forename>Maria</forename><surname>di Borbone</surname></persName>, figliuola di <persName corresp="#carlo_sois"><forename>Carlo</forename> <addName type="role">conte</addName> di <placeName>Sois-
+                        <lb />sons</placeName></persName>, e venuta sposa fino dal <date when="1624-10-10">10 ottobre 1624</date> al ben noto
+                        <lb /><persName corresp="#tommaso_sav"><addName type="role">principe</addName> <forename>Tommaso</forename></persName> fratello dell’<rs corresp="#maria_sav">Infanta</rs> che fu lo stipite del
+                        <lb />ramo di <surname type="complex">Savoia<pc force="weak">-</pc>Carignano</surname>.
+                        <lb />Ma la causa principale del gran passo forse deve tro-
+                        <lb />varsi nei disgusti risentiti dalle <num type="cardinal" value="2">due</num> Principesse per i tanti
+                        <lb />progetti di matrimonio che si seguivano e si rassomiglia-
+                        <lb />vano nell’andare a monte. Già sappiamo del <persName><addName type="role">Principe</addName> di <country>Da-
+                        <lb />nimarca</country></persName>, ma vi furono molti altri mariti alle viste, cioè il
+                        <lb /><persName><addName type="role">Duca</addName> di <placeName>Lerma</placeName></persName> ed il <persName><addName type="role">Duca</addName> di Savoia-Nemours</persName> per la <persName corresp="#cat_sav"><addName>prin-
+                        <lb />cipessa</addName> <forename>Caterina</forename></persName>, il <persName><addName type="role">principe</addName> di <placeName>Galles</placeName></persName> e <persName><forename>Ferdinando</forename> d’<country>Au-
+                        <lb />stria</country></persName> per la <persName corresp="#maria_sav"><addName type="role">principessa</addName> <forename type="middle">Apollonia</forename></persName>. Il Principe inglese morì
+                        <lb />prima della conclusione ; il Principe austriaco, che fu poi
+                        <lb />l’<persName><addName type="role">imperatore</addName> <forename>Ferdinando</forename> <genName>II</genName></persName>, venne rifiutato dall’<rs corresp="#maria_sav">Infanta</rs>. Se
+                        <lb />lo studio del <persName corresp="#croset_mouchet"><addName type="role">canonico</addName> <surname>Croset</surname></persName> fosse fatto da un punto di
+                        <lb />vista meno ascetico e più umano, chi sa che non avesse
+                        <lb />trovato qualche nesso fra quella morte, quel rifiuto e la
+                        <lb />rinunzia solenne di <persName corresp="#maria_sav"><forename>Apollonia</forename></persName> a qualsiasi matrimonio. Per
+                        <lb />noi il difetto più grave del libro che esaminiamo sta in
+                        <lb />questo: i fatti storicamente veri e fedelmente esposti sono
+                        <lb />studiati sotto un aspetto falso perchè esclusivo.
+                    </p>
+                    <p xml:id="p_138_3" facs="#pg_138_p3">
+                        <lb />A questo difetto precipuo altri se ne aggiungono che
+                        <lb />peccano contro la storia. Quando al biografo manca il sus-
+                        <lb />sidio delle notizie ricavate dalle Lettere dell’<rs corresp="#maria_sav">Infanta</rs>, egli
+                        <lb />zoppica nella sua narrazione a segno che si può dire non
+                        <lb />abbia compiuta cognizione del soggetto, nè dei materiali
+                        <lb />che lo riguardano.
+                        <lb />Per dirne una, egli, confondendo la celebre <persName corresp="#olimpia_pan"><addName>Donna</addName> <forename>Olim-
+                        <lb />pia</forename> <surname>Panfili</surname></persName> con la sua nipote <persName><forename>Olimpia</forename> <surname>Giustiniani</surname></persName> che sposò un
+                        <lb /><surname>Barberini</surname>, crea una <persName><addName type="role">Principessa</addName> <forename>Olimpia</forename> <surname type="complex">Panfili-Barberini</surname></persName>
+                        <lb />che non è mai esistita e la mette con l’<persName corresp="#maria_sav"><addName>Infanta</addName> <forename>Apollonia</forename></persName>
+                    </p>
+                    <note xml:id="pie_nota_cib" type="footnote" rend="pre(*)" facs="#pg_138_nota">
+                        <bibl>
+                            <lb /><title>Specchio cronologico della storia nazionale che fa seguito all’ Ori-
+                            <lb />gine c progressi delle istituzioni della Monarchia di Savoia.</title>
+                            <pubPlace>Firenze</pubPlace>,
+                            <publisher>Cel-
+                            <lb />lini</publisher>,
+                            <date when="1869">1869</date>.
+                        </bibl>
+                    </note>
+                    <pb n="2" facs="#pg139" xml:id="pb139"/>
+                    <cb n="1" xml:id="pg139_c1" corresp="#pb139"/>
+                    <p xml:id="p_139_1" facs="#pg_139_p1">
+                        <lb /><persName corresp="#maria_sav"><surname>di Savoia</surname></persName> in relazioni d’intimità, che avrebbero bisogno di
+                        <lb />essere comprovate, mentre non mancano materiali storici
+                        <lb />che accennano piuttosto il contrario. Difatti un foglio degli
+                        <lb /><hi rend="italics">Avvisi di <placeName corresp="#roma">Roma</placeName></hi>, dell’agente <choice resp="#dp"><orig>spagnuolo</orig><reg>spagnolo</reg></choice> <persName><forename>Teodoro</forename> <surname>Ameyden</surname></persName> in
+                        <lb />data <date when="1650-06-25">25 giugno 1650</date> riferisce particolari preziosi circa le
+                        <lb />renitenze, i disturbi ed i disgusti della buona <rs corresp="#maria_sav">Principessa
+                        <lb />di Savoia</rs> a proposito di visite fra lei e <persName corresp="#olimpia_pan">Donna Olimpia</persName>. *
+                        <lb />Si dirà che lo studio del <persName corresp="#croset_mouchet"><addName type="role">canonico</addName> Croset</persName> fu composto prima
+                        <lb />che questi ed altri materiali intorno al soggiorno dell’<rs corresp="#maria_sav">In-
+                        <lb />fanta</rs> a <placeName corresp="#roma">Roma</placeName> nel <date when="1650">1650</date> e quindi dal <date when="1651">1651</date> fino al giorno
+                        <lb />della sua morte venissero in luce. Ma si potrebbe rispon-
+                        <lb />dere che dei fatti della sua vita a <placeName corresp="#roma">Roma</placeName> devesi trovare
+                        <lb />traccia nell’Epistolario dell’<rs corresp="#maria_sav">Infanta</rs> e che in ogni caso al
+                        <lb />biografo di lei correva l’obbligo di cercarli nei Diari <choice resp="#dp"><orig>ove</orig><reg>dove</reg></choice>
+                        <lb />si trovano, secondo era necessario per fare un lavoro com-
+                        <lb />pleto. Vi sono poi altri materiali, egualmente rimasti ignoti
+                        <lb />al <persName corresp="#croset_mouchet"><addName type="role">canonico</addName> Croset</persName>, per i quali scusa consimile non poti ebbe
+                        <lb />addursi. Tale, per esempio, la importantissima lettera del-
+                        <lb />l’<persName><addName type="role">abate</addName> <forename type="first">Giovanni</forename> <forename type="second">Antonio</forename> <surname>Agemo</surname></persName> del <date when="1669-01-20">20 gennaio 1669</date> pub-
+                        <lb />blicata dal <persName><surname>Giustiniani</surname></persName> nella parte seconda delle <bibl rend="italics"><title>Lettere me-
+                        <lb />morabili</title></bibl> sotto n. <num type="cardinal" value="68">68</num>, scrittura lucidissima che 'contiene in
+                        <lb />succinto la vita della <rs corresp="#maria_sav">Principessa</rs> e racconta poi il trasporto
+                        <lb />del suo cadavere dalla <placeName>chiesa dei SS. Apostoli di <placeName corresp="#roma">Roma</placeName></placeName>
+                        <lb />a quella di S. Francesco in<placeName corresp="#assisi">Assisi</placeName>, che non fu senza peripezie.
+                    </p>
+                </div>
+
 
                 <!--bibliografia 2 Scienze filosofiche-->
                 <div type="article" n="5" xml:lang="it" source="bibl2">
@@ -659,7 +930,7 @@ Author: Eleonora Mastroianni -->
                     </head>
                     <list rend="pre(—)">
                         <item xml:id="not1" n="1" facs="#pg_84_not1">
-                            <lb />Del <surname corresp="#rafgiov">Giovagnoli</surname> si stampa un altro Romanzo a <placeName corresp="#roma">Roma</placeName>: <title level="m" rend="italics">Saturnino</title>.
+                            <lb />Del <persName corresp="#rafgiov"><surname>Giovagnoli</surname></persName> si stampa un altro Romanzo a <placeName corresp="#roma">Roma</placeName>: <title level="m" rend="italics">Saturnino</title>.
                         </item>
                         <item xml:id="not2" n="2" facs="#pg_84_not2">
                             <lb />Il <persName corresp="#scbb"><roleName type="nobility">conte</roleName> <roleName type="office">senatore</roleName> <forename>Scipione</forename> <surname type="maternal">Bichi</surname> <surname type="paternal">Borghesi</surname></persName> di <placeName corresp="#siena">Siena</placeName>, morto il <date when="1877-12-01">1° di-
@@ -674,17 +945,17 @@ Author: Eleonora Mastroianni -->
                             <lb />nel <orgName rend="italics" corresp="#vaskm">South Kensington Museum</orgName>.
                         </item>
 
-                        <item xml:id="not4" n="4" facs="#">
-                            <lb />Il signor Bevan, in una lettera al Times dell’8 gennaio, ha cal-
-                            <lb />colato che il numero degli scioperi scoppiati in Inghilterra durante
-                            <lb />il 1877 ascende a 171 la cui durata si protrasse da una settimana a
-                            <lb />nove mesi ed il cui risultato è stato generalmente di ninno effetto
+                        <item xml:id="not4" n="4" facs="#pg_84_not4">
+                            <lb />Il <persName corresp="#sg_bevan"><addName>signor</addName> <surname>Bevan</surname></persName>, in una lettera al <orgName rend="italics" corresp="#times" >Times</orgName> dell’<date when="1878-01-08"><num type="cardinal" value="8">8</num> gennaio</date>, ha cal-
+                            <lb />colato che il numero degli scioperi scoppiati in <placeName><region>Inghilterra</region></placeName> durante
+                            <lb />il <date when="1877">1877</date> ascende a <num type="cardinal" value="171">171</num> la cui durata si protrasse da una settimana a
+                            <lb /><num type="cardinal" value="9">nove</num> mesi ed il cui risultato è stato generalmente di <choice><orig>niuno</orig><reg resp="#dp">nessuno</reg></choice> effetto
                             <lb />tranne in alcuni pochi casi di dispute di pochissima importanza. Le
-                            <lb />miniere di carbone di Saundersfoot sospesero i lavori per 7 mesi, quelle
-                            <lb />di Dronfield per 7 e mezzo, per 3 quelle di Fife e di Clackmannan, e
-                            <lb />tutte li ripresero alle stesse condizioni che per lo innanzi. I calafati
-                            <lb />della Clyde dopo una lotta di circa 6 mesi si sottoposero ad un arbi-
-                            <lb />trato che fu loro contrario; i tessitori di Boston e di Blackburn per-
+                            <lb />miniere di carbone di <placeName corresp="#saundersfoot">Saundersfoot</placeName> sospesero i lavori per <num type="cardinal" value="7">7</num> mesi, quelle
+                            <lb />di <placeName corresp="#dronfield">Dronfield</placeName> per <num type="cardinal" value="7">7</num> e mezzo, per <num type="cardinal" value="3">3</num> quelle di <placeName corresp="#fife">Fife</placeName> e di <placeName corresp="#clackmannan">Clackmannan</placeName>, e
+                            <lb />tutte li ripresero alle stesse condizioni che per lo innanzi. I <term corresp="#calafato">calafati</term>
+                            <lb />della <orgName corresp="#clyde">Clyde</orgName> dopo una lotta di circa <num type="cardinal" value="6">6</num> mesi si sottoposero ad un <term corresp="#arbitrato">arbi-
+                            <lb />trato</term> che fu loro contrario; i tessitori di <placeName corresp="#boston">Boston</placeName> e di <placeName corresp="#blackburn">Blackburn</placeName> per-
                             <lb />severarono altrettanto tempo in un’ agitazione affatto sterile.
                         </item>
                     </list>
@@ -697,6 +968,31 @@ Author: Eleonora Mastroianni -->
                 <listPerson>
                     <head>Lista persone o personaggi:</head>
                     <!--persone articolo 1-->
+                    <person xml:id="marchesa_colombi" sex="F">
+                        <persName>
+                            <forename type="first">Maria</forename>
+                            <forename type="middle">Antonietta</forename>
+                            <surname>Torriani</surname>
+                            <ref target="https://it.wikipedia.org/wiki/Maria_Antonietta_Torriani" />
+                        </persName>
+                        <occupation>È stata una scrittrice italiana conosciuta con lo pseudonimo: Marchesa Colombi</occupation>
+                        <birth>
+                            <date when="1840-01-01">1 gennaio 1840</date>
+                            <placeName>Novara</placeName>
+                            <location>
+                                <region>Piemonte</region>
+                                <country>Italia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1920-03-24">24 marzo 1920</date>
+                            <placeName>Milano</placeName>
+                            <location>
+                                <region>Lombardia</region>
+                                <country>Italia</country>
+                            </location>
+                        </death>
+                    </person>
                     <person xml:id="pf_marlov">
                         <persName>
                             <forename>Martino</forename>
@@ -725,12 +1021,54 @@ Author: Eleonora Mastroianni -->
                         <occupation>contadino</occupation>
                         <note>fratello di Nanna</note>
                     </person>
+                    <person xml:id="pf_gaud">
+                        <persName>
+                            <forename>Gaudenzio</forename>
+                        </persName>
+                        <note>bel giovane di cui si innamorano tutte le ragazze</note>
+                    </person>
                     <person xml:id="pf_dongiov">
                         <persName>
                             <addName>Don</addName>
                             <forename>Giovanni</forename>
                         </persName>
                         <note>personaggio citato</note>
+                    </person>
+                    <person xml:id="pf_rosetta">
+                        <persName>
+                            <forename>Rosetta</forename>
+                        </persName>
+                        <note>moglie di Pietro</note>
+                    </person>
+                    <person xml:id="pf_lucia1">
+                        <persName>
+                            <forename>Lucia</forename>
+                        </persName>
+                        <note>sorella di Rosetta</note>
+                    </person>
+                    <person xml:id="verga" sex="M">
+                        <persName>
+                            <forename>Giovanni</forename>
+                            <surname>Verga</surname>
+                            <ref target="https://it.wikipedia.org/wiki/Giovanni_Verga" />
+                        </persName>
+                        <occupation>È stato uno scrittore, drammaturgo e politico italiano considerato il maggior esponente della corrente del Verismo</occupation>
+                        <birth>
+                            <date when="1840-09-02">2 settembre 1840</date>
+                            <placeName>Catania</placeName>
+                            <location>
+                                <region>Sicilia</region>
+                                <country>Italia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1922-01-27">27 gennaio 1922</date>
+                            <placeName>Catania</placeName>
+                            <location>
+                                <region>Sicilia</region>
+                                <country>Italia</country>
+                            </location>
+                        </death>
                     </person>
 
                     <!--persone articolo 2-->
@@ -792,6 +1130,198 @@ Author: Eleonora Mastroianni -->
                             <ref target="https://it.wikipedia.org/wiki/Maria_(madre_di_Ges%C3%B9)"/>
                         </persName>
                         <note>Madre di Gesù, figlio del Dio cristiano</note>
+                    </person>
+
+                    <!--bibliografia 1-->
+                    <person xml:id="maria_sav" sex="F">
+                        <persName>
+                        <addName>infanta</addName>
+                        <forename type="first">Maria</forename><pc force="weak">-</pc><forename type="second">Apollonia</forename>
+                        <surname>di Savoia</surname>
+                        <ref target="https://it.wikipedia.org/wiki/Maria_Apollonia_di_Savoia"></ref>
+                        </persName>
+                        <occupation>Figlia del duca di Savoia Carlo Emanuele I e di Caterina d’Asburgo</occupation>
+                        <birth>
+                            <date when="1594-02-09">9 febbraio 1594</date>
+                            <placeName>Torino</placeName>
+                            <location>
+                                <region>Piemonte</region>
+                                <country>Italia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1656-07-13">13 luglio 1656</date>
+                            <placeName>Roma</placeName>
+                            <location>
+                                <region>Lazio</region>
+                                <country>Italia</country>
+                            </location>
+                        </death>
+                    </person>
+                    <person xml:id="croset_mouchet" sex="M">
+                        <persName>
+                            <forename>Giuseppe</forename>
+                            <surname type="complex">Croset<pc force="weak">-</pc>Mouchet</surname>
+                        </persName>
+                        <occupation>Canonico e teologo</occupation>
+                        <birth>
+                            <date when="1810">1810</date>
+                        </birth>
+                        <death>
+                            <date when="1871">1871</date>
+                            <placeName>Roma</placeName>
+                        </death>
+                    </person>
+                    <person xml:id="carutti" sex="M">
+                        <persName>
+                        <forename>Domenico</forename>
+                        <surname>Carutti</surname>
+                        </persName>
+                        <occupation>Studioso</occupation>
+                    </person>
+                    <person xml:id="cat_sav" sex="F">
+                        <persName>
+                        <forename type="first">Francesca</forename>
+                        <forename type="second">Caterina</forename>
+                        <surname>di Savoia</surname>
+                        <ref target="https://it.wikipedia.org/wiki/Francesca_Caterina_di_Savoia"></ref>
+                        </persName>
+                        <occupation>Principessa e religiosa italiana, ottava figlia del duca Carlo Emanuele I di Savoia e di sua moglie, la duchessa consorte Caterina Michela d'Asburgo.</occupation>
+                        <birth>
+                            <date when="1595-10-05">5 ottobre 1595</date>
+                            <placeName>Torino</placeName>
+                            <location>
+                                <region>Piemonte</region>
+                                <country>Italia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1640-10-20">20 ottobre 1640</date>
+                            <placeName>Biella</placeName>
+                            <location>
+                                <region>Piemonte</region>
+                                <country>Italia</country>
+                            </location>
+                        </death>
+                    </person>
+                    <person xml:id="carlo_emanuele" sex="M">
+                        <persName>
+                        <forename type="first">Carlo</forename>
+                        <forename type="second">Emanuele</forename>
+                        <genName>I</genName>
+                        <surname>di Savoia</surname>
+                        <ref target="https://it.wikipedia.org/wiki/Carlo_Emanuele_I_di_Savoia"></ref>
+                        </persName>
+                        <occupation>Duca di Savoia e sovrano dello Stato sabaudo dal 1580 al 1630.</occupation>
+                        <birth>
+                            <date when="1562-01-12">12 gennaio 1562</date>
+                            <placeName>Rivoli</placeName>
+                            <location>
+                                <region>Piemonte</region>
+                                <country>Italia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1630-07-26">26 luglio 1630</date>
+                            <placeName>Savigliano</placeName>
+                            <location>
+                                <region>Piemonte</region>
+                                <country>Italia</country>
+                            </location>
+                        </death>
+                    </person>
+                    <person xml:id="maria_borb" sex="F">
+                        <persName>
+                        <forename>Maria</forename>
+                        <surname>di Borbone</surname>
+                        <ref target="https://it.wikipedia.org/wiki/Maria_di_Borbone-Soissons"></ref>
+                        </persName>
+                        <occupation>Nobile francese, fu nonna paterna del condottiero Eugenio di Savoia.</occupation>
+                        <birth>
+                            <date when="1606-05-03">3 maggio 1606</date>
+                            <placeName>Parigi</placeName>
+                            <location>
+                                <country>Francia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1692-06-23">3 giugno 1692</date>
+                            <placeName>Parigi</placeName>
+                            <location>
+                                <country>Francia</country>
+                            </location>
+                        </death>
+                    </person>
+                    <person xml:id="carlo_sois" sex="M">
+                        <persName>
+                        <forename>Carlo</forename>
+                        <surname type="complex">di Borbone-Soissons</surname>
+                        <ref target="https://it.wikipedia.org/wiki/Carlo_di_Borbone-Soissons"></ref>
+                        </persName>
+                        <occupation>Principe francese e comandante militare durante le guerre di religione della fine del XVI secolo.</occupation>
+                        <birth>
+                            <date when="1566-11-03">3 novembre 1566</date>
+                            <placeName>Nogent-le-Rotrou</placeName>
+                            <location>
+                                <country>Francia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1612-11-01">1 novembre 1612</date>
+                            <placeName>Blandy-les-Tours</placeName>
+                            <location>
+                                <country>Francia</country>
+                            </location>
+                        </death>
+                    </person>
+                    <person xml:id="tommaso_sav" sex="M">
+                        <persName>
+                        <forename type="first">Tommaso</forename>
+                        <forename type="middle">Francesco</forename>
+                        <surname type="complex">di Savoia</surname>
+                        <ref target="https://it.wikipedia.org/wiki/Tommaso_Francesco_di_Savoia"></ref>
+                        </persName>
+                        <occupation>Era figlio di Carlo Emanuele I di Savoia e di Caterina Michela d'Asburgo ed è stato il capostipite del ramo Savoia-Carignano.</occupation>
+                        <birth>
+                            <date when="1596-12-21">21 dicembre 1596</date>
+                            <placeName>Torino</placeName>
+                            <location>
+                                <region>Piemonte</region>
+                                <country>Italia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1656-01-22">22 gennaio 1656</date>
+                            <placeName>Torino</placeName>
+                            <location>
+                                <region>Piemonte</region>
+                                <country>Italia</country>
+                            </location>
+                        </death>
+                    </person>
+                    <person xml:id="olimpia_pan" sex="F">
+                        <persName>
+                        <forename>Olimpia</forename>
+                        <surname>Maidalchini</surname>
+                        <ref target="https://it.wikipedia.org/wiki/Olimpia_Maidalchini"></ref>
+                        </persName>
+                        <occupation>Nota come Donna Olimpia, principessa di San Martino al Cimino.</occupation>
+                        <birth>
+                            <date when="1592-05-25">25 maggio 1592</date>
+                            <placeName>Viterbo</placeName>
+                            <location>
+                                <region>Lazio</region>
+                                <country>Italia</country>
+                            </location>
+                        </birth>
+                        <death>
+                            <date when="1657-09-26">26 settembre 1657</date>
+                            <placeName>Cimino</placeName>
+                            <location>
+                                <region>Lazio</region>
+                                <country>Italia</country>
+                            </location>
+                        </death>
                     </person>
                     
                     <!--bibliografia 2-->
@@ -944,14 +1474,22 @@ Author: Eleonora Mastroianni -->
                             </location>
                         </death>
                     </person>
+                    <person xml:id="sg_bevan" sex="M">
+                        <persName>
+                            <addName>Signor</addName>
+                            <surname>Bevan</surname>
+                        </persName>
+                    </person>
 
                 </listPerson>
 
                 <listOrg>
                     <head>Lista delle organizzazioni:</head>
                     <org xml:id="osdtr" role="charitable">
-                        <orgName>Ospizio dei Trovatelli</orgName>
-                        <note resp="#em">Le rare informazioni geografiche non rendono possibile identificare la struttura precisa.Si ipotizza possa essere <ref target="https://www.turismo.pisa.it/cultura/dettaglio/Ospizio-dei-Trovatelli-00001">l'Ospizio dei Trovatelli di Pisa.</ref></note>
+                        <orgName>Ospizio dei Trovatelli
+                            <ref target="https://www.turismo.pisa.it/cultura/dettaglio/Ospizio-dei-Trovatelli-00001"/>
+                        </orgName>
+                        <note resp="#em">Le rare informazioni geografiche non rendono possibile identificare la struttura precisa.Si ipotizza possa essere l'Ospizio dei Trovatelli di Pisa.</note>
                     </org>
                     <org xml:id="arstsi" role="public institution">
                         <orgName>Archivio di Stato di Siena
@@ -967,6 +1505,28 @@ Author: Eleonora Mastroianni -->
                         <orgName>Victoria and Albert South Kensington Museum
                             <ref target="https://it.wikipedia.org/wiki/Victoria_and_Albert_Museum" />
                         </orgName>
+                    </org>
+                    <org xml:id="times" role="journal" >
+                        <orgName>The Times
+                            <ref target="https://it.wikipedia.org/wiki/The_Times"/>
+                        </orgName>
+                        <desc>Quotidiano britannico con sede a Londra fondato nel 1788</desc>
+                    </org>
+                    <org xml:id="archivi_torino" role="public institution" >
+                        <orgName>Archivi di Stato a Torino
+                            <ref target="https://archiviodistatotorino.beniculturali.it/"/>
+                        </orgName>
+                        <desc>Archivio di Stato della città di Torino</desc>
+                    </org>
+                    <org xml:id="reg_dep" role="public institution" >
+                        <orgName>Deputazione Subalpina di storia patria
+                            <ref target="https://it.wikipedia.org/wiki/Deputazione_Subalpina_di_storia_patria#:~:text=La%20Deputazione%20Subalpina%20di%20storia,Piemonte%20e%20agli%20Stati%20sabaudi."/>
+                        </orgName>
+                        <desc>Istituto a carattere locale, sostenuto dallo Stato, sorto a Torino nel XIX secolo</desc>
+                    </org>
+                    <org xml:id="clyde">
+                        <orgName>Clyde</orgName>
+                        <desc>Probabilmente un'agenzia navale</desc>
                     </org>
                 </listOrg>
 
@@ -1022,20 +1582,20 @@ Author: Eleonora Mastroianni -->
                         </location>
                     </place>
                     <place xml:id="hissarlik">
-                        <geogName><geogFeat>collina</geogFeat> di <name xml:lang="tr">Hissarlik</name></geogName>
+                        <geogName><geogFeat>collina</geogFeat> di <name xml:lang="tr">Hissarlik</name><ref target="https://it.wikipedia.org/wiki/Troia"/></geogName>
                         <location>
                             <country>Turchia</country>
                         </location>
-                        <note>Questo è il sito archeologico su cui sorgeva l'antica città di Troia<ref target="https://it.wikipedia.org/wiki/Troia"/></note>
+                        <note>Questo è il sito archeologico su cui sorgeva l'antica città di Troia</note>
                     </place>
                     <place xml:id="troade">
-                        <geogName type="historical">Troade</geogName>
+                        <geogName type="historical">Troade<ref target="https://it.wikipedia.org/wiki/Troade"/></geogName>
                         <geogName type="modern">Biga</geogName>
                         <location>
                             <region>Anatolia</region>
                             <country>Turchia</country>
                         </location>
-                        <note>Penisola che prendeva nome dalla mitica città di Troia<ref target="https://it.wikipedia.org/wiki/Troade"/></note>
+                        <note>Penisola che prendeva nome dalla mitica città di Troia</note>
                     </place>
                     <place xml:id="londra">
                         <placeName type="settlement">Londra</placeName>
@@ -1044,7 +1604,65 @@ Author: Eleonora Mastroianni -->
                             <country>Regno Unito</country>
                         </location>
                     </place>
+                    <place xml:id="saundersfoot">
+                        <placeName type="settlement">Saundersfoot</placeName>
+                        <location>
+                            <region>Inghilterra</region>
+                            <country>Regno Unito</country>
+                        </location>
+                    </place>
+                    <place xml:id="dronfield">
+                        <placeName type="settlement">Dronfield</placeName>
+                        <location>
+                            <region>Inghilterra</region>
+                            <country>Regno Unito</country>
+                        </location>
+                    </place>
+                    <place xml:id="fife">
+                        <placeName type="region">Fife</placeName>
+                        <location>
+                            <region>Scozia</region>
+                            <country>Regno Unito</country>
+                        </location>
+                    </place>
+                    <place xml:id="clackmannan">
+                        <placeName type="settlement">Clackmannan</placeName>
+                        <location>
+                            <region>Scozia</region>
+                            <country>Regno Unito</country>
+                        </location>
+                    </place>
+                    <place xml:id="boston">
+                        <placeName type="settlement">Boston</placeName>
+                        <location>
+                            <region>Inghilterra</region>
+                            <country>Regno Unito</country>
+                        </location>
+                    </place>
+                    <place xml:id="blackburn">
+                        <placeName type="settlement">Blackburn</placeName>
+                        <location>
+                            <region>Inghilterra</region>
+                            <country>Regno Unito</country>
+                        </location>
+                    </place>
+                    <place xml:id="torino">
+                        <placeName type="settlement">Torino</placeName>
+                        <location>
+                            <region>Piemonte</region>
+                            <country>Italia</country>
+                        </location>
+                    </place>
+                    <place xml:id="assisi">
+                        <placeName type="settlement">Assisi</placeName>
+                        <location>
+                            <region>Umbria</region>
+                            <country>Italia</country>
+                        </location>
+                    </place>
+
                 </listPlace>
+
                 <listBibl>
                     <biblStruct xml:id="sosanuna">
                         <monogr>
@@ -1067,6 +1685,70 @@ Author: Eleonora Mastroianni -->
                             <biblScope unit="volume" n="4">L'attenzione negli alienati</biblScope>
                         </monogr>
                     </biblStruct>
+                    <biblStruct xml:id="in_risaia">
+                        <monogr>
+                            <author>
+                                <persName type="pseudonym" corresp="#marchesa_colombi">
+                                <addName>Marchesa</addName>
+                                <surname>Colombi</surname>
+                                </persName>
+                            </author>
+                            <title>In risaia</title>
+                           <imprint>
+                                <pubPlace>Milano</pubPlace>
+                                <date when="1878">1878</date>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                    <biblStruct xml:id="nedda">
+                        <monogr>
+                            <author>
+                                <persName corresp="#verga">
+                                <forename>Giovanni</forename>
+                                <surname>Verga</surname>
+                                </persName>
+                            </author>
+                            <title>Nedda</title>
+                           <imprint>
+                                <pubPlace>Milano</pubPlace>
+                                <publisher>Brigola</publisher>
+                                <date when="1874">1874</date>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                    <biblStruct xml:id="storia_car">
+                        <monogr>
+                            <author>
+                                <persName corresp="#carutti">
+                                <forename>Domenico</forename>
+                                <surname>Carutti</surname>
+                                </persName>
+                            </author>
+                           <title>Storia della diplomazia della corte di Savoia</title>
+                           <imprint>
+                                <pubPlace>Torino</pubPlace>
+                                <publisher>Fratelli Bocca</publisher>
+                                <date when="1879">1879</date>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                    <biblStruct xml:id="savoia">
+                        <monogr>
+                            <author>
+                                <persName corresp="#croset_mouchet">
+                                <forename>Giuseppe</forename>
+                                <surname type="complex">Croset<pc force="weak">-</pc>Mouchet</surname>
+                                </persName>
+                            </author>
+                           <title>Vita dell’infanta Maria Francesca Apollonia, principessa di Savoia.</title>
+                           <imprint>
+                                <pubPlace>Torino</pubPlace>
+                                <publisher>Unione tipografico<pc force="weak">-</pc>editrice</publisher>
+                                <date when="1878">1878</date>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+
                 </listBibl>
                 <list type="gloss">
                     <head>Glossario</head>
@@ -1123,6 +1805,12 @@ Author: Eleonora Mastroianni -->
                     </label>
                     <item>
                         <gloss xml:id="att_psi">Eccitazioni a cui è esposto il cervello e che elabora in modo conscio.</gloss>
+                    </item>
+                    <label>
+                        <term xml:id="calafato">Operaio specializzato che esegue l' operazione di calafataggio.</term>
+                    </label>
+                    <item>
+                        <term xml:id="arbitrato">È il procedimento privato attraverso il quale gli “arbitri”, nominati di comune accordo dalle parti in conflitto, risolvono una controversia.</term>
                     </item>
                 </list>
             </div>
