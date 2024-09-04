@@ -178,6 +178,9 @@ Author: Eleonora Mastroianni -->
                 <quotation>
                     <p>Le citazioni da testi differenti rispetto alla Rassegna sono state gestite con il tag <gi>quote</gi></p>
                 </quotation>
+                <interpretation>
+                    <p>In certi articoli abbiamo riscontrato la presenza di un cambio di destinatario da parte dell'autore, rispetto alla terza persona usata nel resto del testo. Abbiamo deciso di interpretare questo fenomeno con la figura retorica dell'apostrofe, marcata nel testo con il tag <gi>q</gi> con l'attributo @ana</p>
+                </interpretation>
             </editorialDecl>
             <projectDesc><!--finalità del progetto-->
                 <p>Progetto realizzato per il corso di Codifica di Testi della facoltà di Informatica Umanistica</p>
@@ -687,7 +690,7 @@ Author: Eleonora Mastroianni -->
                         <lb />nel <date when="1630-05">maggio</date>. Come accade sempre, prima non ci si volle
                         <lb />credere, poi si presero severe ma tarde precauzioni di iso-
                         <lb />lamenti, quarantene e lazzaretti. Un tal <persName><forename>Pietro</forename> <surname>Moratti</surname></persName>, in
-                        <lb />un <rs corresp="#opuscolo_peste" >opuscolo</rs> stampato l’ <date when="1631">anno dopo</date>, ce ne descrive così i
+                        <lb />un <rs type="bibl" corresp="#opuscolo_peste">opuscolo</rs> stampato l’ <date when="1631">anno dopo</date>, ce ne descrive così i
                         <lb />sintomi che possono essere utilmente ricordati :<quote rend="pre(«) post(»)" source="#opuscolo_peste"> Scopri-
                         <lb />vasi... negli infermi (oltre una palpitazione di cuore) in
                         <lb />diverse parti del corpo bogni, buboni, carboni e giandole,
@@ -720,7 +723,7 @@ Author: Eleonora Mastroianni -->
                     <pb n="2" facs="#pg131" xml:id="pb131"/>
                     <cb n="1" xml:id="pg131_c1" corresp="#pb131"/>
                     <p xml:id="p_131_1" n="1" facs="#pg_131_p1">
-                        <lb />creduto di lasciarla dormire nell’<rs corresp="#opuscolo_peste">opuscolo</rs> ignorato dove si
+                        <lb />creduto di lasciarla dormire nell’<rs type="bibl" corresp="#opuscolo_peste">opuscolo</rs> ignorato dove si
                         <lb />trova, ora che non può essere inutile il far confronti <choice><orig>colla</orig><reg resp="#dp">con la</reg></choice>
                         <lb />immortale descrizione del <persName corresp="#giboc"><surname>Boccaccio</surname></persName> e con quel che ci lasciarono scritto gli storici milanesi, e più <persName corresp="#manzoni"><forename>Alessandro</forename> <surname>Manzoni</surname></persName>.
                         <lb />In quello spavento tutti quelli che potevano fuggirono
@@ -730,7 +733,7 @@ Author: Eleonora Mastroianni -->
                         <lb />mente in quella del <persName corresp="#cantu"><surname>Cantù</surname></persName>, era allora professore nello <orgName corresp="#unibo"><choice><orig>Studio
                         <lb />di <placeName corresp="#bologna">Bologna</placeName></orig><reg resp="#dp">Università di Bologna</reg></choice></orgName> e scappò subito in una villetta che possedeva
                         <lb />al <placeName corresp="#sasso">Sasso</placeName> nella <geogName><geogFeat>valle</geogFeat> del <name type="river">Reno</name></geogName>. <choice><orig>Ivi</orig><reg resp="#dp">Lì</reg></choice>, pieno di paura, visse rin-
-                        <lb />chiuso per tutto il tempo che durò <rs corresp="#peste">il contagio</rs> fabbricando
+                        <lb />chiuso per tutto il tempo che durò <rs type="event" corresp="#peste">il contagio</rs> fabbricando
                         <lb />un piccolo tempio alla sua protettrice <persName corresp="#apollonia"><abbr>S.</abbr><expan>Santa</expan><forename>Appollonia</forename></persName> e stu-
                         <lb />diando la <bibl corresp="#somma">Somma</bibl> di <persName corresp="#san_tommaso"><abbr>S.</abbr><expan>San</expan><forename><choice><sic>Tomaso</sic><corr resp="#dp">Tommaso</corr></choice></forename></persName>. <choice><orig>Ivi</orig><reg resp="#dp">Lì</reg></choice> gli giunse una <bibl corresp="#lettera_masc_ach">lettera</bibl>
                         <lb />che <persName corresp="#mascardi"><forename>Agostino</forename> <surname>Mascardi</surname></persName> gli scriveva da <placeName corresp="#roma">Roma</placeName>, nella quale
@@ -2197,13 +2200,16 @@ Author: Eleonora Mastroianni -->
                         </location>
                     </place>
                     <place xml:id="europa">
+                        <placeName type="bloc">Europa</placeName>
                         <bloc>Europa</bloc>
                     </place>
                     <place xml:id="italia">
-                        <country>Italia</country>
+                        <placeName type="country">Italia</placeName>
+                        <bloc>Europa</bloc>
                     </place>
                     <place xml:id="francia">
-                        <country>Francia</country>
+                        <placeName type="country">Francia</placeName>
+                        <bloc>Europa</bloc>
                     </place>
                     <place xml:id="bologna">
                         <placeName type="settlement">Bologna</placeName>
@@ -2314,49 +2320,49 @@ Author: Eleonora Mastroianni -->
                         </monogr>
                     </biblStruct>
                     <bibl xml:id="opuscolo_peste">
-                            <title>Racconto de gli ordini e provisioni fatte ne’ lazaretti in bologna, e suo contado in tempo del contagio dell’anno 1630.</title>
                             <author>
                                 <persName>
                                 <forename>Pietro</forename>
                                 <surname>Moratti</surname>
                                 </persName>
                             </author>
+                            <title>Racconto de gli ordini e provisioni fatte ne’ lazaretti in bologna, e suo contado in tempo del contagio dell’anno 1630.</title>
                     </bibl>
                     <bibl xml:id="sonetto_luigi">
-                            <title>Sudate, o fochi, a preparar metalli</title>
                             <author>
                                 <persName>
                                 <forename>Claudio</forename>
                                 <surname>Achillini</surname>
                                 </persName>
                             </author>
+                            <title>Sudate, o fochi, a preparar metalli</title>
                     </bibl>
                     <bibl xml:id="somma">
-                            <title>Summa Theologiae</title>
                             <author>
                                 <persName corresp="#san_tommaso">
                                 <addName type="honorific">Giuseppe</addName>
                                 <forename>Tommaso</forename>
                                 </persName>
                             </author>
+                            <title>Summa Theologiae</title>                            
                     </bibl>
                     <bibl xml:id="lettera_masc_ach">
-                            <note>Lettera che Mascardi manda ad Achillini nel 1630, durante l'epidemia di peste.</note>
                             <author>
                                 <persName corresp="#mascardi">
                                 <forename>Agostino</forename>
                                 <surname>Mascardi</surname>
                                 </persName>
                             </author>
+                            <note>Lettera che Mascardi manda ad Achillini nel 1630, durante l'epidemia di peste.</note>
                     </bibl>
                     <bibl xml:id="lettera_ach_masc">
-                            <note>Lettera che Mascardi manda ad Achillini nel 1630, durante l'epidemia di peste.</note>
                             <author>
                                 <persName corresp="#achillini">
                                 <forename>Claudio</forename>
                                 <surname>Achillini</surname>
                                 </persName>
                             </author>
+                            <note>Lettera che Achillini manda a Mascardi nel 1630, durante l'epidemia di peste.</note>
                     </bibl>
                      <biblStruct xml:id="promessisposi">
                         <monogr>

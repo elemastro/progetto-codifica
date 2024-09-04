@@ -264,6 +264,10 @@
             <dd>
                 <xsl:value-of select="tei:editorialDecl/tei:quotation/tei:p"/>
             </dd>
+            <dt>Interpretazioni</dt>
+            <dd>
+                <xsl:value-of select="tei:editorialDecl/tei:interpretation/tei:p"/>
+            </dd>
         </dl>
     </xsl:template>
 
@@ -571,6 +575,22 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- Template per abbreviazione -->
+    <xsl:template match="tei:abbr" priority="2">
+        <xsl:element name="span">
+            <xsl:attribute name="class">abbreviazione</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Template per espansione -->
+    <xsl:template match="tei:expan" priority="2">
+        <xsl:element name="span">
+            <xsl:attribute name="class">espansione</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
     <xsl:template match="tei:persName/*[not(self::tei:placeName)]">
         <!-- Aggiungi il valore dell'elemento corrente -->
         <xsl:value-of select="."/>
@@ -746,13 +766,27 @@
             <!-- Imposta la classe in base agli attributi 'ana' e 'type' -->
             <xsl:choose>
                 <xsl:when test="@ana">
-                    <xsl:attribute name="class">fig_reg</xsl:attribute>
+                    <xsl:attribute name="class">fig_reg nome_testo</xsl:attribute>
+                    <xsl:variable name="ana-id" select="substring-after(@ana, '#')"/>
+                    <xsl:variable name="interpretation" select="/tei:TEI/tei:standOff/tei:interpGrp/tei:interp[@xml:id=$ana-id]"/>
+                    <!-- Mostra il contenuto dell'elemento 'q' -->
+                    <xsl:apply-templates />
+                    <xsl:if test="$interpretation">
+                        <span class="nomi interpretazione">
+                            <ul>
+                                <li>
+                                    <strong>Figura retorica: </strong>
+                                    <xsl:value-of select="$interpretation"/>
+                                </li>
+                            </ul>
+                        </span>
+                    </xsl:if>
                 </xsl:when>
                 <xsl:when test="@type='thought'">
                     <xsl:attribute name="class">pensieri</xsl:attribute>
+                    <xsl:apply-templates />
                 </xsl:when>
             </xsl:choose>
-            <xsl:apply-templates />
         </xsl:element>
     </xsl:template>
 
@@ -803,22 +837,6 @@
     <xsl:template match="tei:choice/tei:reg">
         <xsl:element name="span">
             <xsl:attribute name="class">regolarizzazione</xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
-
-    <!-- Template per abbreviazione -->
-    <xsl:template match="tei:abbr">
-        <xsl:element name="span">
-            <xsl:attribute name="class">abbreviazione</xsl:attribute>
-            <xsl:apply-templates/>
-        </xsl:element>
-    </xsl:template>
-
-    <!-- Template per espansione -->
-    <xsl:template match="tei:expan">
-        <xsl:element name="span">
-            <xsl:attribute name="class">espansione</xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>

@@ -176,6 +176,7 @@ table {
 
 .but_evidenzia{
     font-family: 'Times New Roman', Times, serif;
+    font-size: large;
     color: #fff;
     margin-right: 2%;
     margin-top: 1%;
@@ -223,7 +224,7 @@ table {
 }
 
 #but_term{
-    background-color: #e1c1c4;
+    background-color: #926aa6;
 }
 
 #but_date{
@@ -299,9 +300,26 @@ table {
     border-radius: 10px;
 }
 
+.interpretazione {
+    display: none;
+    position: absolute;
+    background-color: #fbe5b5;
+    border: 5px solid #af5129;
+    padding: 0.5%;
+    z-index: 1000;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
 /* Mostra la finestra informativa quando il cursore è sopra il nome */
 .nome_testo:hover + .nomi {
     display: block; /* Mostra la finestra informativa */
+}
+
+.fig_reg:hover .interpretazione{
+    display: block;
 }
 
 .nome_luogo{
