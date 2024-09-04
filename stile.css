@@ -160,10 +160,97 @@ table {
     font-size: larger;
 }
 
+/*bottoni per evidenziare il testo*/
+#evidenzia_parti{
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    background-color: rgba(255, 243, 218, 0.5);
+    z-index: 2000;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.but_evidenzia{
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    padding: 1%;
+
+}
+
+#but_pers{
+    background-color: #b87333;
+
+}
+
+#but_luoghi{
+    background-color: #182d09;
+}
+
+#but_organ{
+    background-color: #7c2946;
+}
+
+#but_event{
+    background-color: #650015;
+}
+
+#but_disc{
+    background-color: #4e533b;
+}
+
+#but_pens{
+    background-color: #2b1d14;
+}
+
+#but_fig_ret{
+    background-color: #8c411d;
+}
+
+#but_cit{
+    background-color: #bf5700;
+}
+
+#but_opere{
+    background-color: #253047;
+}
+
+#but_term{
+    background-color: #e1c1c4;
+}
+
+#but_date{
+    background-color: #4e1336;
+}
+
+#but_nume{
+    background-color: #c0513e;
+}
+
+#but_corr{
+    background-color: #008080;
+}
+
+#but_reg{
+    background-color: #7e212a;
+}
+
+#but_esp{
+    background-color: #7bb369;
+}
+
 /*testi e immagini*/
 .contenitore{
     width: 98%;
     margin-left: 1%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
 }
@@ -228,6 +315,24 @@ table {
     color: #fff3da;
 }
 
+.nome_term{
+    background-color: #84a473;
+    border: solid 3px #36251b;
+    color: #000;
+}
+
+.nome_bibl{
+    background-color: #733b73;
+    border: solid 3px #36251b;
+    color: #fff3da;
+}
+
+.nome_evento{
+    background-color: #313575;
+    border: solid 3px #733b73;
+    color: #fff3da;
+}
+
 ul{
     list-style: none;
 }
@@ -235,4 +340,8 @@ ul{
 ul li{
     margin-bottom: 2%;
     margin-left: 1%;
+}
+
+a{
+    color: #000;
 }
