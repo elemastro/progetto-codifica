@@ -2461,8 +2461,6 @@ Author: Eleonora Mastroianni -->
         </back>
     </text>
     <standOff><!--luogo dove stanno le interpretazioni date a certe parti del testo e collegate alle singole interpretazioni con l'attributo @ana-->
-        <interpGrp type="rethoric_fig">
-            <interp xml:id="apostrofe">L'apostrofe è una figura retorica dove il narratore si rivolge direttamente a un personaggio, un oggetto o al lettore</interp>
-        </interpGrp>
+        <interp xml:id="apostrofe">L'apostrofe è una figura retorica dove il narratore si rivolge direttamente a un personaggio, un oggetto o al lettore</interp>
     </standOff>
 </TEI>

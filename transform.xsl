@@ -768,7 +768,7 @@
                 <xsl:when test="@ana">
                     <xsl:attribute name="class">fig_reg nome_testo</xsl:attribute>
                     <xsl:variable name="ana-id" select="substring-after(@ana, '#')"/>
-                    <xsl:variable name="interpretation" select="/tei:TEI/tei:standOff/tei:interpGrp/tei:interp[@xml:id=$ana-id]"/>
+                    <xsl:variable name="interpretation" select="/tei:TEI/tei:standOff/tei:interp[@xml:id=$ana-id]"/>
                     <!-- Mostra il contenuto dell'elemento 'q' -->
                     <xsl:apply-templates />
                     <xsl:if test="$interpretation">
