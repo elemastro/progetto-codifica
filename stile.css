@@ -164,8 +164,7 @@ table {
 #evidenzia_parti{
     position: fixed;
     bottom: 0;
-    left: 10%;
-    width: 80%;
+    width: 100%;
     background-color: rgba(255, 243, 218, 0.5);
     z-index: 2000;
     display: flex;
@@ -251,7 +250,7 @@ table {
 .contenitore{
     width: 98%;
     margin-left: 1%;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
     display: flex;
     flex-direction: column;
 }
@@ -291,6 +290,7 @@ table {
 .nomi {
     display: none;
     position: absolute;
+    color: black;
     background-color: #fbe5b5;
     border: 5px solid #af5129;
     padding: 0.5%;
@@ -299,7 +299,6 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-
 .interpretazione {
     display: none;
     position: absolute;
@@ -312,16 +311,13 @@ table {
     border-radius: 10px;
 }
 
-
 /* Mostra la finestra informativa quando il cursore è sopra il nome */
 .nome_testo:hover + .nomi {
     display: block; /* Mostra la finestra informativa */
 }
-
 .fig_reg:hover .interpretazione{
     display: block;
 }
-
 .nome_luogo{
     background-color: #af5129;
     border: solid 3px #36251b;
@@ -363,3 +359,98 @@ ul li{
 a{
     color: #000;
 }
+
+.highlight{
+    background-color: #eab43f;
+    border-radius:10px;
+}
+
+.highlighted_per {
+    color: #FFFFFF; 
+    background-color: #b87333; 
+}
+
+.highlighted_per a {
+    color: #FFFFFF; 
+}
+
+.highlighted_luo {
+    color: #FFFFFF; 
+    background-color: #182d09; 
+}
+
+.highlighted_luo a {
+    color: #FFFFFF; 
+}
+
+.highlighted_dis {
+    color: #FFFFFF; 
+    background-color: #4e533b; 
+}
+
+.highlighted_pen {
+    color: #FFFFFF; 
+    background-color: #2b1d14; 
+}
+
+.highlighted_eve {
+    color: #FFFFFF; 
+    background-color: #650015; 
+}
+
+
+.highlighted_dat {
+    color: #FFFFFF; 
+    background-color: #4e1336; 
+}
+
+.highlighted_org {
+    color: #FFFFFF; 
+    background-color: #7c2946; 
+}
+
+.highlighted_org a {
+    color: #FFFFFF; 
+}
+
+.highlighted_num {
+    color: #FFFFFF; 
+    background-color: #c0513e; 
+}
+
+.highlighted_fig {
+    color: #FFFFFF; 
+    background-color: #8c411d; 
+}
+
+.highlighted_cit {
+    color: #FFFFFF; 
+    background-color: #bf5700; 
+}
+
+.highlighted_ter {
+    color: #FFFFFF; 
+    background-color: #926aa6; 
+}
+
+.highlighted_op {
+    color: #FFFFFF; 
+    background-color: #253047; 
+}
+
+.highlighted_corr {
+    color: #FFFFFF; 
+    background-color: #008080; 
+}
+
+.highlighted_esp {
+    color: #FFFFFF; 
+    background-color: #7bb369; 
+}
+
+.highlighted_reg {
+    color: #FFFFFF; 
+    background-color: #7e212a; 
+}
+
+

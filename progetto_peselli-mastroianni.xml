@@ -178,7 +178,7 @@ Author: Eleonora Mastroianni -->
                 <quotation>
                     <p>Le citazioni da testi differenti rispetto alla Rassegna sono state gestite con il tag <gi>quote</gi></p>
                 </quotation>
-                <interpretation>
+                 <interpretation>
                     <p>In certi articoli abbiamo riscontrato la presenza di un cambio di destinatario da parte dell'autore, rispetto alla terza persona usata nel resto del testo. Abbiamo deciso di interpretare questo fenomeno con la figura retorica dell'apostrofe, marcata nel testo con il tag <gi>q</gi> con l'attributo @ana</p>
                 </interpretation>
             </editorialDecl>
@@ -195,11 +195,11 @@ Author: Eleonora Mastroianni -->
         <!--articolo 1-->
         <surface xml:id="pg75" n="1" start="#pb75">
             <graphic url="Vol1-1878-1-S1-F5-75.png" width='1527.4px' height='2230.4px' corresp="#" />
-            <zone xml:id="titolo_75" ulx="720" uly="719" lrx="1391" lry="754" corresp="#art1_titolo_75" />
+            <zone xml:id="titolo_75" ulx="720" uly="719" lrx="1391" lry="754" start="#art1_titolo_75" />
             <zone xml:id="pg_75_p1" ulx="716" uly="757" lrx="1396" lry="1070" start="#p_75_1" />
             <zone xml:id="pg_75_p2" ulx="715" uly="1076" lrx="1391" lry="1560" start="#p_75_2" />
             <zone xml:id="pg_75_p3" ulx="716" uly="1562" lrx="1387" lry="2023" start="#p_75_3" />
-            <zone xml:id="pg_75_nota" ulx="722" uly="2039" lrx="1378" lry="2068" corresp="#pie_nota1" />
+            <zone xml:id="pg_75_nota" ulx="722" uly="2039" lrx="1378" lry="2068" start="#pie_nota1" />
         </surface>
         <surface xml:id="pg76" n="2" start="#pb76">
             <graphic url="Vol1-1878-1-S1-F5-76.png" width='1527.4px' height='2230.4px' />
@@ -212,13 +212,13 @@ Author: Eleonora Mastroianni -->
         </surface>
         <surface xml:id="pg77" n="3" start="#pb77">
             <graphic url='Vol1-1878-1-S1-F5-77.png' width='1507px' height='2221px' />
-            <zone xml:id="pg_77_p1" ulx="46" uly="137" lrx="696" lry="759" start="#p_77_7" />
+            <zone xml:id="pg_77_p1" ulx="46" uly="137" lrx="696" lry="759" start="#p_77_1" />
         </surface>
 
         <!--articolo 2-->
         <surface xml:id="pg434" n="4" start="#pb434">
             <graphic url='Vol1-1878-1-S1-F23-434.png' width='1504.4px' height='2237.4px' />
-            <zone xml:id="titolo_434" ulx="792" uly="1888" lrx="1401" lry="1914" corresp="#art2_titolo_434" />
+            <zone xml:id="titolo_434" ulx="792" uly="1888" lrx="1401" lry="1914" start="#art2_titolo_434" />
             <zone xml:id="pg_434_p1" ulx="765" uly="1924" lrx="1440" lry="2089" start="#p_434_1" />
         </surface>
 
@@ -230,13 +230,13 @@ Author: Eleonora Mastroianni -->
             <zone xml:id="pg_435_p3" ulx="73" uly="1522" lrx="754" lry="2068" start="#p_435_3" />
             <zone xml:id="pg_435_p4" ulx="772" uly="140" lrx="1445" lry="575" start="#p_435_4" />
             <zone xml:id="pg_435_p5" ulx="770" uly="576" lrx="1446" lry="1078" start="#p_435_5" />
-            <zone xml:id="pg_435_firma" ulx="1173" uly="1081" lrx="1421" lry="1112" corresp="#firma_2" />
+            <zone xml:id="pg_435_firma" ulx="1173" uly="1081" lrx="1421" lry="1112" start="#firma_2" />
         </surface>
 
         <!--articolo 3-->
         <surface xml:id="pg130" n="6" start="#pb130">
             <graphic url='Vol3-1879-1-S1-F59-130.png' width='1511px' height='2248px' />
-            <zone xml:id="titolo_130" ulx="948" uly="1046" lrx="1294" lry="1079" corresp="#art3_titolo_130" />
+            <zone xml:id="titolo_130" ulx="948" uly="1046" lrx="1294" lry="1079" start="#art3_titolo_130" />
             <zone xml:id="pg_130_p1" ulx="781" uly="1082" lrx="1453" lry="2097" start="#p_130_1" />
         </surface>
         <surface xml:id="pg131" n="7" start="#pb131">
@@ -244,34 +244,34 @@ Author: Eleonora Mastroianni -->
             <zone xml:id="pg_131_p1" ulx="88" uly="163" lrx="746" lry="1236" start="#p_131_1"/>
             <zone xml:id="pg_131_p2" ulx="87" uly="1245" lrx="740" lry="2091" start="#p_131_2"/>
             <zone xml:id="pg_131_p3" ulx="776" uly="171" lrx="1466" lry="1249" start="#p_131_3"/>
-            <zone xml:id="pg_131_p4" ulx="784" uly="1261" lrx="1446" lry="1542" start="#p_131_4"/>
-            <zone xml:id="pg_131_firma" ulx="1245" uly="1524" lrx="1416" lry="1550" corresp="#firma_3" />
+            <zone xml:id="pg_131_p4" ulx="769" uly="1266" lrx="1431" lry="1527" start="#p_131_4"/>
+            <zone xml:id="pg_131_firma" ulx="1249" uly="1531" lrx="1407" lry="1542" start="#firma_3" />
         </surface>
         
         <!--bibliografia 1: Storia-->
         <surface xml:id="pg138" n="7" start="#pb138">
             <graphic url='Vol3-1879-1-S1-F59-138.png' width='1516px' height='2243px' />
-            <zone xml:id="titolo_138" ulx="408" uly="1303" lrx="502" lry="1322"  corresp="#bibl3_titolo_138"/>
-            <zone xml:id="pg_138_fonte" ulx="107" uly="1329" lrx="778" lry="1408" corresp="#fonte_3" />
-            <zone  xml:id="pg_138_p1" ulx="109" uly="1422" lrx="786" lry="2081" start="#pg_138_p1"/>
-            <zone xml:id="pg_138_p1_1" ulx="809" uly="163" lrx="1478" lry="209" start="#pg_138_p1_1" />
-            <zone xml:id="pg_138_p2" ulx="814" uly="216" lrx="1496" lry="1679" start="#pg_138_2" />
-            <zone xml:id="pg_138_p3" ulx="820" uly="1688" lrx="1486" lry="1965" start="#pg_138_3" />
-            <zone xml:id="pg_138_nota" ulx="825" uly="2008" lrx="1487" lry="2073" corresp="#pie_nota_cib" />
+            <zone xml:id="titolo_138" ulx="408" uly="1303" lrx="502" lry="1322"  start="#bibl3_titolo_138"/>
+            <zone xml:id="pg_138_fonte" ulx="107" uly="1329" lrx="778" lry="1408" start="#fonte_3" />
+            <zone  xml:id="pg_138_p1" ulx="109" uly="1422" lrx="786" lry="2081" start="#p_138_1"/>
+            <zone xml:id="pg_138_p1_1" ulx="809" uly="163" lrx="1478" lry="209" start="#p_138_1_1" />
+            <zone xml:id="pg_138_p2" ulx="814" uly="216" lrx="1496" lry="1679" start="#p_138_2" />
+            <zone xml:id="pg_138_p3" ulx="820" uly="1688" lrx="1486" lry="1965" start="#p_138_3" />
+            <zone xml:id="pg_138_nota" ulx="825" uly="2008" lrx="1487" lry="2073" start="#pie_nota_cib" />
         </surface>
         <surface xml:id="pg139" n="8" start="#pb139">
             <graphic url='Vol3-1879-1-S1-F59-139.png' width='1521px' height='2197px' />
-            <zone xml:id="pg_139_p1" ulx="73" uly="167" lrx="729" lry="871" start="#pg_139_1"/>
-            <zone xml:id="pg_139_p2" ulx="82" uly="890" lrx="733" lry="1571" start="#pg_139_2"/>
-            <zone xml:id="pg_139_nota" ulx="87" uly="1974" lrx="737" lry="2046" corresp="#pie_nota_139"/>
-            <zone xml:id="pg_139_nota1" ulx="78" uly="2059" lrx="734" lry="2097" corresp="#pie_nota_139_1"/>
+            <zone xml:id="pg_139_p1" ulx="73" uly="167" lrx="729" lry="871" start="#p_139_1"/>
+            <zone xml:id="pg_139_p2" ulx="82" uly="890" lrx="733" lry="1571" start="#p_139_2"/>
+            <zone xml:id="pg_139_nota" ulx="87" uly="1974" lrx="737" lry="2046" start="#pie_nota_139"/>
+            <zone xml:id="pg_139_nota1" ulx="78" uly="2059" lrx="734" lry="2097" start="#pie_nota_139_1"/>
         </surface>
 
         <!--bibliografia 2: Scienze filosofiche-->
         <surface xml:id="pg81" n="9" start="#pb81">
             <graphic url="Vol1-1878-1-S1-F5-81.png" width='1541.4px' height='2221.4px' />
-            <zone xml:id="titolo_81" ulx="59" uly="827" lrx="715" lry="860" corresp="#bibl2_titolo_81" />
-            <zone xml:id="pg_81_fonte" ulx="58" uly="862" lrx="713" lry="919" corresp="#fonte_2" />
+            <zone xml:id="titolo_81" ulx="59" uly="827" lrx="715" lry="860" start="#bibl2_titolo_81" />
+            <zone xml:id="pg_81_fonte" ulx="58" uly="862" lrx="713" lry="919" start="#fonte_2" />
             <zone xml:id="pg_81_p1" ulx="53" uly="922" lrx="711" lry="2064" start="#p_81_1" />
             <zone xml:id="pg_81_p2" ulx="740" uly="158" lrx="1408" lry="493" start="#p_81_2" />
             <zone xml:id="pg_81_p3" ulx="738" uly="494" lrx="1409" lry="1340" start="#p_81_3" />
@@ -280,7 +280,7 @@ Author: Eleonora Mastroianni -->
         <!--notizie-->
         <surface xml:id="pg84" n="11" start="#pb84">
             <graphic url="Vol1-1878-1-S1-F5-84.png" width='1495.4px' height='2210.4px' />
-            <zone xml:id="titolo_84" ulx="826" uly="347" lrx="1461" lry="388" corresp="#not_titolo_84" />
+            <zone xml:id="titolo_84" ulx="826" uly="347" lrx="1461" lry="388" start="#not_titolo_84" />
             <zone xml:id="pg_84_not1" ulx="805" uly="398" lrx="1469" lry="422" start="#not1" />
             <zone xml:id="pg_84_not2" ulx="795" uly="427" lrx="1473" lry="551" start="#not2" />
             <zone xml:id="pg_84_not3" ulx="794" uly="555" lrx="1478" lry="623" start="#not3" />
@@ -785,7 +785,7 @@ Author: Eleonora Mastroianni -->
                         <lb />proponesse quel ragionamento come modello di sofisma ba-
                         <lb />rocco e quante lodi si dessero al <persName corresp="#manzoni"><surname>Manzoni</surname></persName> per averlo tro-
                         <lb />vato. Il <persName corresp="#manzoni"><surname>Manzoni</surname></persName> invece l’ aveva copiato dal celeberrimo
-                        <lb /><persName corresp="#achillini"><forename>CLaudio </forename><surname>Achillini</surname></persName>.
+                        <lb /><persName corresp="#achillini"><forename>Claudio </forename><surname>Achillini</surname></persName>.
                         <lb />E perchè non ci si accusi di malignità e di bugia, ecco
                         <lb />i due ragionamenti messi a fronte :
                     </p>
@@ -884,7 +884,7 @@ Author: Eleonora Mastroianni -->
                     <closer xml:id="firma_3">
                         <signed corresp="#guerrini">
                             <persName corresp="#guerrini">
-                                <forename><choice><abbr>O.</abbr><expan>Olindo</expan></choice></forename>
+                                <forename>O.</forename>
                                 <surname>Guerrini</surname>
                             </persName>
                         </signed>
@@ -2344,7 +2344,7 @@ Author: Eleonora Mastroianni -->
                                 <forename>Tommaso</forename>
                                 </persName>
                             </author>
-                            <title>Summa Theologiae</title>                            
+                            <title>Summa Theologiae</title>
                     </bibl>
                     <bibl xml:id="lettera_masc_ach">
                             <author>
@@ -2461,6 +2461,6 @@ Author: Eleonora Mastroianni -->
         </back>
     </text>
     <standOff><!--luogo dove stanno le interpretazioni date a certe parti del testo e collegate alle singole interpretazioni con l'attributo @ana-->
-        <interp xml:id="apostrofe">L'apostrofe è una figura retorica dove il narratore si rivolge direttamente a un personaggio, un oggetto o al lettore</interp>
+            <interp xml:id="apostrofe">L'apostrofe è una figura retorica dove il narratore si rivolge direttamente a un personaggio, un oggetto o al lettore</interp>
     </standOff>
 </TEI>

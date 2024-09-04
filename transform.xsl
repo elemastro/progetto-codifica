@@ -147,7 +147,7 @@
 
     <!-- Template per head -->
     <xsl:template match="tei:head">
-        <div class="titolo_a">
+        <div class="titolo_a" id="{@xml:id}">
             <span id="{substring-after(@facs, '#')}"></span>
             <xsl:value-of select="@xml:id"/>
             <div class="titolo">
@@ -155,7 +155,12 @@
             </div>
         </div>
     </xsl:template>
-
+    <!-- Template per note -->
+    <xsl:template match="tei:note">
+    <div id="{@xml:id}">
+        <xsl:apply-templates />
+    </div>
+</xsl:template>
     <!-- Template per ab -->
     <xsl:template match="tei:ab">
         <div class="testo_codificato">
@@ -192,9 +197,9 @@
     <!-- Template per item -->
     <xsl:template match="tei:item">
         <div class="testo_codificato">
-            <span id="{@xml:id}">
+            <div id="{@xml:id}">
                 <xsl:value-of select="@xml:id"/>
-            </span>
+            </div>
             <div class="testo">
                 <xsl:apply-templates />
             </div>
@@ -204,24 +209,26 @@
     <!-- Template per closer -->
     <xsl:template match="tei:closer">
         <div class="testo_codificato">
-            <span id="{@xml:id}">
+            <div id="{@xml:id}">
                 <xsl:value-of select="@xml:id"/>
-            </span>
+            </div>
             <div class="testo">
                 <xsl:apply-templates/>
             </div>
         </div>
     </xsl:template>
 
-    <!-- Template per surface -->
-    <xsl:template match="tei:surface">
-        <img src="{tei:graphic/@url}" class="facsimile" usemap="#{@xml:id}" alt="{@xml:id}"/>
-        <map name="{@xml:id}">
-            <xsl:for-each select="tei:zone">
-                <area id="{@xml:id}" coords="{@ulx},{@uly},{@lrx},{@lry}" />
-            </xsl:for-each>
-        </map>
-    </xsl:template>
+   <!-- Template per surface -->
+<xsl:template match="tei:surface">
+    <xsl:variable name="graphic" select="tei:graphic"/>
+    <img src="{$graphic/@url}" class="facsimile" usemap="#{@xml:id}" alt="{@xml:id}" 
+         width="{$graphic/@width}" height="{$graphic/@height}" />
+    <map name="{@xml:id}">
+        <xsl:for-each select="tei:zone">
+            <area id="{@start}" coords="{@ulx},{@uly},{@lrx},{@lry}" shape="rect" />
+        </xsl:for-each>
+    </map>
+</xsl:template>
 
     <!--Template per encodingDesc-->
     <xsl:template match="tei:encodingDesc">
@@ -840,6 +847,7 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
+
 
     <!--Template per le date-->
     <xsl:template match="tei:date">
