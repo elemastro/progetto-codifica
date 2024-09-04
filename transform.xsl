@@ -473,13 +473,11 @@
     </xsl:template>
 
     <!-- Template per i nomi di persona e le reference a quelle persone-->
-    <xsl:template match="tei:persName[@corresp]">
+    <xsl:template match="tei:persName[@corresp] | tei:rs[@type='person']">
         <!-- Trova l'ID della persona -->
         <xsl:variable name="person-id" select="substring-after(@corresp, '#')"/>
-        
         <!-- Trova la persona nella listPerson usando l'ID -->
         <xsl:variable name="person" select="/tei:TEI/tei:text/tei:back/tei:div/tei:listPerson/tei:person[@xml:id=$person-id]"/>
-        
         <!-- Mostra il nome breve nel testo con link se presente -->
         <xsl:choose>
             <xsl:when test="$person/tei:persName/tei:ref/@target">
@@ -580,7 +578,7 @@
     </xsl:template>
 
     <!-- Template per luoghi -->
-    <xsl:template match="tei:placeName[@corresp] | tei:geogName[@corresp]">
+    <xsl:template match="tei:placeName[@corresp] | tei:geogName[@corresp] | tei:rs[@type='place']">
         <xsl:variable name="luogo-id" select="substring-after(@corresp, '#')"/>
         <xsl:variable name="luogo" select="/tei:TEI/tei:text/tei:back/tei:div/tei:listPlace/tei:place[@xml:id=$luogo-id]"/>
         <xsl:choose>
@@ -713,5 +711,194 @@
         <xsl:value-of select="."/>
     </xsl:template>
 
+    <!--Template per i numeri-->
+    <xsl:template match="tei:num">
+        <xsl:element name="span">
+            <xsl:attribute name="class">num</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
+    </xsl:template>
+
+    <!--Template per i discorsi diretti-->
+    <xsl:template match="tei:said[@direct='true']">
+        <xsl:variable name="pre" select="substring-before(substring-after(@rend, 'pre('), ')')"/>
+        <xsl:variable name="post" select="substring-before(substring-after(@rend, 'post('), ')')"/>
+        <span class="discorso_diretto">
+            <xsl:value-of select="$pre"/>
+            <xsl:apply-templates/>
+            <xsl:value-of select="$post"/>
+        </span>
+    </xsl:template>
+
+    <!--Template per le figure retoriche e pensieri-->
+    <xsl:template match="tei:q">
+        <xsl:element name="span">
+            <!-- Imposta la classe in base agli attributi 'ana' e 'type' -->
+            <xsl:choose>
+                <xsl:when test="@ana">
+                    <xsl:attribute name="class">fig_reg</xsl:attribute>
+                </xsl:when>
+                <xsl:when test="@type='thought'">
+                    <xsl:attribute name="class">pensieri</xsl:attribute>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:apply-templates />
+        </xsl:element>
+    </xsl:template>
+
+    <!--Template per le citazioni-->
+    <xsl:template match="tei:quote">
+        <xsl:variable name="pre" select="substring-before(substring-after(@rend, 'pre('), ')')"/>
+        <xsl:variable name="post" select="substring-before(substring-after(@rend, 'post('), ')')"/>
+        <span class="citazioni">
+            <xsl:value-of select="$pre"/>
+            <xsl:apply-templates/>
+            <xsl:value-of select="$post"/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:choice">
+        <xsl:element name="span">
+            <xsl:attribute name="class">scelte</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
+    </xsl:template>
+
+
+    <!-- Template per sic-->
+    <xsl:template match="tei:sic">
+        <xsl:element name="span">
+            <xsl:attribute name="class">errore_orig</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!--Template per corr-->
+    <xsl:template match="tei:choice/tei:corr">
+        <xsl:element name="span">
+            <xsl:attribute name="class">correzione</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!--Template per orig-->
+    <xsl:template match="tei:choice/tei:orig">
+        <xsl:element name="span">
+            <xsl:attribute name="class">originale</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!--Template per reg-->
+    <xsl:template match="tei:choice/tei:reg">
+        <xsl:element name="span">
+            <xsl:attribute name="class">regolarizzazione</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!--Template per abbr-->
+    <xsl:template match="tei:abbr">
+        <xsl:element name="span">
+            <xsl:attribute name="class">abbreviazione</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!--Template per expan-->
+    <xsl:template match="tei:expan">
+        <xsl:element name="span">
+            <xsl:attribute name="class">espansione</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!--Template per le date-->
+    <xsl:template match="tei:date">
+        <xsl:element name="span">
+            <xsl:attribute name="class">data</xsl:attribute>
+            <xsl:apply-templates />
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Template per i termini tecnici -->
+    <xsl:template match="tei:term[@corresp] | tei:rs[@type='term']">
+        <xsl:variable name="term-id" select="substring-after(@corresp, '#')"/>
+        <xsl:variable name="term" select="/tei:TEI/tei:text/tei:back/tei:div/tei:list[@type='gloss']/tei:label/tei:term[@xml:id=$term-id]"/>
+        <xsl:variable name="gloss" select="/tei:TEI/tei:text/tei:back/tei:div/tei:list[@type='gloss']/tei:item/tei:gloss[@corresp=concat('#', $term-id)]"/>
+        <span class="nome_testo">
+            <xsl:value-of select="."/>
+        </span>
+        <xsl:if test="$term">
+            <span class="nomi nome_term">
+                <ul>
+                    <li>
+                        <strong>Termine: </strong>
+                        <xsl:value-of select="$term"/>
+                    </li>
+                    <xsl:if test="$gloss">
+                        <li>
+                            <strong>Significato: </strong>
+                            <xsl:value-of select="$gloss"/>
+                        </li>
+                    </xsl:if>
+                </ul>
+            </span>
+        </xsl:if>
+    </xsl:template>
+
+
+    <!-- Template per bibliografie -->
+    <xsl:template match="tei:bibl[@corresp] | tei:name[@type='bibl'] | tei:rs[@type='bibl']">
+        <xsl:variable name="bibl-id" select="substring-after(@corresp, '#')"/>
+        <xsl:variable name="bibl" select="/tei:TEI/tei:text/tei:back/tei:div/tei:listBibl/tei:biblStruct[@xml:id=$bibl-id]"/>
+        <xsl:if test="$bibl">
+            <span class="nome_testo">
+                <xsl:apply-templates select="." mode="short"/>
+            </span>
+            <span class="nomi nome_bibl">
+                <ul>
+                    <xsl:if test="$bibl/tei:monogr/tei:author/tei:persName">
+                        <li>
+                            <strong>Autore: </strong>
+                            <xsl:apply-templates select="$bibl/tei:monogr/tei:author/tei:persName"/>
+                        </li>
+                    </xsl:if>
+                    <xsl:if test="$bibl/tei:monogr/tei:title">
+                        <li>
+                            <strong>Titolo: </strong>
+                            <xsl:value-of select="$bibl/tei:monogr/tei:title"/>
+                        </li>
+                    </xsl:if>
+                    <xsl:if test="$bibl/tei:monogr/tei:imprint">
+                        <li>
+                            <strong>Luogo di pubblicazione: </strong>
+                            <xsl:value-of select="$bibl/tei:monogr/tei:imprint/tei:pubPlace"/>
+                        </li>
+                        <xsl:if test="$bibl/tei:monogr/tei:imprint/tei:publisher">
+                            <li>
+                                <strong>Editore: </strong>
+                                <xsl:value-of select="$bibl/tei:monogr/tei:imprint/tei:publisher"/>
+                            </li>
+                        </xsl:if>
+                        <xsl:if test="$bibl/tei:monogr/tei:imprint/tei:date">
+                            <li>
+                                <strong>Anno: </strong>
+                                <xsl:value-of select="$bibl/tei:monogr/tei:imprint/tei:date"/>
+                            </li>
+                        </xsl:if>
+                    </xsl:if>
+                    <xsl:if test="$bibl/tei:monogr/tei:biblScope">
+                        <xsl:for-each select="$bibl/tei:monogr/tei:biblScope">
+                            <li>
+                                <strong><xsl:value-of select="@unit"/>: </strong>
+                                <xsl:value-of select="."/>
+                            </li>
+                        </xsl:for-each>
+                    </xsl:if>
+                </ul>
+            </span>
+        </xsl:if>
+    </xsl:template>
 
 </xsl:stylesheet>
