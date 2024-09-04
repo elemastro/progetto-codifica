@@ -53,15 +53,33 @@
 
                 <div id="menu_art">
                     <xsl:for-each select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listBibl/tei:biblStruct/tei:analytic">
-                        <button>
+                        <button id="button_{position()}">
                             <xsl:value-of select="tei:title"/>
                         </button>
                     </xsl:for-each>
                 </div>
 
+                <div id="evidenzia_parti">
+                    <button class="but_evidenzia" id="but_pers">persone e riferimenti</button>
+                    <button class="but_evidenzia" id="but_luoghi">luoghi e riferimenti</button>
+                    <button class="but_evidenzia" id="but_organ">organizzazioni</button>
+                    <button class="but_evidenzia" id="but_event">eventi e riferimenti</button>
+                    <button class="but_evidenzia" id="but_disc">discorsi diretti</button>
+                    <button class="but_evidenzia" id="but_pens">pensieri</button>
+                    <button class="but_evidenzia" id="but_fig_ret">figure retoriche</button>
+                    <button class="but_evidenzia" id="but_cit">citazioni</button>
+                    <button class="but_evidenzia" id="but_opere">opere e riferimenti</button>
+                    <button class="but_evidenzia" id="but_term">termini tecnici e riferimenti</button>
+                    <button class="but_evidenzia" id="but_date">date</button>
+                    <button class="but_evidenzia" id="but_nume">numeri</button>
+                    <button class="but_evidenzia" id="but_corr">correzioni</button>
+                    <button class="but_evidenzia" id="but_reg">regolarizzazioni</button>
+                    <button class="but_evidenzia" id="but_esp">espansioni</button>
+                </div>
+
                 <!-- Testi e facsimile -->
                 <xsl:for-each select="tei:TEI/tei:text/tei:body/tei:div[@type='journal']/tei:div">
-                    <div class="contenitore">
+                    <div class="contenitore" id="cont_{position()}">
                         <div class="titolo_a">
                             <h3>
                                 <xsl:value-of select="tei:head"/>
@@ -103,12 +121,6 @@
                         </xsl:for-each>
                     </div>
                 </xsl:for-each>
-
-                <footer>
-                    <p>
-                        <xsl:value-of select="tei:TEI/tei:teiHeader/tei:encodingDesc/tei:projectDesc/tei:p"/>
-                    </p>
-                </footer>
 
             </body>
         </html>
@@ -481,15 +493,15 @@
         <!-- Mostra il nome breve nel testo con link se presente -->
         <xsl:choose>
             <xsl:when test="$person/tei:persName/tei:ref/@target">
-                <span class="nome_testo">
+                <span class="nome_testo per_rif">
                     <a href="{$person/tei:persName/tei:ref/@target}">
-                        <xsl:apply-templates select="." mode="short"/>
+                        <xsl:apply-templates select="*"/>
                     </a>
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <span class="nome_testo">
-                    <xsl:apply-templates select="." mode="short"/>
+                <span class="nome_testo per_rif">
+                    <xsl:apply-templates select="*"/>
                 </span>
             </xsl:otherwise>
         </xsl:choose>
@@ -558,20 +570,11 @@
             </span>
         </xsl:if>
     </xsl:template>
-    
-    <!-- Template per visualizzare solo il nome breve in modalità "short" -->
-    <xsl:template match="tei:persName" mode="short">
-        <xsl:for-each select="*">
-            <xsl:value-of select="."/>
-            <xsl:if test="position() != last()">
-                <xsl:text> </xsl:text>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:template>
 
-    <!--Template per visualizzare gli elementi figlio di tei:persName-->
-    <xsl:template match="tei:persName/*" mode="short">
+    <xsl:template match="tei:persName/*[not(self::tei:placeName)]">
+        <!-- Aggiungi il valore dell'elemento corrente -->
         <xsl:value-of select="."/>
+        <!-- Aggiungi uno spazio se non è l'ultimo elemento -->
         <xsl:if test="position() != last()">
             <xsl:text> </xsl:text>
         </xsl:if>
@@ -583,7 +586,7 @@
         <xsl:variable name="luogo" select="/tei:TEI/tei:text/tei:back/tei:div/tei:listPlace/tei:place[@xml:id=$luogo-id]"/>
         <xsl:choose>
             <xsl:when test="$luogo/tei:geogName/tei:ref/@target">
-                <span class="nome_testo">
+                <span class="nome_testo luo_rif">
                     <a href="{$luogo/tei:geogName/tei:ref/@target}">
                         <xsl:apply-templates select="." mode="short"/>
                     </a>
@@ -592,14 +595,14 @@
             <xsl:otherwise>
                 <xsl:choose>
                     <xsl:when test="$luogo/tei:placeName/tei:ref/@target">
-                        <span class="nome_testo">
+                        <span class="nome_testo luo_rif">
                             <a href="{$luogo/tei:placeName/tei:ref/@target}">
                                 <xsl:apply-templates select="." mode="short"/>
                             </a>
                         </span>
                     </xsl:when>
                     <xsl:otherwise>
-                        <span class="nome_testo">
+                        <span class="nome_testo luo_rif">
                             <xsl:apply-templates select="." mode="short"/>
                         </span>
                     </xsl:otherwise>
@@ -629,8 +632,15 @@
                     
                     <xsl:if test="$luogo/tei:location/tei:country">
                         <li>
-                            <strong>Paese: </strong>
+                            <strong>Stato: </strong>
                             <xsl:value-of select="$luogo/tei:location/tei:country"/>
+                        </li>
+                    </xsl:if>
+
+                    <xsl:if test="$luogo/tei:bloc">
+                        <li>
+                            <strong>Continente: </strong>
+                            <xsl:value-of select="$luogo/tei:bloc" />
                         </li>
                     </xsl:if>
 
@@ -656,14 +666,14 @@
         <xsl:variable name="org" select="/tei:TEI/tei:text/tei:back/tei:div/tei:listOrg/tei:org[@xml:id=$org-id]"/>
         <xsl:choose>
             <xsl:when test="$org/tei:orgName/tei:ref/@target">
-                <span class="nome_testo">
+                <span class="nome_testo organ">
                     <a href="{$org/tei:orgName/tei:ref/@target}">
                         <xsl:apply-templates select="." mode="short"/>
                     </a>
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <span class="nome_testo">
+                <span class="nome_testo organ">
                     <xsl:apply-templates select="." mode="short"/>
                 </span>
             </xsl:otherwise>
@@ -757,7 +767,7 @@
         </span>
     </xsl:template>
 
-    <xsl:template match="tei:choice">
+   <xsl:template match="tei:choice">
         <xsl:element name="span">
             <xsl:attribute name="class">scelte</xsl:attribute>
             <xsl:apply-templates />
@@ -765,7 +775,7 @@
     </xsl:template>
 
 
-    <!-- Template per sic-->
+    <!--Template per sic-->
     <xsl:template match="tei:sic">
         <xsl:element name="span">
             <xsl:attribute name="class">errore_orig</xsl:attribute>
@@ -797,7 +807,7 @@
         </xsl:element>
     </xsl:template>
 
-    <!--Template per abbr-->
+    <!-- Template per abbreviazione -->
     <xsl:template match="tei:abbr">
         <xsl:element name="span">
             <xsl:attribute name="class">abbreviazione</xsl:attribute>
@@ -805,7 +815,7 @@
         </xsl:element>
     </xsl:template>
 
-    <!--Template per expan-->
+    <!-- Template per espansione -->
     <xsl:template match="tei:expan">
         <xsl:element name="span">
             <xsl:attribute name="class">espansione</xsl:attribute>
@@ -826,7 +836,7 @@
         <xsl:variable name="term-id" select="substring-after(@corresp, '#')"/>
         <xsl:variable name="term" select="/tei:TEI/tei:text/tei:back/tei:div/tei:list[@type='gloss']/tei:label/tei:term[@xml:id=$term-id]"/>
         <xsl:variable name="gloss" select="/tei:TEI/tei:text/tei:back/tei:div/tei:list[@type='gloss']/tei:item/tei:gloss[@corresp=concat('#', $term-id)]"/>
-        <span class="nome_testo">
+        <span class="nome_testo term_tec_rif">
             <xsl:value-of select="."/>
         </span>
         <xsl:if test="$term">
@@ -851,23 +861,24 @@
     <!-- Template per bibliografie -->
     <xsl:template match="tei:bibl[@corresp] | tei:name[@type='bibl'] | tei:rs[@type='bibl']">
         <xsl:variable name="bibl-id" select="substring-after(@corresp, '#')"/>
-        <xsl:variable name="bibl" select="/tei:TEI/tei:text/tei:back/tei:div/tei:listBibl/tei:biblStruct[@xml:id=$bibl-id]"/>
+        <xsl:variable name="bibl" select=" /tei:TEI/tei:text/tei:back/tei:div/tei:listBibl/tei:biblStruct[@xml:id=$bibl-id] | /tei:TEI/tei:text/tei:back/tei:div/tei:listBibl/tei:bibl[@xml:id=$bibl-id]"/>
         <xsl:if test="$bibl">
-            <span class="nome_testo">
+            <span class="nome_testo op_rif">
                 <xsl:apply-templates select="." mode="short"/>
             </span>
+
             <span class="nomi nome_bibl">
                 <ul>
-                    <xsl:if test="$bibl/tei:monogr/tei:author/tei:persName">
+                    <xsl:if test="$bibl/tei:monogr/tei:author/tei:persName | $bibl/tei:author">
                         <li>
                             <strong>Autore: </strong>
-                            <xsl:apply-templates select="$bibl/tei:monogr/tei:author/tei:persName"/>
+                            <xsl:apply-templates select="$bibl/tei:monogr/tei:author/tei:persName | $bibl/tei:author"/>
                         </li>
                     </xsl:if>
-                    <xsl:if test="$bibl/tei:monogr/tei:title">
+                    <xsl:if test="$bibl/tei:monogr/tei:title | $bibl/tei:title">
                         <li>
                             <strong>Titolo: </strong>
-                            <xsl:value-of select="$bibl/tei:monogr/tei:title"/>
+                            <xsl:value-of select="$bibl/tei:monogr/tei:title | $bibl/tei:title"/>
                         </li>
                     </xsl:if>
                     <xsl:if test="$bibl/tei:monogr/tei:imprint">
@@ -895,6 +906,55 @@
                                 <xsl:value-of select="."/>
                             </li>
                         </xsl:for-each>
+                    </xsl:if>
+                    <xsl:if test="$bibl/tei:note">
+                        <li>
+                            <strong>Note: </strong>
+                            <xsl:value-of select="$bibl/tei:note"/>
+                        </li>
+                    </xsl:if>
+                </ul>
+            </span>
+        </xsl:if>
+    </xsl:template>
+
+    <!--Template per event-->
+    <xsl:template match="tei:eventName[@corresp] | tei:rs[@type='event']">
+        <xsl:variable name="evento-id" select="substring-after(@corresp, '#')"/>
+        <xsl:variable name="evento" select="/tei:TEI/tei:text/tei:back/tei:div/tei:listEvent/tei:event[@xml:id=$evento-id]"/>
+
+        <span class="nome_testo eventi">
+            <xsl:apply-templates select="." mode="short"/>
+        </span>
+
+        <xsl:if test="$evento">
+            <span class="nomi nome_evento">
+                <ul>
+                    <li>
+                        <strong>Nome dell'evento: </strong>
+                        <xsl:for-each select="$evento/tei:label">
+                            <xsl:value-of select="."/>
+                        </xsl:for-each>
+                    </li>
+
+                    <xsl:if test="$evento/@from or $evento/@to">
+                        <li>
+                            <strong>Periodo: </strong>
+                            <xsl:if test="$evento/@from">
+                                <xsl:value-of select="$evento/@from"/>
+                            </xsl:if>
+                            <xsl:if test="$evento/@to">
+                                <xsl:text> - </xsl:text>
+                                <xsl:value-of select="$evento/@to"/>
+                            </xsl:if>
+                        </li>
+                    </xsl:if>
+
+                    <xsl:if test="$evento/tei:desc">
+                        <li>
+                            <strong>Descrizione: </strong>
+                            <xsl:value-of select="$evento/tei:desc"/>
+                        </li>
                     </xsl:if>
                 </ul>
             </span>
