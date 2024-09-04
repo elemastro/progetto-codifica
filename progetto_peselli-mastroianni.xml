@@ -880,8 +880,10 @@ Author: Eleonora Mastroianni -->
                      </p>
                     <closer xml:id="firma_3">
                         <signed corresp="#guerrini">
-                            <forename><choice><abbr>O.</abbr><expan>Olindo</expan></choice></forename>
-                            <surname>Guerrini</surname>
+                            <persName corresp="#guerrini">
+                                <forename><choice><abbr>O.</abbr><expan>Olindo</expan></choice></forename>
+                                <surname>Guerrini</surname>
+                            </persName>
                         </signed>
                     </closer>
                 </div>
@@ -1079,7 +1081,7 @@ Author: Eleonora Mastroianni -->
                             </note>
                     <note xml:id="pie_nota_139_1" type="footnote" rend="pre(**)" facs="#pg_139_nota1">
                     <bibl>
-                        <lb /><citedRange>Tomo 1</citedRange>. — <pubPlace>Genova</pubPlace>, <publisher>Tipografia del R. Istituto do’Sordo-Muti</publisher>, <date when="1877">1877</date>.
+                        <lb /><citedRange>Tomo 1</citedRange>. — <pubPlace>Genova</pubPlace>, <publisher>Tipografia del R. Istituto de’Sordo-Muti</publisher>, <date when="1877">1877</date>.
                     </bibl>
                     </note>
                 </div>
@@ -1159,7 +1161,7 @@ Author: Eleonora Mastroianni -->
                         <lb />e quindi di impressionabilità di fronte ad una data ecci-
                         <lb />tazione, essa perde ogni senso speciale, e diviene equiva-
                         <lb />lente non solo all’<hi rend="italics">attività psichica</hi> in generale ma alla
-                        <lb />semplice <hi rend="italics">irritabilità nervosa</hi>; l’<rs type="person" corresp="au_paric">Autore</rs> difatti è condotto a
+                        <lb />semplice <hi rend="italics">irritabilità nervosa</hi>; l’<rs type="person" corresp="#au_paric">Autore</rs> difatti è condotto a
                         <lb />definire l’attenzione: <quote rend="pre(«) post(»)" source="#fonte_bibl2">quel fenomeno pel quale gli elementi
                         <lb />nervosi sono messi in vibrazione o in movimento da una
                         <lb />eccitazione.</quote>
@@ -1171,7 +1173,7 @@ Author: Eleonora Mastroianni -->
                         <lb />dell’ <name type="bibl" subtype="section" rend="pre(«) post(»)" source="#fonte_bibl2">Attenzione degli Alienati.</name> Malgrado tutto l’inte-
                         <lb />resse che offrono queste <num type="cardinal" value="2">due</num> parti, siamo costretti a la-
                         <lb />sciarle da banda, per fermarci un momento sulla terza, ove
-                        <lb />l’<rs type="person" corresp="au_paric">Autore</rs> studia l’Attenzione <quote rend="pre(«) post(»)" source="#fonte_bibl2">in rapporto alla Educazione
+                        <lb />l’<rs type="person" corresp="#au_paric">Autore</rs> studia l’Attenzione <quote rend="pre(«) post(»)" source="#fonte_bibl2">in rapporto alla Educazione
                         <lb />intellettuale dell’Uomo.</quote> Questa parte del suo lavoro è una
                         <lb />continuazione di quello del <persName corresp="#sfdedom"><nameLink>De</nameLink> <surname>Dominicis</surname></persName>, di cui abbiamo
                         <lb />già parlato, o piuttosto uno sviluppo più particolareggiato
@@ -1188,7 +1190,7 @@ Author: Eleonora Mastroianni -->
                         <lb />l’allettare l’intelligenza allo studio, la disgustiamo; lungi
                         <lb />dal fare una cosa in virtù della quale essa deve svolgersi,
                         <lb />facciamo una cosa malgrado la quale essa riesce a non soc-
-                        <lb />combere. <quote rend="pre(—)" source="#fonte_bibl2"> L’insegnamento classico,</quote> dice l’<rs type="person" corresp="au_paric">Autore</rs>, <quote source="#fonte_bibl2">è quello
+                        <lb />combere. <quote rend="pre(—)" source="#fonte_bibl2"> L’insegnamento classico,</quote> dice l’<rs type="person" corresp="#au_paric">Autore</rs>, <quote source="#fonte_bibl2">è quello
                         <lb />che la psicologia e la pedagogia moderne condannano, l’in-
                         <lb />segnamento scientifico è quello che esse prescrivono; è
                         <lb />tempo di tradurre in atto e mettere in pratica un sistema
