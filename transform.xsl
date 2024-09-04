@@ -495,31 +495,34 @@
         </a>
     </xsl:template>
 
-    <!-- Template per i nomi di persona e le reference a quelle persone-->
+    <!-- Template per i nomi di persona e le reference a quelle persone -->
     <xsl:template match="tei:persName[@corresp] | tei:rs[@type='person']">
         <!-- Trova l'ID della persona -->
         <xsl:variable name="person-id" select="substring-after(@corresp, '#')"/>
         <!-- Trova la persona nella listPerson usando l'ID -->
         <xsl:variable name="person" select="/tei:TEI/tei:text/tei:back/tei:div/tei:listPerson/tei:person[@xml:id=$person-id]"/>
-        <!-- Mostra il nome breve nel testo con link se presente -->
-        <xsl:choose>
-            <xsl:when test="$person/tei:persName/tei:ref/@target">
-                <span class="nome_testo per_rif">
+
+        <!-- Crea uno span per il nome breve -->
+        <span class="nome_testo per_rif">
+            <!-- Se c'è un link, avvolgilo in un elemento <a> -->
+            <xsl:choose>
+                <xsl:when test="$person/tei:persName/tei:ref/@target">
                     <a href="{$person/tei:persName/tei:ref/@target}">
-                        <xsl:apply-templates select="*"/>
+                        <xsl:apply-templates/>
                     </a>
-                </span>
-            </xsl:when>
-            <xsl:otherwise>
-                <span class="nome_testo per_rif">
-                    <xsl:apply-templates select="*"/>
-                </span>
-            </xsl:otherwise>
-        </xsl:choose>
-        
+                </xsl:when>
+                <xsl:otherwise>
+                    <!-- Altrimenti, applica i template ai nodi figli -->
+                    <xsl:apply-templates/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </span>
+
+        <!-- Mostra i dettagli della persona -->
         <xsl:if test="$person">
             <span class="nomi">
                 <ul>
+                    <!-- Nome completo -->
                     <li>
                         <strong>Nome completo: </strong>
                         <xsl:for-each select="$person/tei:persName/*">
@@ -529,7 +532,8 @@
                             </xsl:if>
                         </xsl:for-each>
                     </li>
-                    
+
+                    <!-- Occupazione -->
                     <xsl:if test="$person/tei:occupation">
                         <li>
                             <strong>Occupazione: </strong>
@@ -537,20 +541,23 @@
                         </li>
                     </xsl:if>
 
+                    <!-- Note -->
                     <xsl:if test="$person/tei:note">
                         <li>
                             <strong>Note: </strong>
                             <xsl:value-of select="$person/tei:note"/>
                         </li>
                     </xsl:if>
-                    
+
+                    <!-- Data di nascita -->
                     <xsl:if test="$person/tei:birth/tei:date">
                         <li>
                             <strong>Data di nascita: </strong>
                             <xsl:value-of select="$person/tei:birth/tei:date"/>
                         </li>
                     </xsl:if>
-                    
+
+                    <!-- Luogo di nascita -->
                     <xsl:if test="$person/tei:birth/tei:placeName">
                         <li>
                             <strong>Luogo di nascita: </strong>
@@ -560,14 +567,16 @@
                             </xsl:for-each>
                         </li>
                     </xsl:if>
-                    
+
+                    <!-- Data di morte -->
                     <xsl:if test="$person/tei:death/tei:date">
                         <li>
                             <strong>Data di morte: </strong>
                             <xsl:value-of select="$person/tei:death/tei:date"/>
                         </li>
                     </xsl:if>
-                    
+
+                    <!-- Luogo di morte -->
                     <xsl:if test="$person/tei:death/tei:placeName">
                         <li>
                             <strong>Luogo di morte: </strong>
@@ -598,6 +607,7 @@
         </xsl:element>
     </xsl:template>
 
+    <!-- Template per i nodi di testo in persName (esclusi placeName) -->
     <xsl:template match="tei:persName/*[not(self::tei:placeName)]">
         <!-- Aggiungi il valore dell'elemento corrente -->
         <xsl:value-of select="."/>
